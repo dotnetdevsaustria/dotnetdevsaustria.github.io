@@ -189,7 +189,10 @@ defaultContentLanguage = "de"           # Default language to use
     #o-goodreads = "http://localhost:1313"
     #p-coding = "http://localhost:1313"
     #q-bilibili = "http://localhost:1313"
-
+    t-slack = "https://dotnetdevsaustria.slack.com"
+    u-youtube = "https://www.youtube.com/channel/UCuf0V0imn7bI_wST2fEHgXQ"
+    v-twitch = "https://www.twitch.tv/dotnetdevsat"
+    w-meetup = "https://www.meetup.com/dotnet-austria"
 
 [languages]
   [languages.en]
