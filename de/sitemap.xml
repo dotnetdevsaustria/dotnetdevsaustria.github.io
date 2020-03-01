@@ -17,11 +17,6 @@
   </url>
   
   <url>
-    <loc>https://dotnetdevs.at/</loc>
-    <lastmod>2019-09-30T00:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://dotnetdevs.at/post/</loc>
     <lastmod>2019-09-30T00:00:00+02:00</lastmod>
   </url>
@@ -29,6 +24,11 @@
   <url>
     <loc>https://dotnetdevs.at/posts/streaming/</loc>
     <lastmod>2019-09-30T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dotnetdevs.at/</loc>
+    <lastmod>2019-01-01T00:00:00+02:00</lastmod>
   </url>
   
   <url>
