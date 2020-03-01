@@ -22,20 +22,56 @@ Wenn du daran interessiert bist uns zu unterstützen, melde dich doch bei [uns](
 
 ## Location Sponsoring
 
-Wir bekommen von dir Räumlichkeiten, Essen und Getränke zur Verfügnung gestellt. Wie der Raum gestaltet ist, ist komplett dir überlassen.  
+Du bekommst:
 
-Bei der Eröffnung bekommst du einen Slot für 5 Minuten Sprechzeit.
+- Bei der Eröffnung einen Slot für 5 Minuten Sprechzeit.
+- Die Raumgestaltung ist, ist komplett dir überlassen.  
+
+Wir bekommen:
+
+- Räumlichkeiten
+- Essen und Getränke für die Besucher
+- Internet- Zugang für Streaming (min 10 MBit/s Upload, HTTP/HTTPS & Port 1935 freigegeben)
 
 ## Location Sponsoring Klein
 
-Du stellst uns deine Räumlichkeiten zur Verfügung. Wie der Raum gestaltet ist, ist komplett dir überlassen.  
+Du bekommst:
 
-Bei der Eröffnungspräsentation präsentieren wir eine Slide von dir für dich.
+- Die Raumgestaltung ist, ist komplett dir überlassen.  
+- Wir präsentieren eine Slide von dir für dich.
+
+Wir bekommen:
+
+- Räumlichkeiten
+- Internet- Zugang für Streaming (min 10 MBit/s Upload, HTTP/HTTPS & Port 1935 freigegeben)
 
 ## 200€ Sponsoring
 
-Du spendest uns 200€ und beim nächsten Meetup kannst du während der Eröffnung bis zu 3 Minuten Spechzeit präsentieren.
+Du bekommst:
+
+- beim nächsten Meetup kannst du während der Eröffnung bis zu 3 Minuten Spechzeit präsentieren
+
+Wir bekommen:
+
+- 200€
 
 ## 100€ Sponsoring
 
-Du spendest uns 100€ und beim nächsten Meetup präsentieren wir für dich bis zu 2 Slides.
+Du bekommst:
+
+- beim nächsten Meetup präsentieren wir für dich bis zu 2 Slides
+
+Wir bekommen:
+
+- 100€
+
+## 1000€ Sponsoring
+
+Du bekommst:
+
+- dein Firmenlogo auf der Startseite für 12 Monate 
+- dein Firmenlogo und Erwähnung in jeder Meetup- Intro für 12 Monate
+
+Wir bekommen:
+
+- 1000€
