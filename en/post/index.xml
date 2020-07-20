@@ -6,7 +6,7 @@
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 30 Sep 2019 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2020 00:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://dotnetdevs.at/en/post/index.xml" rel="self" type="application/rss+xml" />
     
@@ -21,6 +21,16 @@
 Our goals are:
  make it easier for new participants to find existing communities offer existing members more choice promote the exchange between the different communities  We are thanking our sponsors:
   </description>
+    </item>
+    
+    <item>
+      <title>EF Core Hidden gems by Igor Rončević</title>
+      <link>https://dotnetdevs.at/en/posts/ef-core-hidden-gems-by-igor-ron%C4%8Devi%C4%87/</link>
+      <pubDate>Mon, 20 Jul 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/posts/ef-core-hidden-gems-by-igor-ron%C4%8Devi%C4%87/</guid>
+      <description>The recording of the talk &amp;ldquo;EF Core Hidden gems&amp;rdquo; by Igor Rončević is now on YouTube at https://www.youtube.com/watch?v=rjwou1Nw8Bk available.
+The Code- Samples can be found on GitHub at https://github.com/ironcev-talks/entity-framework-core-hidden-gems./</description>
     </item>
     
     <item>

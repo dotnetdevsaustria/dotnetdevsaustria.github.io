@@ -6,7 +6,7 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2020 00:00:00 +0200</lastBuildDate>
     
         <atom:link href="https://dotnetdevs.at/index.xml" rel="self" type="application/rss+xml" />
     
@@ -198,6 +198,19 @@ Im Folgenden erklären wir, was Cookies sind und warum Sie genutzt werden, damit
     &lt;img src=&#34;https://dotnetdevs.at/images/sponsors/tietoevry.jpg&#34; width=&#34;300px&#34;/&gt; &lt;/a&gt;
 &lt;/figure&gt;
 
+</description>
+      
+    </item>
+    
+    <item>
+      <title>EF Core Hidden gems von Igor Rončević</title>
+      <link>https://dotnetdevs.at/posts/ef-core-hidden-gems-von-igor-ron%C4%8Devi%C4%87/</link>
+      <pubDate>Mon, 20 Jul 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/posts/ef-core-hidden-gems-von-igor-ron%C4%8Devi%C4%87/</guid>
+      
+        <description>&lt;p&gt;Das Recording vom Talk &amp;ldquo;EF Core Hidden gems&amp;rdquo; von Igor Rončević ist jetzt auf YouTube unter &lt;a href=&#34;https://www.youtube.com/watch?v=rjwou1Nw8Bk&#34;&gt;https://www.youtube.com/watch?v=rjwou1Nw8Bk&lt;/a&gt; verfügbar.&lt;/p&gt;
+&lt;p&gt;Die Code- Samples sind auf GitHub unter &lt;a href=&#34;https://github.com/ironcev-talks/entity-framework-core-hidden-gems&#34;&gt;https://github.com/ironcev-talks/entity-framework-core-hidden-gems&lt;/a&gt; zu finden.&lt;/p&gt;
 </description>
       
     </item>
