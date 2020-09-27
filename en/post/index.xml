@@ -6,7 +6,7 @@
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 20 Jul 2020 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 27 Sep 2020 00:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://dotnetdevs.at/en/post/index.xml" rel="self" type="application/rss+xml" />
     
@@ -20,7 +20,18 @@
       <description>The DotNetDevs.at is an association, which activities are not about gaining profit, it&amp;rsquo;s purpose is to spread knowledge and experience about the usage of .NET technologies.
 Our goals are:
  make it easier for new participants to find existing communities offer existing members more choice promote the exchange between the different communities  We are thanking our sponsors:
-  </description>
+    </description>
+    </item>
+    
+    <item>
+      <title>Real-Time Serverless Apps with .NET, Azure Functions and Azure SignalR by Rainer Stropek</title>
+      <link>https://dotnetdevs.at/en/posts/real-time-serverless-apps-with-.net-azure-functions-and-azure-signalr-by-rainer-stropek/</link>
+      <pubDate>Sun, 27 Sep 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/posts/real-time-serverless-apps-with-.net-azure-functions-and-azure-signalr-by-rainer-stropek/</guid>
+      <description>The recording of the talk &amp;ldquo;Real-Time Serverless Apps with .NET, Azure Functions and Azure SignalR&amp;rdquo; by Rainer Stropek is now on YouTube at https://youtu.be/TvLABG6Cl3Y available.
+Rainers recording is available here.
+The Code- Samples can be found on GitHub at https://github.com/rstropek/Samples/tree/master/AsyncBlazor./</description>
     </item>
     
     <item>

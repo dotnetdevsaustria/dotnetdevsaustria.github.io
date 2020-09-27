@@ -6,7 +6,7 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 20 Jul 2020 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 27 Sep 2020 00:00:00 +0200</lastBuildDate>
     
         <atom:link href="https://dotnetdevs.at/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -26,10 +26,28 @@
 &lt;li&gt;promote the exchange between the different communities&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;We are thanking our sponsors:&lt;/p&gt;
-&lt;figure&gt;&lt;a href=&#34;https://www.tieto.at&#34; target=&#34;_blank&#34;&gt;
+&lt;p&gt;&lt;figure&gt;&lt;a href=&#34;https://www.tieto.at&#34; target=&#34;_blank&#34;&gt;
     &lt;img src=&#34;https://dotnetdevs.at/images/sponsors/tietoevry.jpg&#34; width=&#34;300px&#34;/&gt; &lt;/a&gt;
 &lt;/figure&gt;
 
+&lt;figure&gt;&lt;a href=&#34;https://www.rubicon.eu&#34; target=&#34;_blank&#34;&gt;
+    &lt;img src=&#34;https://dotnetdevs.at/images/sponsors/rubicon.svg&#34; width=&#34;300px&#34;/&gt; &lt;/a&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Real-Time Serverless Apps with .NET, Azure Functions and Azure SignalR by Rainer Stropek</title>
+      <link>https://dotnetdevs.at/en/posts/real-time-serverless-apps-with-.net-azure-functions-and-azure-signalr-by-rainer-stropek/</link>
+      <pubDate>Sun, 27 Sep 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/posts/real-time-serverless-apps-with-.net-azure-functions-and-azure-signalr-by-rainer-stropek/</guid>
+      
+        <description>&lt;p&gt;The recording of the talk &amp;ldquo;Real-Time Serverless Apps with .NET, Azure Functions and Azure SignalR&amp;rdquo; by Rainer Stropek is now on YouTube at &lt;a href=&#34;https://youtu.be/TvLABG6Cl3Y&#34;&gt;https://youtu.be/TvLABG6Cl3Y&lt;/a&gt; available.&lt;br&gt;
+Rainers recording is available &lt;a href=&#34;https://www.youtube.com/watch?v=h-l8uogXFvg&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The Code- Samples can be found on GitHub at &lt;a href=&#34;https://github.com/rstropek/Samples/tree/master/AsyncBlazor&#34;&gt;https://github.com/rstropek/Samples/tree/master/AsyncBlazor&lt;/a&gt;./&lt;/p&gt;
 </description>
       
     </item>

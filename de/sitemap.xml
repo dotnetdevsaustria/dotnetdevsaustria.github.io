@@ -18,16 +18,21 @@
   
   <url>
     <loc>https://dotnetdevs.at/</loc>
-    <lastmod>2020-07-20T00:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dotnetdevs.at/posts/ef-core-hidden-gems-von-igor-ron%C4%8Devi%C4%87/</loc>
-    <lastmod>2020-07-20T00:00:00+02:00</lastmod>
+    <lastmod>2020-09-27T00:00:00+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://dotnetdevs.at/post/</loc>
+    <lastmod>2020-09-27T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dotnetdevs.at/posts/real-time-serverless-apps-with-.net-azure-functions-and-azure-signalr-von-rainer-stropek/</loc>
+    <lastmod>2020-09-27T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dotnetdevs.at/posts/ef-core-hidden-gems-von-igor-ron%C4%8Devi%C4%87/</loc>
     <lastmod>2020-07-20T00:00:00+02:00</lastmod>
   </url>
   
