@@ -6,7 +6,7 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Sun, 27 Sep 2020 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2020 00:00:00 +0200</lastBuildDate>
     
         <atom:link href="https://dotnetdevs.at/index.xml" rel="self" type="application/rss+xml" />
     
@@ -202,6 +202,100 @@ Im Folgenden erklären wir, was Cookies sind und warum Sie genutzt werden, damit
     &lt;img src=&#34;https://dotnetdevs.at/images/sponsors/rubicon.svg&#34; width=&#34;300px&#34;/&gt; &lt;/a&gt;
 &lt;/figure&gt;
 &lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Show and tell of Visual Studio &amp; Visual Studio Code extensions hidden gems</title>
+      <link>https://dotnetdevs.at/posts/show-and-tell-of-visual-studio-visual-studio-code-extensions-hidden-gems/</link>
+      <pubDate>Wed, 30 Sep 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/posts/show-and-tell-of-visual-studio-visual-studio-code-extensions-hidden-gems/</guid>
+      
+        <description>&lt;h2 id=&#34;vs-extensions&#34;&gt;VS Extensions&lt;/h2&gt;
+&lt;h3 id=&#34;resharper&#34;&gt;Resharper&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=JetBrains.ReSharper&#34;&gt;https://marketplace.visualstudio.com/items?itemName=JetBrains.ReSharper&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;tweaks&#34;&gt;Tweaks&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MadsKristensen.Tweaks&#34;&gt;https://marketplace.visualstudio.com/items?itemName=MadsKristensen.Tweaks&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Presentation Mode !!!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;productivity-power-tools-20172019&#34;&gt;Productivity Power Tools 2017/2019&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.ProductivityPowerPack2017&#34;&gt;https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.ProductivityPowerPack2017&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Extensionpack which combines a lot of extensions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix Mixed Tabs&lt;/li&gt;
+&lt;li&gt;Shrink Emtpy Lines (negativ)&lt;/li&gt;
+&lt;li&gt;PowerCommands&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;markdown-editor&#34;&gt;Markdown Editor&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor&#34;&gt;https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Markdown Syntax Highlighting with Preview&lt;/p&gt;
+&lt;h3 id=&#34;add-new-file&#34;&gt;Add New File&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MadsKristensen.AddNewFile&#34;&gt;https://marketplace.visualstudio.com/items?itemName=MadsKristensen.AddNewFile&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Add files starting with a Dot!!&lt;/p&gt;
+&lt;h3 id=&#34;vscoloroutput&#34;&gt;VSColorOutput&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MikeWard-AnnArbor.VSColorOutput&#34;&gt;https://marketplace.visualstudio.com/items?itemName=MikeWard-AnnArbor.VSColorOutput&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Make your output pane colorful!&lt;/p&gt;
+&lt;h3 id=&#34;net-portability-analyzer&#34;&gt;.NET Portability Analyzer&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer&#34;&gt;https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If you still have to port .NET Framework code to .NET Core&lt;/p&gt;
+&lt;h3 id=&#34;open-commandline&#34;&gt;Open Commandline&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MadsKristensen.OpenCommandLine&#34;&gt;https://marketplace.visualstudio.com/items?itemName=MadsKristensen.OpenCommandLine&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;open-vs-code&#34;&gt;Open VS Code&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MadsKristensen.OpeninVisualStudioCode&#34;&gt;https://marketplace.visualstudio.com/items?itemName=MadsKristensen.OpeninVisualStudioCode&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;wakatime&#34;&gt;WakaTime&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=WakaTime.WakaTime&#34;&gt;https://marketplace.visualstudio.com/items?itemName=WakaTime.WakaTime&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;See how long you are working on different projects&lt;/p&gt;
+&lt;h3 id=&#34;sharpen---user-submitted&#34;&gt;Sharpen - User submitted&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ironcev.sharpen&#34;&gt;https://marketplace.visualstudio.com/items?itemName=ironcev.sharpen&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Code analyzer um neue C# Features zu verwenden&lt;/p&gt;
+&lt;h3 id=&#34;license-header-manager---user-submitted&#34;&gt;License Header Manager - User submitted&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=StefanWenig.LicenseHeaderManager&#34;&gt;https://marketplace.visualstudio.com/items?itemName=StefanWenig.LicenseHeaderManager&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Managed die Lizenz Header für Projekt- Files&lt;/p&gt;
+&lt;h3 id=&#34;git-diff-margin---user-submitted&#34;&gt;Git Diff Margin - User submitted&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=LaurentKempe.GitDiffMargin&#34;&gt;https://marketplace.visualstudio.com/items?itemName=LaurentKempe.GitDiffMargin&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Git Diff Margin displays live Git changes of the currently edited file on Visual Studio margin and scroll bar.&lt;/p&gt;
+&lt;h3 id=&#34;vsvim---user-submitted&#34;&gt;VsVim - User submitted&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=JaredParMSFT.VsVim&#34;&gt;https://marketplace.visualstudio.com/items?itemName=JaredParMSFT.VsVim&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Vim für Visual Studio&lt;/p&gt;
+&lt;h3 id=&#34;warn-about-todos---user-submitted&#34;&gt;Warn About TODOs - User submitted&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MattLaceyLtd.WarnAboutTODOs&#34;&gt;https://marketplace.visualstudio.com/items?itemName=MattLaceyLtd.WarnAboutTODOs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;TODOs werden als Warnung angezeigt&lt;/p&gt;
+&lt;h3 id=&#34;collapse-comments---user-submitted&#34;&gt;Collapse Comments - User submitted&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MattLaceyLtd.CollapseComments&#34;&gt;https://marketplace.visualstudio.com/items?itemName=MattLaceyLtd.CollapseComments&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;string-resource-visualizer---user-submitted&#34;&gt;String Resource Visualizer - User submitted&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MattLaceyLtd.StringResourceVisualizer&#34;&gt;https://marketplace.visualstudio.com/items?itemName=MattLaceyLtd.StringResourceVisualizer&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Zeigt die Werte aus den resx- Files im Editor an&lt;/p&gt;
+&lt;h2 id=&#34;vs-code-extensions&#34;&gt;VS Code Extensions&lt;/h2&gt;
+&lt;h3 id=&#34;remote---wsl&#34;&gt;Remote - WSL&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl&#34;&gt;https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Remote Debugging/Working mit WSL&lt;/p&gt;
+&lt;h3 id=&#34;remote---containers&#34;&gt;Remote - Containers&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers&#34;&gt;https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Remote Debugging/Working mit Docker Container&lt;/p&gt;
+&lt;h3 id=&#34;markdownlint&#34;&gt;markdownlint&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint&#34;&gt;https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Linter für Markdown&lt;/p&gt;
+&lt;h3 id=&#34;c&#34;&gt;C#&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp&#34;&gt;https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;C# Support&lt;/p&gt;
+&lt;h3 id=&#34;docker&#34;&gt;Docker&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker&#34;&gt;https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;live-share&#34;&gt;Live Share&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare&#34;&gt;https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;sql-server-mssql&#34;&gt;SQL Server (mssql)&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql&#34;&gt;https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;azure-account&#34;&gt;Azure Account&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-vscode.azure-account&#34;&gt;https://marketplace.visualstudio.com/items?itemName=ms-vscode.azure-account&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;editorconfig-for-vs-code&#34;&gt;EditorConfig for VS Code&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig&#34;&gt;https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;prettier---code-formatter&#34;&gt;Prettier - Code formatter&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode&#34;&gt;https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;wakatime-1&#34;&gt;WakaTime&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=WakaTime.vscode-wakatime&#34;&gt;https://marketplace.visualstudio.com/items?itemName=WakaTime.vscode-wakatime&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;See how long you are working on different projects&lt;/p&gt;
 </description>
       
     </item>
@@ -501,30 +595,6 @@ Teilnehmer an unseren Events sind vor allem .NET EntwicklerInnen von Junior bis 
 &lt;ul&gt;
 &lt;li&gt;1000€&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Team</title>
-      <link>https://dotnetdevs.at/team/</link>
-      <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
-      
-      <guid>https://dotnetdevs.at/team/</guid>
-      
-        <description>&lt;p&gt;Diese Personen engagieren sich, die .NET Community in Österreich zusammenzubringen und zu wachsen.&lt;br&gt;
-Wenn du uns dabei helfen möchtest, melde dich bei uns unter &lt;a href=&#34;mailto:team@dotnetdevs.at&#34;&gt;mailto:team@dotnetdevs.at&lt;/a&gt;.&lt;/p&gt;
-&lt;h1 id=&#34;andreas-willich&#34;&gt;Andreas Willich&lt;/h1&gt;
-&lt;p&gt;Obmann des Vereins.
-Organisator von der .NET Community Austria und dem F# |&amp;gt; Vienna Meetup.&lt;/p&gt;
-&lt;h1 id=&#34;martin-ullrich&#34;&gt;Martin Ullrich&lt;/h1&gt;
-&lt;p&gt;Obmann- Stellvertreter des Vereins
-Organisator von der .NET Community Austria.&lt;/p&gt;
-&lt;h1 id=&#34;raoul-holzer&#34;&gt;Raoul Holzer&lt;/h1&gt;
-&lt;p&gt;Kassier des Vereins
-Organisator von der .NET Community Austria.&lt;/p&gt;
-&lt;h1 id=&#34;gregor-beyerle&#34;&gt;Gregor Beyerle&lt;/h1&gt;
-&lt;p&gt;Organisator von dem F# |&amp;gt; Vienna Meetup.&lt;/p&gt;
 </description>
       
     </item>

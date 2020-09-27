@@ -6,7 +6,7 @@
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Sun, 27 Sep 2020 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2020 00:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://dotnetdevs.at/post/index.xml" rel="self" type="application/rss+xml" />
     
@@ -21,6 +21,26 @@
 Unsere Ziele sind:
  neuen TeilnehmerInnen es einfacher zu machen, die bereits bestehenden Communities zu finden bestehenden TeilnehmerInnen mehr Angebot zur Verfügung stellen Förderung des Austausch zwischen den einzelnen Communities  Wir bedanken uns bei unseren Sponsoren:
     </description>
+    </item>
+    
+    <item>
+      <title>Show and tell of Visual Studio &amp; Visual Studio Code extensions hidden gems</title>
+      <link>https://dotnetdevs.at/posts/show-and-tell-of-visual-studio-visual-studio-code-extensions-hidden-gems/</link>
+      <pubDate>Wed, 30 Sep 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/posts/show-and-tell-of-visual-studio-visual-studio-code-extensions-hidden-gems/</guid>
+      <description>VS Extensions Resharper https://marketplace.visualstudio.com/items?itemName=JetBrains.ReSharper
+Tweaks https://marketplace.visualstudio.com/items?itemName=MadsKristensen.Tweaks
+ Presentation Mode !!!  Productivity Power Tools 2017/2019 https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.ProductivityPowerPack2017
+Extensionpack which combines a lot of extensions:
+ Fix Mixed Tabs Shrink Emtpy Lines (negativ) PowerCommands  Markdown Editor https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor
+Markdown Syntax Highlighting with Preview
+Add New File https://marketplace.visualstudio.com/items?itemName=MadsKristensen.AddNewFile
+Add files starting with a Dot!!
+VSColorOutput https://marketplace.visualstudio.com/items?itemName=MikeWard-AnnArbor.VSColorOutput
+Make your output pane colorful!
+.NET Portability Analyzer https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer
+If you still have to port .NET Framework code to .</description>
     </item>
     
     <item>
