@@ -6,7 +6,7 @@
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 27 Sep 2020 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 04 Oct 2020 00:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://dotnetdevs.at/en/post/index.xml" rel="self" type="application/rss+xml" />
     
@@ -21,6 +21,19 @@
 Our goals are:
  make it easier for new participants to find existing communities offer existing members more choice promote the exchange between the different communities  We are thanking our sponsors:
     </description>
+    </item>
+    
+    <item>
+      <title>Show and tell of Visual Studio &amp; Visual Studio Code extensions hidden gems</title>
+      <link>https://dotnetdevs.at/en/posts/show-and-tell-of-visual-studio-visual-studio-code-extensions-hidden-gems/</link>
+      <pubDate>Sun, 04 Oct 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/posts/show-and-tell-of-visual-studio-visual-studio-code-extensions-hidden-gems/</guid>
+      <description>The recording of the talk &amp;ldquo;Show and tell of Visual Studio &amp;amp; Visual Studio Code extensions hidden gems&amp;rdquo; by Martin, Andreas and Raoul is now on YouTube at https://youtu.be/daOE-iWeNm8 available.
+Here is the list of the shown Visual Studio and Visual Studio Code extensions:
+VS Extensions  Resharper Tweaks
+Presentation Mode is back!!! Productivity Power Tools 2017/2019
+Extensionpack with a lot of nice extensions:  Fix Mixed Tabs PowerCommands Shrink Emtpy Lines (negative Effect)   Markdown Editor Add New File</description>
     </item>
     
     <item>

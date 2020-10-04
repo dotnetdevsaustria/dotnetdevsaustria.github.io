@@ -6,7 +6,7 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 27 Sep 2020 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 04 Oct 2020 00:00:00 +0200</lastBuildDate>
     
         <atom:link href="https://dotnetdevs.at/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -34,6 +34,79 @@
     &lt;img src=&#34;https://dotnetdevs.at/images/sponsors/rubicon.svg&#34; width=&#34;300px&#34;/&gt; &lt;/a&gt;
 &lt;/figure&gt;
 &lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Show and tell of Visual Studio &amp; Visual Studio Code extensions hidden gems</title>
+      <link>https://dotnetdevs.at/en/posts/show-and-tell-of-visual-studio-visual-studio-code-extensions-hidden-gems/</link>
+      <pubDate>Sun, 04 Oct 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/posts/show-and-tell-of-visual-studio-visual-studio-code-extensions-hidden-gems/</guid>
+      
+        <description>&lt;p&gt;The recording of the talk &amp;ldquo;Show and tell of Visual Studio &amp;amp; Visual Studio Code extensions hidden gems&amp;rdquo; by Martin, Andreas and Raoul is now on YouTube at &lt;a href=&#34;https://youtu.be/daOE-iWeNm8&#34;&gt;https://youtu.be/daOE-iWeNm8&lt;/a&gt; available.&lt;/p&gt;
+&lt;p&gt;Here is the list of the shown Visual Studio and Visual Studio Code extensions:&lt;/p&gt;
+&lt;h2 id=&#34;vs-extensions&#34;&gt;VS Extensions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=JetBrains.ReSharper&#34;&gt;Resharper&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MadsKristensen.Tweaks&#34;&gt;Tweaks&lt;/a&gt;&lt;br&gt;
+Presentation Mode is back!!!&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.ProductivityPowerPack2017&#34;&gt;Productivity Power Tools 2017/2019&lt;/a&gt;&lt;br&gt;
+Extensionpack with a lot of nice extensions:
+&lt;ul&gt;
+&lt;li&gt;Fix Mixed Tabs&lt;/li&gt;
+&lt;li&gt;PowerCommands&lt;/li&gt;
+&lt;li&gt;Shrink Emtpy Lines (negative Effect)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor&#34;&gt;Markdown Editor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MadsKristensen.AddNewFile&#34;&gt;Add New File&lt;/a&gt;&lt;br&gt;
+Makes it possible to create quickly emtpy files (also with a starting dot)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MikeWard-AnnArbor.VSColorOutput&#34;&gt;VSColorOutput&lt;/a&gt;&lt;br&gt;
+Makes the Output- Pane colorful&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer&#34;&gt;.NET Portability Analyzer&lt;/a&gt;
+In case you have to port .NET Framework project to .NET Core&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MadsKristensen.OpenCommandLine&#34;&gt;Open Commandline&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MadsKristensen.OpeninVisualStudioCode&#34;&gt;Open VS Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=WakaTime.WakaTime&#34;&gt;WakaTime&lt;/a&gt;&lt;br&gt;
+Analytics to see, how long you worked on a project&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ironcev.sharpen&#34;&gt;Sharpen&lt;/a&gt; - Community submitted&lt;br&gt;
+Code analyzer to use new C# features&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=StefanWenig.LicenseHeaderManager&#34;&gt;License Header Manager&lt;/a&gt; - Community submitted
+Managed the Lizenz Header of Project- Files&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=LaurentKempe.GitDiffMargin&#34;&gt;Git Diff Margin&lt;/a&gt; - Community submitted&lt;br&gt;
+Git Diff Margin displays live Git changes of the currently edited file on Visual Studio margin and scroll bar.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=JaredParMSFT.VsVim&#34;&gt;VsVim&lt;/a&gt; - Community submitted
+Vim for Visual Studio&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MattLaceyLtd.WarnAboutTODOs&#34;&gt;Warn About TODOs&lt;/a&gt; - Community submitted&lt;br&gt;
+TODOs are displayed as warnings&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MattLaceyLtd.CollapseComments&#34;&gt;Collapse Comments&lt;/a&gt; - Community submitted&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MattLaceyLtd.StringResourceVisualizer&#34;&gt;String Resource Visualizer&lt;/a&gt; - Community submitted
+Shows the values from the resx- files&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=Flash0Ware.F0-Analyzers-VS&#34;&gt;F0.Analyzers&lt;/a&gt; - Community submitted&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=PaulHarrington.EditorGuidelines&#34;&gt;Editor Guidelines&lt;/a&gt; - Community submitted&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=SonarSource.SonarLintforVisualStudio2019&#34;&gt;SonarLint for Visual Studio 2019&lt;/a&gt; - Community submitted&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=Sameerk.BruteClean&#34;&gt;Brute Clean&lt;/a&gt; - Community submitted&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;vs-code-extensions&#34;&gt;VS Code Extensions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl&#34;&gt;Remote - WSL&lt;/a&gt;&lt;br&gt;
+Remote Debugging/Working with WSL&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers&#34;&gt;Remote - Containers&lt;/a&gt;
+Remote Debugging/Working with  Docker Container&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint&#34;&gt;markdownlint&lt;/a&gt;
+Linter for Markdown&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp&#34;&gt;C#&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker&#34;&gt;Docker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare&#34;&gt;Live Share&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql&#34;&gt;SQL Server (mssql)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-vscode.azure-account&#34;&gt;Azure Account&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig&#34;&gt;EditorConfig for VS Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode&#34;&gt;Prettier - Code formatter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=WakaTime.vscode-wakatime&#34;&gt;WakaTime&lt;/a&gt;&lt;br&gt;
+Analytics to see, how long you worked on a project&lt;/li&gt;
+&lt;/ul&gt;
 </description>
       
     </item>

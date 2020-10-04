@@ -6,7 +6,7 @@
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Wed, 30 Sep 2020 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 04 Oct 2020 00:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://dotnetdevs.at/post/index.xml" rel="self" type="application/rss+xml" />
     
@@ -26,21 +26,14 @@ Unsere Ziele sind:
     <item>
       <title>Show and tell of Visual Studio &amp; Visual Studio Code extensions hidden gems</title>
       <link>https://dotnetdevs.at/posts/show-and-tell-of-visual-studio-visual-studio-code-extensions-hidden-gems/</link>
-      <pubDate>Wed, 30 Sep 2020 00:00:00 +0200</pubDate>
+      <pubDate>Sun, 04 Oct 2020 00:00:00 +0200</pubDate>
       
       <guid>https://dotnetdevs.at/posts/show-and-tell-of-visual-studio-visual-studio-code-extensions-hidden-gems/</guid>
-      <description>VS Extensions Resharper https://marketplace.visualstudio.com/items?itemName=JetBrains.ReSharper
-Tweaks https://marketplace.visualstudio.com/items?itemName=MadsKristensen.Tweaks
- Presentation Mode !!!  Productivity Power Tools 2017/2019 https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.ProductivityPowerPack2017
-Extensionpack which combines a lot of extensions:
- Fix Mixed Tabs Shrink Emtpy Lines (negativ) PowerCommands  Markdown Editor https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor
-Markdown Syntax Highlighting with Preview
-Add New File https://marketplace.visualstudio.com/items?itemName=MadsKristensen.AddNewFile
-Add files starting with a Dot!!
-VSColorOutput https://marketplace.visualstudio.com/items?itemName=MikeWard-AnnArbor.VSColorOutput
-Make your output pane colorful!
-.NET Portability Analyzer https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer
-If you still have to port .NET Framework code to .</description>
+      <description>Das Recording vom Talk &amp;ldquo;Show and tell of Visual Studio &amp;amp; Visual Studio Code extensions hidden gems&amp;rdquo; von Martin, Andreas und Raoul ist jetzt auf YouTube unter https://youtu.be/daOE-iWeNm8 verfügbar.
+Hier ist die Liste der gezeigten Visual Studio und Visual Studio Code Extensions:
+VS Extensions  Resharper Tweaks
+Presentation Mode ist zurück!!! Productivity Power Tools 2017/2019
+Extensionpack mit einer Menge an nützlichen Extensions:  Fix Mixed Tabs PowerCommands Shrink Emtpy Lines (negativer Effect)   Markdown Editor Add New File</description>
     </item>
     
     <item>
