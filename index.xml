@@ -6,7 +6,7 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Sun, 04 Oct 2020 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2020 00:00:00 +0200</lastBuildDate>
     
         <atom:link href="https://dotnetdevs.at/index.xml" rel="self" type="application/rss+xml" />
     
@@ -150,13 +150,13 @@ Im Folgenden erklären wir, was Cookies sind und warum Sie genutzt werden, damit
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;_gat_gtag_UA_&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;gat_gtag_UA&lt;/em&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Ablaufzeit: 1 Minute&lt;/li&gt;
 &lt;li&gt;Verwendung: Wird zum Drosseln der Anforderungsrate verwendet. Wenn Google Analytics über den Google Tag Manager bereitgestellt wird, erhält dieser Cookie den Namen &lt;em&gt;dc_gtm&lt;/em&gt; &lt;!-- raw HTML omitted --&gt;.&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;li&gt;Beispielhafter Wert: 1&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Nähere Informationen zu Nutzungsbedingungen und Datenschutz finden Sie unter &lt;a href=&#34;http://www.google.com/analytics/terms/de.html&#34;&gt;http://www.google.com/analytics/terms/de.html&lt;/a&gt; bzw. unter &lt;a href=&#34;https://support.google.com/analytics/answer/6004245?hl=de&#34;&gt;https://support.google.com/analytics/answer/6004245?hl=de&lt;/a&gt;.&lt;/p&gt;
@@ -202,6 +202,22 @@ Im Folgenden erklären wir, was Cookies sind und warum Sie genutzt werden, damit
     &lt;img src=&#34;https://dotnetdevs.at/images/sponsors/rubicon.svg&#34; width=&#34;300px&#34;/&gt; &lt;/a&gt;
 &lt;/figure&gt;
 &lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>What is The Clean Architecture and how you would build one in .NET?</title>
+      <link>https://dotnetdevs.at/posts/what-is-the-clean-architecture-and-how-you-would-build-one-in-.net/</link>
+      <pubDate>Mon, 26 Oct 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/posts/what-is-the-clean-architecture-and-how-you-would-build-one-in-.net/</guid>
+      
+        <description>&lt;p&gt;Das Recording vom Talk &amp;ldquo;What is The Clean Architecture and how you would build one in .NET?&amp;rdquo; von &lt;a href=&#34;https://twitter.com/ICooper&#34;&gt;Ian Cooper&lt;/a&gt; ist jetzt auf YouTube unter &lt;a href=&#34;https://youtu.be/efD2-GO50io&#34;&gt;https://youtu.be/efD2-GO50io&lt;/a&gt; verfügbar.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Links vom Talk:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Brighter auf GitHub: &lt;a href=&#34;https://github.com/BrighterCommand/Brighter&#34;&gt;https://github.com/BrighterCommand/Brighter&lt;/a&gt;&lt;br&gt;
+Alle Folien von Ian Cooper: &lt;a href=&#34;https://github.com/iancooper/Presentations&#34;&gt;https://github.com/iancooper/Presentations&lt;/a&gt;&lt;br&gt;
+Ian Cooper auf Twitter: &lt;a href=&#34;https://twitter.com/ICooper&#34;&gt;https://twitter.com/ICooper&lt;/a&gt;&lt;/p&gt;
 </description>
       
     </item>
@@ -500,80 +516,6 @@ Falls dich dies interessiert, schau bei einem der Treffen vorbei. Wir sind dort 
       
         <description>&lt;p&gt;Damit wir uns auch außerhalb der Meetups Wissen austauschen können, haben wir einen Slack Channel eingerichtet.&lt;br&gt;
 Einfach anmelden und Hallo sagen: &lt;a href=&#34;https://join.slack.com/t/dotnetdevsaustria/shared_invite/enQtMjcyNTA1NjMxNjg2LTEwYWE0NjY4YTg4YWM5ZmNhMDJkZWY4YjE5YmZjNTY5ZDVkMGVkYzU3ODI1OTA5ODAzMzg3OTkwZWU3ODU3NDk&#34;&gt;Slack Invite Page&lt;/a&gt;&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Sponsoring</title>
-      <link>https://dotnetdevs.at/sponsoring/</link>
-      <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
-      
-      <guid>https://dotnetdevs.at/sponsoring/</guid>
-      
-        <description>&lt;p&gt;Damit wir Meetups und Events organisieren können, brauchen wir Unterstützung. Diese kann rein finanziel, mit Räumlichkeiten, Catering sein oder eine Kombination aus allen.&lt;/p&gt;
-&lt;p&gt;Wir haben deshalb ein paar Pakete zusammengestellt. Diese sind ein Vorschlag.&lt;/p&gt;
-&lt;p&gt;Unsere Meetups finden jeden Monat unter der Woche (Mo - Do) am Abend (ab 18:00) statt.&lt;br&gt;
-Teilnehmer an unseren Events sind vor allem .NET EntwicklerInnen von Junior bis Architekten. Es sind je nach Monat und Thema zwischen 30 und 50 Personen dabei.&lt;/p&gt;
-&lt;p&gt;Warum sollte man uns ünterstützen?&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Man kann es seinen MitarbeiterInnen leichter machen, es zu besuchen und sich fortzubilden&lt;/li&gt;
-&lt;li&gt;Seine Bekanntheit in der .NET EntwicklerInnen Community zu steigern&lt;/li&gt;
-&lt;li&gt;Employer branding&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Wenn du daran interessiert bist uns zu unterstützen, melde dich doch bei &lt;a href=&#34;mailto:team@dotnetdevs.at&#34;&gt;uns&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&#34;sponsor--pakete&#34;&gt;Sponsor- Pakete&lt;/h1&gt;
-&lt;h2 id=&#34;location-sponsoring&#34;&gt;Location Sponsoring&lt;/h2&gt;
-&lt;p&gt;Du bekommst:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Bei der Eröffnung einen Slot für 5 Minuten Sprechzeit.&lt;/li&gt;
-&lt;li&gt;Die Raumgestaltung ist, ist komplett dir überlassen.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Wir bekommen:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Räumlichkeiten&lt;/li&gt;
-&lt;li&gt;Essen und Getränke für die Besucher&lt;/li&gt;
-&lt;li&gt;Internet- Zugang für Streaming (min 10 MBit/s Upload, HTTP/HTTPS &amp;amp; Port 1935 freigegeben)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;location-sponsoring-klein&#34;&gt;Location Sponsoring Klein&lt;/h2&gt;
-&lt;p&gt;Du bekommst:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Die Raumgestaltung ist, ist komplett dir überlassen.&lt;/li&gt;
-&lt;li&gt;Wir präsentieren eine Slide von dir für dich.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Wir bekommen:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Räumlichkeiten&lt;/li&gt;
-&lt;li&gt;Internet- Zugang für Streaming (min 10 MBit/s Upload, HTTP/HTTPS &amp;amp; Port 1935 freigegeben)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;200-sponsoring&#34;&gt;200€ Sponsoring&lt;/h2&gt;
-&lt;p&gt;Du bekommst:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;beim nächsten Meetup kannst du während der Eröffnung bis zu 3 Minuten Spechzeit präsentieren&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Wir bekommen:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;200€&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;100-sponsoring&#34;&gt;100€ Sponsoring&lt;/h2&gt;
-&lt;p&gt;Du bekommst:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;beim nächsten Meetup präsentieren wir für dich bis zu 2 Slides&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Wir bekommen:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;100€&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;1000-sponsoring&#34;&gt;1000€ Sponsoring&lt;/h2&gt;
-&lt;p&gt;Du bekommst:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;dein Firmenlogo auf der Startseite für 12 Monate&lt;/li&gt;
-&lt;li&gt;dein Firmenlogo und Erwähnung in jeder Meetup- Intro für 12 Monate&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Wir bekommen:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;1000€&lt;/li&gt;
-&lt;/ul&gt;
 </description>
       
     </item>

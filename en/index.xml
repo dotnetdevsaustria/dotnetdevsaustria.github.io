@@ -6,7 +6,7 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 04 Oct 2020 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2020 00:00:00 +0200</lastBuildDate>
     
         <atom:link href="https://dotnetdevs.at/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -34,6 +34,22 @@
     &lt;img src=&#34;https://dotnetdevs.at/images/sponsors/rubicon.svg&#34; width=&#34;300px&#34;/&gt; &lt;/a&gt;
 &lt;/figure&gt;
 &lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>What is The Clean Architecture and how you would build one in .NET?</title>
+      <link>https://dotnetdevs.at/en/posts/what-is-the-clean-architecture-and-how-you-would-build-one-in-.net/</link>
+      <pubDate>Mon, 26 Oct 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/posts/what-is-the-clean-architecture-and-how-you-would-build-one-in-.net/</guid>
+      
+        <description>&lt;p&gt;The recording of the talk &amp;ldquo;What is The Clean Architecture and how you would build one in .NET?&amp;rdquo; by &lt;a href=&#34;https://twitter.com/ICooper&#34;&gt;Ian Cooper&lt;/a&gt; is now on YouTube at &lt;a href=&#34;https://youtu.be/efD2-GO50io&#34;&gt;https://youtu.be/efD2-GO50io&lt;/a&gt; available.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Links of the Talk:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Brighter at GitHub: &lt;a href=&#34;https://github.com/BrighterCommand/Brighter&#34;&gt;https://github.com/BrighterCommand/Brighter&lt;/a&gt;&lt;br&gt;
+All Slides from Ian Cooper: &lt;a href=&#34;https://github.com/iancooper/Presentations&#34;&gt;https://github.com/iancooper/Presentations&lt;/a&gt;&lt;br&gt;
+Ian Cooper at Twitter: &lt;a href=&#34;https://twitter.com/ICooper&#34;&gt;https://twitter.com/ICooper&lt;/a&gt;&lt;/p&gt;
 </description>
       
     </item>
@@ -336,18 +352,6 @@ Join and say hello:  &lt;a href=&#34;https://join.slack.com/t/dotnetdevsaustria/
 &lt;h1 id=&#34;martin-ullrich&#34;&gt;Martin Ullrich&lt;/h1&gt;
 &lt;h1 id=&#34;raoul-holzer&#34;&gt;Raoul Holzer&lt;/h1&gt;
 &lt;h1 id=&#34;gregor-beyerle&#34;&gt;Gregor Beyerle&lt;/h1&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>F# Sharp Vienna</title>
-      <link>https://dotnetdevs.at/en/communities/fsharp_vienna/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dotnetdevs.at/en/communities/fsharp_vienna/</guid>
-      
-        <description>&lt;p&gt;asdf&lt;/p&gt;
 </description>
       
     </item>

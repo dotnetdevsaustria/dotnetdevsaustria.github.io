@@ -13,12 +13,17 @@
   
   <url>
     <loc>https://dotnetdevs.at/en/</loc>
-    <lastmod>2020-10-04T00:00:00+02:00</lastmod>
+    <lastmod>2020-10-26T00:00:00+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://dotnetdevs.at/en/post/</loc>
-    <lastmod>2020-10-04T00:00:00+02:00</lastmod>
+    <lastmod>2020-10-26T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dotnetdevs.at/en/posts/what-is-the-clean-architecture-and-how-you-would-build-one-in-.net/</loc>
+    <lastmod>2020-10-26T00:00:00+02:00</lastmod>
   </url>
   
   <url>

@@ -6,11 +6,7 @@
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Sun, 04 Oct 2020 00:00:00 +0200</lastBuildDate>
-    
-	<atom:link href="https://dotnetdevs.at/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 26 Oct 2020 00:00:00 +0200</lastBuildDate><atom:link href="https://dotnetdevs.at/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Willkommen bei den DotNetDevs.at</title>
       <link>https://dotnetdevs.at/posts/willkommen-bei-den-dotnetdevs.at/</link>
@@ -21,6 +17,19 @@
 Unsere Ziele sind:
  neuen TeilnehmerInnen es einfacher zu machen, die bereits bestehenden Communities zu finden bestehenden TeilnehmerInnen mehr Angebot zur Verfügung stellen Förderung des Austausch zwischen den einzelnen Communities  Wir bedanken uns bei unseren Sponsoren:
     </description>
+    </item>
+    
+    <item>
+      <title>What is The Clean Architecture and how you would build one in .NET?</title>
+      <link>https://dotnetdevs.at/posts/what-is-the-clean-architecture-and-how-you-would-build-one-in-.net/</link>
+      <pubDate>Mon, 26 Oct 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/posts/what-is-the-clean-architecture-and-how-you-would-build-one-in-.net/</guid>
+      <description>Das Recording vom Talk &amp;ldquo;What is The Clean Architecture and how you would build one in .NET?&amp;rdquo; von Ian Cooper ist jetzt auf YouTube unter https://youtu.be/efD2-GO50io verfügbar.
+Links vom Talk:
+Brighter auf GitHub: https://github.com/BrighterCommand/Brighter
+Alle Folien von Ian Cooper: https://github.com/iancooper/Presentations
+Ian Cooper auf Twitter: https://twitter.com/ICooper</description>
     </item>
     
     <item>
