@@ -6,7 +6,7 @@
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 26 Oct 2020 00:00:00 +0200</lastBuildDate><atom:link href="https://dotnetdevs.at/en/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Nov 2020 13:46:39 +0100</lastBuildDate><atom:link href="https://dotnetdevs.at/en/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Welcome to the .NET Developers Austria</title>
       <link>https://dotnetdevs.at/en/posts/welcome-to-the-.net-developers-austria/</link>
@@ -16,7 +16,18 @@
       <description>The DotNetDevs.at is an association, which activities are not about gaining profit, it&amp;rsquo;s purpose is to spread knowledge and experience about the usage of .NET technologies.
 Our goals are:
  make it easier for new participants to find existing communities offer existing members more choice promote the exchange between the different communities  We are thanking our sponsors:
-    </description>
+      </description>
+    </item>
+    
+    <item>
+      <title>Microsoft Is a New Sponsor!</title>
+      <link>https://dotnetdevs.at/en/posts/microsoft-is-a-new-sponsor/</link>
+      <pubDate>Mon, 23 Nov 2020 13:46:39 +0100</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/posts/microsoft-is-a-new-sponsor/</guid>
+      <description>We are happy to announce that we have a new Sponsor! Starting with November Microsoft is sponsoring our non- profit- organisation.
+  This helps us to improve our infrastructure and our events for the future.
+Big thanks specially to Christian Schwendtner for making this possible!</description>
     </item>
     
     <item>

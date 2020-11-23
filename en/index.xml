@@ -6,7 +6,7 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 26 Oct 2020 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2020 13:46:39 +0100</lastBuildDate>
     
         <atom:link href="https://dotnetdevs.at/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -33,7 +33,29 @@
 &lt;figure&gt;&lt;a href=&#34;https://www.rubicon.eu&#34; target=&#34;_blank&#34;&gt;
     &lt;img src=&#34;https://dotnetdevs.at/images/sponsors/rubicon.svg&#34; width=&#34;300px&#34;/&gt; &lt;/a&gt;
 &lt;/figure&gt;
+
+&lt;figure&gt;&lt;a href=&#34;https://www.microsoft.at&#34; target=&#34;_blank&#34;&gt;
+    &lt;img src=&#34;https://dotnetdevs.at/images/sponsors/Microsoft.png&#34; width=&#34;300px&#34;/&gt; &lt;/a&gt;
+&lt;/figure&gt;
 &lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Microsoft Is a New Sponsor!</title>
+      <link>https://dotnetdevs.at/en/posts/microsoft-is-a-new-sponsor/</link>
+      <pubDate>Mon, 23 Nov 2020 13:46:39 +0100</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/posts/microsoft-is-a-new-sponsor/</guid>
+      
+        <description>&lt;p&gt;We are happy to announce that we have a new Sponsor! Starting with November Microsoft is sponsoring our non- profit- organisation.&lt;/p&gt;
+&lt;figure&gt;&lt;a href=&#34;https://www.microsoft.at&#34; target=&#34;_blank&#34;&gt;
+    &lt;img src=&#34;https://dotnetdevs.at/images/sponsors/Microsoft.png&#34; width=&#34;300px&#34;/&gt; &lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;This helps us to improve our infrastructure and our events for the future.&lt;/p&gt;
+&lt;p&gt;Big thanks specially to Christian Schwendtner for making this possible!&lt;/p&gt;
 </description>
       
     </item>
@@ -337,21 +359,6 @@ Join and say hello:  &lt;a href=&#34;https://join.slack.com/t/dotnetdevsaustria/
       <guid>https://dotnetdevs.at/en/sponsoring/</guid>
       
         <description>&lt;p&gt;To be translated&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Team</title>
-      <link>https://dotnetdevs.at/en/team/</link>
-      <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
-      
-      <guid>https://dotnetdevs.at/en/team/</guid>
-      
-        <description>&lt;h1 id=&#34;andreas-willich&#34;&gt;Andreas Willich&lt;/h1&gt;
-&lt;h1 id=&#34;martin-ullrich&#34;&gt;Martin Ullrich&lt;/h1&gt;
-&lt;h1 id=&#34;raoul-holzer&#34;&gt;Raoul Holzer&lt;/h1&gt;
-&lt;h1 id=&#34;gregor-beyerle&#34;&gt;Gregor Beyerle&lt;/h1&gt;
 </description>
       
     </item>

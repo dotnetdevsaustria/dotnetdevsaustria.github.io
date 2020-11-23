@@ -6,7 +6,7 @@
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Mon, 26 Oct 2020 00:00:00 +0200</lastBuildDate><atom:link href="https://dotnetdevs.at/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Nov 2020 13:46:39 +0100</lastBuildDate><atom:link href="https://dotnetdevs.at/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Willkommen bei den DotNetDevs.at</title>
       <link>https://dotnetdevs.at/posts/willkommen-bei-den-dotnetdevs.at/</link>
@@ -16,7 +16,18 @@
       <description>Die DotNetDevs.at sind ein Verein, dessen Tätigkeit nicht auf Gewinn gerichtet ist, bezweckt die Verbreitung von Wissen und Erfahrung zur Verwendung auf .NET Technologien basierter Software.
 Unsere Ziele sind:
  neuen TeilnehmerInnen es einfacher zu machen, die bereits bestehenden Communities zu finden bestehenden TeilnehmerInnen mehr Angebot zur Verfügung stellen Förderung des Austausch zwischen den einzelnen Communities  Wir bedanken uns bei unseren Sponsoren:
-    </description>
+      </description>
+    </item>
+    
+    <item>
+      <title>Microsoft ist neuer Sponsor!</title>
+      <link>https://dotnetdevs.at/posts/microsoft-ist-neuer-sponsor/</link>
+      <pubDate>Mon, 23 Nov 2020 13:46:39 +0100</pubDate>
+      
+      <guid>https://dotnetdevs.at/posts/microsoft-ist-neuer-sponsor/</guid>
+      <description>Wir freuen uns, dass wir mitteilen können, das wir einen neuen Sponsor haben! Seit November ist Microsoft einer der Sponsoren des Vereins.
+  Dies hilft uns unsere Infrastruktur und unsere zukünftigen Events zu verbessern.
+Ein großer Dank geht an Christian Schwendtner, der dies möglich gemacht hat!</description>
     </item>
     
     <item>

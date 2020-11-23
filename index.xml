@@ -6,7 +6,7 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Mon, 26 Oct 2020 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2020 13:46:39 +0100</lastBuildDate>
     
         <atom:link href="https://dotnetdevs.at/index.xml" rel="self" type="application/rss+xml" />
     
@@ -201,7 +201,29 @@ Im Folgenden erklären wir, was Cookies sind und warum Sie genutzt werden, damit
 &lt;figure&gt;&lt;a href=&#34;https://www.rubicon.eu&#34; target=&#34;_blank&#34;&gt;
     &lt;img src=&#34;https://dotnetdevs.at/images/sponsors/rubicon.svg&#34; width=&#34;300px&#34;/&gt; &lt;/a&gt;
 &lt;/figure&gt;
+
+&lt;figure&gt;&lt;a href=&#34;https://www.microsoft.at&#34; target=&#34;_blank&#34;&gt;
+    &lt;img src=&#34;https://dotnetdevs.at/images/sponsors/Microsoft.png&#34; width=&#34;300px&#34;/&gt; &lt;/a&gt;
+&lt;/figure&gt;
 &lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Microsoft ist neuer Sponsor!</title>
+      <link>https://dotnetdevs.at/posts/microsoft-ist-neuer-sponsor/</link>
+      <pubDate>Mon, 23 Nov 2020 13:46:39 +0100</pubDate>
+      
+      <guid>https://dotnetdevs.at/posts/microsoft-ist-neuer-sponsor/</guid>
+      
+        <description>&lt;p&gt;Wir freuen uns, dass wir mitteilen können, das wir einen neuen Sponsor haben! Seit November ist Microsoft einer der Sponsoren des Vereins.&lt;/p&gt;
+&lt;figure&gt;&lt;a href=&#34;https://www.microsoft.at&#34; target=&#34;_blank&#34;&gt;
+    &lt;img src=&#34;https://dotnetdevs.at/images/sponsors/Microsoft.png&#34; width=&#34;300px&#34;/&gt; &lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Dies hilft uns unsere Infrastruktur und unsere zukünftigen Events zu verbessern.&lt;/p&gt;
+&lt;p&gt;Ein großer Dank geht an Christian Schwendtner, der dies möglich gemacht hat!&lt;/p&gt;
 </description>
       
     </item>
@@ -503,19 +525,6 @@ Die behandelten Themen gehen von Grundlagen wie C# Features und MSBuild, zu .NET
 Falls dich dies interessiert, schau bei einem der Treffen vorbei. Wir sind dort alle Anfänger und lernen gemeinsam diese Art zu programmieren.&lt;/p&gt;
 &lt;p&gt;Meetup Seite: &lt;a href=&#34;https://www.meetup.com/FSharp-Vienna/&#34;&gt;https://www.meetup.com/FSharp-Vienna/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Wenn du noch eine Gruppe kennst, bitte melde dich unter &lt;a href=&#34;mailto:team@dotnetdevs.at&#34;&gt;mailto:team@dotnetdevs.at&lt;/a&gt;.&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Slack</title>
-      <link>https://dotnetdevs.at/slack/</link>
-      <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
-      
-      <guid>https://dotnetdevs.at/slack/</guid>
-      
-        <description>&lt;p&gt;Damit wir uns auch außerhalb der Meetups Wissen austauschen können, haben wir einen Slack Channel eingerichtet.&lt;br&gt;
-Einfach anmelden und Hallo sagen: &lt;a href=&#34;https://join.slack.com/t/dotnetdevsaustria/shared_invite/enQtMjcyNTA1NjMxNjg2LTEwYWE0NjY4YTg4YWM5ZmNhMDJkZWY4YjE5YmZjNTY5ZDVkMGVkYzU3ODI1OTA5ODAzMzg3OTkwZWU3ODU3NDk&#34;&gt;Slack Invite Page&lt;/a&gt;&lt;/p&gt;
 </description>
       
     </item>
