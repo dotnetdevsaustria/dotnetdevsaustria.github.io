@@ -17,3 +17,4 @@ We are thanking our sponsors:
 
 {{< figure src="/images/sponsors/tietoevry.jpg" width="300px" link="https://www.tieto.at" target="_blank">}}
 {{< figure src="/images/sponsors/rubicon.svg" width="300px" link="https://www.rubicon.eu" target="_blank">}}
+{{< figure src="/images/sponsors/Microsoft.png" width="300px" link="https://www.microsoft.at" target="_blank">}}
