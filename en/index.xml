@@ -6,7 +6,7 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Nov 2020 13:46:39 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 26 Feb 2021 08:30:39 +0100</lastBuildDate>
     
         <atom:link href="https://dotnetdevs.at/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -34,14 +34,30 @@
     &lt;img src=&#34;https://dotnetdevs.at/images/sponsors/rubicon.svg&#34; width=&#34;300px&#34;/&gt; &lt;/a&gt;
 &lt;/figure&gt;
 
-&lt;figure&gt;&lt;a href=&#34;https://www.microsoft.at&#34; target=&#34;_blank&#34;&gt;
-    &lt;img src=&#34;https://dotnetdevs.at/images/sponsors/Microsoft.png&#34; width=&#34;300px&#34;/&gt; &lt;/a&gt;
-&lt;/figure&gt;
-
 &lt;figure&gt;&lt;a href=&#34;https://www.ogs.at&#34; target=&#34;_blank&#34;&gt;
     &lt;img src=&#34;https://dotnetdevs.at/images/sponsors/ogs.png&#34; width=&#34;300px&#34;/&gt; &lt;/a&gt;
 &lt;/figure&gt;
 &lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>OGS is new Sponsor &amp; Videorecordings</title>
+      <link>https://dotnetdevs.at/en/posts/ogs-is-new-sponsor-videorecordings/</link>
+      <pubDate>Fri, 26 Feb 2021 08:30:39 +0100</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/posts/ogs-is-new-sponsor-videorecordings/</guid>
+      
+        <description>&lt;p&gt;If you attended one of the last meetups, you already noticed it.&lt;br&gt;
+Since January we have &lt;a href=&#34;https://ogs.at&#34;&gt;OGS Software &amp;amp; Services&lt;/a&gt; as sponsor.&lt;/p&gt;
+&lt;p&gt;This helps us to improve our infrastructure and our events for the future.&lt;/p&gt;
+&lt;p&gt;The recordings of our lasts meetups are now online:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/eWsHuvlTzRM&#34;&gt;Introduction to Open Source Uno Platform for cross-platform development&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/1xr7YAviACY&#34;&gt;The hidden gems of the .NET ecosystem&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Have fun with watching them!&lt;/p&gt;
 </description>
       
     </item>
@@ -351,18 +367,6 @@ If you are the person, who is organizing them, please send us a notice to  &lt;a
       
         <description>&lt;p&gt;So that we can also exchange knowledge outside of the meetups, we created a Slack channgel.&lt;br&gt;
 Join and say hello:  &lt;a href=&#34;https://join.slack.com/t/dotnetdevsaustria/shared_invite/enQtMjcyNTA1NjMxNjg2LTEwYWE0NjY4YTg4YWM5ZmNhMDJkZWY4YjE5YmZjNTY5ZDVkMGVkYzU3ODI1OTA5ODAzMzg3OTkwZWU3ODU3NDk&#34;&gt;Slack Invite Page&lt;/a&gt;&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Sponsoring</title>
-      <link>https://dotnetdevs.at/en/sponsoring/</link>
-      <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
-      
-      <guid>https://dotnetdevs.at/en/sponsoring/</guid>
-      
-        <description>&lt;p&gt;To be translated&lt;/p&gt;
 </description>
       
     </item>

@@ -6,7 +6,7 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Mon, 23 Nov 2020 13:46:39 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 26 Feb 2021 08:30:39 +0100</lastBuildDate>
     
         <atom:link href="https://dotnetdevs.at/index.xml" rel="self" type="application/rss+xml" />
     
@@ -202,14 +202,29 @@ Im Folgenden erklären wir, was Cookies sind und warum Sie genutzt werden, damit
     &lt;img src=&#34;https://dotnetdevs.at/images/sponsors/rubicon.svg&#34; width=&#34;300px&#34;/&gt; &lt;/a&gt;
 &lt;/figure&gt;
 
-&lt;figure&gt;&lt;a href=&#34;https://www.microsoft.at&#34; target=&#34;_blank&#34;&gt;
-    &lt;img src=&#34;https://dotnetdevs.at/images/sponsors/Microsoft.png&#34; width=&#34;300px&#34;/&gt; &lt;/a&gt;
-&lt;/figure&gt;
-
 &lt;figure&gt;&lt;a href=&#34;https://www.ogs.at&#34; target=&#34;_blank&#34;&gt;
     &lt;img src=&#34;https://dotnetdevs.at/images/sponsors/ogs.png&#34; width=&#34;300px&#34;/&gt; &lt;/a&gt;
 &lt;/figure&gt;
 &lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>OGS ist neuer Sponsor &amp; Videorecordings</title>
+      <link>https://dotnetdevs.at/posts/ogs-ist-neuer-sponsor-videorecordings/</link>
+      <pubDate>Fri, 26 Feb 2021 08:30:39 +0100</pubDate>
+      
+      <guid>https://dotnetdevs.at/posts/ogs-ist-neuer-sponsor-videorecordings/</guid>
+      
+        <description>&lt;p&gt;Wenn ihr bei einem Meetup wart, habt ihr es schon mitbekommen. Wir haben seit Jänner &lt;a href=&#34;https://ogs.at&#34;&gt;OGS Software &amp;amp; Services&lt;/a&gt; als Sponsor.&lt;/p&gt;
+&lt;p&gt;Dies hilft uns weiter um zukünftige Events noch besser zu machen. Vielen Dank an OGS!&lt;/p&gt;
+&lt;p&gt;Die Recordings unserer letzten beiden Meetups sind jetzt auch online:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/eWsHuvlTzRM&#34;&gt;Introduction to Open Source Uno Platform for cross-platform development&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/1xr7YAviACY&#34;&gt;The hidden gems of the .NET ecosystem&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Viel Spaß beim Anschauen!&lt;/p&gt;
 </description>
       
     </item>
@@ -507,28 +522,6 @@ Wenn du die Person bist, die in Tirol Treffen organisiert, bitte melde dich bei 
       
         <description>&lt;p&gt;Wir wissen im Moment leider von keinen Meetups in Vorarlberg.&lt;br&gt;
 Wenn du die Person bist, die in Vorarlberg Treffen organisiert, bitte melde dich bei uns unter &lt;a href=&#34;mailto:team@dotnetdevs.at&#34;&gt;mailto:team@dotnetdevs.at&lt;/a&gt;.&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Wien</title>
-      <link>https://dotnetdevs.at/bundesland/wien/</link>
-      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
-      
-      <guid>https://dotnetdevs.at/bundesland/wien/</guid>
-      
-        <description>&lt;p&gt;In Wien gibt es mehrere Gruppen die sich mit .NET Themen beschäftigen.&lt;/p&gt;
-&lt;h1 id=&#34;net-community-austria&#34;&gt;.NET Community Austria&lt;/h1&gt;
-&lt;p&gt;Dieses Meetup betrifft sich mit allen Themen rund um .NET und den Programmiersprachen dafür.&lt;br&gt;
-Die behandelten Themen gehen von Grundlagen wie C# Features und MSBuild, zu .NET Core bis zu PWAs.&lt;/p&gt;
-&lt;p&gt;Jeder der etwas über .NET wissen will, ist willkommen. Es gibt kein benötigtes Mindestwissen!&lt;/p&gt;
-&lt;p&gt;Meetup Seite: &lt;a href=&#34;https://www.meetup.com/dotnet-austria/&#34;&gt;https://www.meetup.com/dotnet-austria/&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&#34;f--vienna&#34;&gt;F# |&amp;gt; Vienna&lt;/h1&gt;
-&lt;p&gt;In diese Meetup treffen sich Leute, die funktional auf der .NET Platform entwicklen wollen.&lt;br&gt;
-Falls dich dies interessiert, schau bei einem der Treffen vorbei. Wir sind dort alle Anfänger und lernen gemeinsam diese Art zu programmieren.&lt;/p&gt;
-&lt;p&gt;Meetup Seite: &lt;a href=&#34;https://www.meetup.com/FSharp-Vienna/&#34;&gt;https://www.meetup.com/FSharp-Vienna/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Wenn du noch eine Gruppe kennst, bitte melde dich unter &lt;a href=&#34;mailto:team@dotnetdevs.at&#34;&gt;mailto:team@dotnetdevs.at&lt;/a&gt;.&lt;/p&gt;
 </description>
       
     </item>

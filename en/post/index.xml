@@ -6,7 +6,7 @@
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Nov 2020 13:46:39 +0100</lastBuildDate><atom:link href="https://dotnetdevs.at/en/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Feb 2021 08:30:39 +0100</lastBuildDate><atom:link href="https://dotnetdevs.at/en/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Welcome to the .NET Developers Austria</title>
       <link>https://dotnetdevs.at/en/posts/welcome-to-the-.net-developers-austria/</link>
@@ -16,7 +16,20 @@
       <description>The DotNetDevs.at is an association, which activities are not about gaining profit, it&amp;rsquo;s purpose is to spread knowledge and experience about the usage of .NET technologies.
 Our goals are:
  make it easier for new participants to find existing communities offer existing members more choice promote the exchange between the different communities  We are thanking our sponsors:
-        </description>
+      </description>
+    </item>
+    
+    <item>
+      <title>OGS is new Sponsor &amp; Videorecordings</title>
+      <link>https://dotnetdevs.at/en/posts/ogs-is-new-sponsor-videorecordings/</link>
+      <pubDate>Fri, 26 Feb 2021 08:30:39 +0100</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/posts/ogs-is-new-sponsor-videorecordings/</guid>
+      <description>If you attended one of the last meetups, you already noticed it.
+Since January we have OGS Software &amp;amp; Services as sponsor.
+This helps us to improve our infrastructure and our events for the future.
+The recordings of our lasts meetups are now online:
+ Introduction to Open Source Uno Platform for cross-platform development The hidden gems of the .NET ecosystem  Have fun with watching them!</description>
     </item>
     
     <item>
