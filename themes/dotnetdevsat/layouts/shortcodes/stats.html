@@ -1,0 +1,30 @@
+
+<div class="divTable">
+  <div class="divTableBody">
+    <div class="divTableRow">
+    <div class="divTableCell">Event</div>
+    <div class="divTableCell">Title</div>
+    <div class="divTableCell">Registrations</div>
+    <div class="divTableCell">Participants</div>
+    <div class="divTableCell">Showrate</div>
+    </div>
+
+
+{{ range $.Site.Data.meetups }}
+
+  {{ $showrate := mul (div .Participants .Registrations) 100 }}
+
+  <div class="divTableRow">
+    <div class="divTableCell">{{ .Name }}</div>
+    <div class="divTableCell"><a href={{ .Link }}>{{ .Title }}</a></div>
+    <div class="divTableCell">{{ .Registrations }}</div>
+    <div class="divTableCell">{{ .Participants }}</div>
+    <div class="divTableCell">{{ printf "%.2f %%" $showrate }}</div>
+  </div>
+
+{{ end }}
+
+
+  </div>
+</div>
+  <!-- DivTable.com -->

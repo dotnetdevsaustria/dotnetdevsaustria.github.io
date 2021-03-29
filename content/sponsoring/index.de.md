@@ -18,9 +18,9 @@ Warum sollte man uns ünterstützen?
 
 Wenn du daran interessiert bist uns zu unterstützen, melde dich doch bei [uns](mailto:team@dotnetdevs.at)
 
-# Sponsor- Pakete
+## Sponsor- Pakete
 
-## Location Sponsoring
+### Location Sponsoring
 
 Du bekommst:
 
@@ -33,7 +33,7 @@ Wir bekommen:
 - Essen und Getränke für die Besucher
 - Internet- Zugang für Streaming (min 10 MBit/s Upload, HTTP/HTTPS & Port 1935 freigegeben)
 
-## Location Sponsoring Klein
+### Location Sponsoring Klein
 
 Du bekommst:
 
@@ -45,7 +45,7 @@ Wir bekommen:
 - Räumlichkeiten
 - Internet- Zugang für Streaming (min 10 MBit/s Upload, HTTP/HTTPS & Port 1935 freigegeben)
 
-## 200€ Sponsoring
+### 200€ Sponsoring
 
 Du bekommst:
 
@@ -55,7 +55,7 @@ Wir bekommen:
 
 - 200€
 
-## 100€ Sponsoring
+### 100€ Sponsoring
 
 Du bekommst:
 
@@ -65,7 +65,7 @@ Wir bekommen:
 
 - 100€
 
-## 1000€ Sponsoring
+### 1000€ Sponsoring
 
 Du bekommst:
 
@@ -75,3 +75,7 @@ Du bekommst:
 Wir bekommen:
 
 - 1000€
+
+## Statistiken
+
+{{< stats >}}
