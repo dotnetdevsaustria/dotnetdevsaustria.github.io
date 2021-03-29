@@ -1,0 +1,14 @@
+- id: blogpost_begin
+  translation: Das Recording vom Talk
+
+- id: blogpost_with
+  translation: von
+
+- id: blogpost_youtube
+  translation: ist jetzt auf YouTube unter
+
+- id: blogpost_end
+  translation: " verfügbar."
+
+- id: additional_links
+  translation: Weitere Links

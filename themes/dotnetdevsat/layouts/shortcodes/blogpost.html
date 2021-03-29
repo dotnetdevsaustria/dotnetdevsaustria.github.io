@@ -1,0 +1,10 @@
+
+{{ $data := .Get "data" }}
+
+{{ $details := index site.Data.meetups $data }}
+
+{{ i18n "blogpost_begin"}} "{{ $details.Title }}" {{ i18n "blogpost_with"}} {{ $details.Speaker }} {{i18n "blogpost_youtube"}} <a href={{ $details.RecordingLink }}>{{ $details.RecordingLink }}</a>{{i18n "blogpost_end"}}
+
+<p>{{ i18n "additional_links"}}:</p>
+
+Meetup.com: <a href={{ $details.Link}}>{{ $details.Link}}</a>

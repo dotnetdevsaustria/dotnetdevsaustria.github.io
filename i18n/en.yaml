@@ -1,0 +1,14 @@
+- id: blogpost_begin
+  translation: The recording of the talk
+
+- id: blogpost_with
+  translation: from
+
+- id: blogpost_youtube
+  translation: is now available on YouTube at
+
+- id: blogpost_end
+  translation: .  
+
+- id: additional_links
+  translation: Additional Links
