@@ -194,17 +194,44 @@ Im Folgenden erklären wir, was Cookies sind und warum Sie genutzt werden, damit
 &lt;li&gt;Förderung des Austausch zwischen den einzelnen Communities&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Wir bedanken uns bei unseren Sponsoren:&lt;/p&gt;
-&lt;p&gt;&lt;figure&gt;&lt;a href=&#34;https://www.tieto.at&#34; target=&#34;_blank&#34;&gt;
-    &lt;img src=&#34;https://dotnetdevs.at/images/sponsors/tietoevry.jpg&#34; width=&#34;300px&#34;/&gt; &lt;/a&gt;
-&lt;/figure&gt;
+&lt;p&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://dotnetdevs.at/css/hugo-easy-gallery.css&#34; /&gt;
+&lt;div class=&#34;box&#34;&gt;
+&lt;figure  itemprop=&#34;associatedMedia&#34;
+  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; 
+  style=&#34;max-width:300px&#34; &gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://dotnetdevs.at/images/sponsors/tietoevry.jpg&#34; /&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://www.tieto.at&#34; target=&#34;_blank&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
 
-&lt;figure&gt;&lt;a href=&#34;https://www.rubicon.eu&#34; target=&#34;_blank&#34;&gt;
-    &lt;img src=&#34;https://dotnetdevs.at/images/sponsors/rubicon.svg&#34; width=&#34;300px&#34;/&gt; &lt;/a&gt;
-&lt;/figure&gt;
 
-&lt;figure&gt;&lt;a href=&#34;https://www.ogs.at&#34; target=&#34;_blank&#34;&gt;
-    &lt;img src=&#34;https://dotnetdevs.at/images/sponsors/ogs.png&#34; width=&#34;300px&#34;/&gt; &lt;/a&gt;
-&lt;/figure&gt;
+
+&lt;div class=&#34;box&#34;&gt;
+&lt;figure  itemprop=&#34;associatedMedia&#34;
+  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; 
+  style=&#34;max-width:300px&#34; &gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://dotnetdevs.at/images/sponsors/rubicon.svg&#34; /&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://www.rubicon.eu&#34; target=&#34;_blank&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+
+
+&lt;div class=&#34;box&#34;&gt;
+&lt;figure  itemprop=&#34;associatedMedia&#34;
+  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; 
+  style=&#34;max-width:300px&#34; &gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://dotnetdevs.at/images/sponsors/ogs.png&#34; /&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://www.ogs.at&#34; target=&#34;_blank&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
 &lt;/p&gt;
 </description>
       
@@ -237,9 +264,18 @@ Im Folgenden erklären wir, was Cookies sind und warum Sie genutzt werden, damit
       <guid>https://dotnetdevs.at/posts/microsoft-ist-neuer-sponsor/</guid>
       
         <description>&lt;p&gt;Wir freuen uns, dass wir mitteilen können, das wir einen neuen Sponsor haben! Seit November ist Microsoft einer der Sponsoren des Vereins.&lt;/p&gt;
-&lt;figure&gt;&lt;a href=&#34;https://www.microsoft.at&#34; target=&#34;_blank&#34;&gt;
-    &lt;img src=&#34;https://dotnetdevs.at/images/sponsors/Microsoft.png&#34; width=&#34;300px&#34;/&gt; &lt;/a&gt;
-&lt;/figure&gt;
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://dotnetdevs.at/css/hugo-easy-gallery.css&#34; /&gt;
+&lt;div class=&#34;box&#34;&gt;
+&lt;figure  itemprop=&#34;associatedMedia&#34;
+  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; 
+  style=&#34;max-width:300px&#34; &gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://dotnetdevs.at/images/sponsors/Microsoft.png&#34; /&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://www.microsoft.at&#34; target=&#34;_blank&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Dies hilft uns unsere Infrastruktur und unsere zukünftigen Events zu verbessern.&lt;/p&gt;
 &lt;p&gt;Ein großer Dank geht an Christian Schwendtner, der dies möglich gemacht hat!&lt;/p&gt;

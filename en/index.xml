@@ -26,17 +26,44 @@
 &lt;li&gt;promote the exchange between the different communities&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;We are thanking our sponsors:&lt;/p&gt;
-&lt;p&gt;&lt;figure&gt;&lt;a href=&#34;https://www.tieto.at&#34; target=&#34;_blank&#34;&gt;
-    &lt;img src=&#34;https://dotnetdevs.at/images/sponsors/tietoevry.jpg&#34; width=&#34;300px&#34;/&gt; &lt;/a&gt;
-&lt;/figure&gt;
+&lt;p&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://dotnetdevs.at/css/hugo-easy-gallery.css&#34; /&gt;
+&lt;div class=&#34;box&#34;&gt;
+&lt;figure  itemprop=&#34;associatedMedia&#34;
+  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; 
+  style=&#34;max-width:300px&#34; &gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://dotnetdevs.at/images/sponsors/tietoevry.jpg&#34; /&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://www.tieto.at&#34; target=&#34;_blank&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
 
-&lt;figure&gt;&lt;a href=&#34;https://www.rubicon.eu&#34; target=&#34;_blank&#34;&gt;
-    &lt;img src=&#34;https://dotnetdevs.at/images/sponsors/rubicon.svg&#34; width=&#34;300px&#34;/&gt; &lt;/a&gt;
-&lt;/figure&gt;
 
-&lt;figure&gt;&lt;a href=&#34;https://www.ogs.at&#34; target=&#34;_blank&#34;&gt;
-    &lt;img src=&#34;https://dotnetdevs.at/images/sponsors/ogs.png&#34; width=&#34;300px&#34;/&gt; &lt;/a&gt;
-&lt;/figure&gt;
+
+&lt;div class=&#34;box&#34;&gt;
+&lt;figure  itemprop=&#34;associatedMedia&#34;
+  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; 
+  style=&#34;max-width:300px&#34; &gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://dotnetdevs.at/images/sponsors/rubicon.svg&#34; /&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://www.rubicon.eu&#34; target=&#34;_blank&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+
+
+&lt;div class=&#34;box&#34;&gt;
+&lt;figure  itemprop=&#34;associatedMedia&#34;
+  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; 
+  style=&#34;max-width:300px&#34; &gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://dotnetdevs.at/images/sponsors/ogs.png&#34; /&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://www.ogs.at&#34; target=&#34;_blank&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
 &lt;/p&gt;
 </description>
       
@@ -70,9 +97,18 @@ Since January we have &lt;a href=&#34;https://ogs.at&#34;&gt;OGS Software &amp;a
       <guid>https://dotnetdevs.at/en/posts/microsoft-is-a-new-sponsor/</guid>
       
         <description>&lt;p&gt;We are happy to announce that we have a new Sponsor! Starting with November Microsoft is sponsoring our non- profit- organisation.&lt;/p&gt;
-&lt;figure&gt;&lt;a href=&#34;https://www.microsoft.at&#34; target=&#34;_blank&#34;&gt;
-    &lt;img src=&#34;https://dotnetdevs.at/images/sponsors/Microsoft.png&#34; width=&#34;300px&#34;/&gt; &lt;/a&gt;
-&lt;/figure&gt;
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://dotnetdevs.at/css/hugo-easy-gallery.css&#34; /&gt;
+&lt;div class=&#34;box&#34;&gt;
+&lt;figure  itemprop=&#34;associatedMedia&#34;
+  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; 
+  style=&#34;max-width:300px&#34; &gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://dotnetdevs.at/images/sponsors/Microsoft.png&#34; /&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://www.microsoft.at&#34; target=&#34;_blank&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
 
 &lt;p&gt;This helps us to improve our infrastructure and our events for the future.&lt;/p&gt;
 &lt;p&gt;Big thanks specially to Christian Schwendtner for making this possible!&lt;/p&gt;
