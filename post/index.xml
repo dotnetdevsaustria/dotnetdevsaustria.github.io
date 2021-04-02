@@ -6,7 +6,7 @@
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Fri, 26 Feb 2021 08:30:39 +0100</lastBuildDate><atom:link href="https://dotnetdevs.at/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Apr 2021 08:30:39 +0100</lastBuildDate><atom:link href="https://dotnetdevs.at/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Willkommen bei den DotNetDevs.at</title>
       <link>https://dotnetdevs.at/posts/willkommen-bei-den-dotnetdevs.at/</link>
@@ -17,6 +17,16 @@
 Unsere Ziele sind:
  neuen TeilnehmerInnen es einfacher zu machen, die bereits bestehenden Communities zu finden bestehenden TeilnehmerInnen mehr Angebot zur Verfügung stellen Förderung des Austausch zwischen den einzelnen Communities  Wir bedanken uns bei unseren Sponsoren:
              </description>
+    </item>
+    
+    <item>
+      <title>Embracing gRPC in .NET by Irina Scurtu</title>
+      <link>https://dotnetdevs.at/posts/embracing-grpc-in-.net-by-irina-scurtu/</link>
+      <pubDate>Thu, 01 Apr 2021 08:30:39 +0100</pubDate>
+      
+      <guid>https://dotnetdevs.at/posts/embracing-grpc-in-.net-by-irina-scurtu/</guid>
+      <description> Das Recording vom Talk &#34;Embracing gRPC in .NET by Irina Scurtu&#34; von Irina Scurtu ist jetzt auf YouTube unter https://www.youtube.com/watch?v=vdpnQXb_ddo verfügbar. Weitere Links:
+Meetup.com: https://www.meetup.com/dotnet-austria/events/276288853/ </description>
     </item>
     
     <item>

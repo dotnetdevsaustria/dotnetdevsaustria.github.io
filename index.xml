@@ -6,7 +6,7 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Fri, 26 Feb 2021 08:30:39 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 01 Apr 2021 08:30:39 +0100</lastBuildDate>
     
         <atom:link href="https://dotnetdevs.at/index.xml" rel="self" type="application/rss+xml" />
     
@@ -233,6 +233,28 @@ Im Folgenden erklären wir, was Cookies sind und warum Sie genutzt werden, damit
   &lt;/figure&gt;
 &lt;/div&gt;
 &lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Embracing gRPC in .NET by Irina Scurtu</title>
+      <link>https://dotnetdevs.at/posts/embracing-grpc-in-.net-by-irina-scurtu/</link>
+      <pubDate>Thu, 01 Apr 2021 08:30:39 +0100</pubDate>
+      
+      <guid>https://dotnetdevs.at/posts/embracing-grpc-in-.net-by-irina-scurtu/</guid>
+      
+        <description>
+
+
+
+
+Das Recording vom Talk &#34;Embracing gRPC in .NET by Irina Scurtu&#34; von Irina Scurtu ist jetzt auf YouTube unter &lt;a href=https://www.youtube.com/watch?v&amp;#61;vdpnQXb_ddo&gt;https://www.youtube.com/watch?v=vdpnQXb_ddo&lt;/a&gt; verfügbar.
+
+&lt;p&gt;Weitere Links:&lt;/p&gt;
+
+Meetup.com: &lt;a href=https://www.meetup.com/dotnet-austria/events/276288853/&gt;https://www.meetup.com/dotnet-austria/events/276288853/&lt;/a&gt;
+
 </description>
       
     </item>
@@ -545,19 +567,6 @@ Wenn du die Person bist, die in Salzburg Treffen organisiert, bitte melde dich b
       
         <description>&lt;p&gt;Wir wissen im Moment leider von keinen Meetups in Tirol.&lt;br&gt;
 Wenn du die Person bist, die in Tirol Treffen organisiert, bitte melde dich bei uns unter &lt;a href=&#34;mailto:team@dotnetdevs.at&#34;&gt;mailto:team@dotnetdevs.at&lt;/a&gt;.&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Vorarlberg</title>
-      <link>https://dotnetdevs.at/bundesland/vorarlberg/</link>
-      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
-      
-      <guid>https://dotnetdevs.at/bundesland/vorarlberg/</guid>
-      
-        <description>&lt;p&gt;Wir wissen im Moment leider von keinen Meetups in Vorarlberg.&lt;br&gt;
-Wenn du die Person bist, die in Vorarlberg Treffen organisiert, bitte melde dich bei uns unter &lt;a href=&#34;mailto:team@dotnetdevs.at&#34;&gt;mailto:team@dotnetdevs.at&lt;/a&gt;.&lt;/p&gt;
 </description>
       
     </item>

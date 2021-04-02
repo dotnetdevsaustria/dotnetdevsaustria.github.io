@@ -6,7 +6,7 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 26 Feb 2021 08:30:39 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 01 Apr 2021 08:30:39 +0100</lastBuildDate>
     
         <atom:link href="https://dotnetdevs.at/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -65,6 +65,28 @@
   &lt;/figure&gt;
 &lt;/div&gt;
 &lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Embracing gRPC in .NET by Irina Scurtu</title>
+      <link>https://dotnetdevs.at/en/posts/embracing-grpc-in-.net-by-irina-scurtu/</link>
+      <pubDate>Thu, 01 Apr 2021 08:30:39 +0100</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/posts/embracing-grpc-in-.net-by-irina-scurtu/</guid>
+      
+        <description>
+
+
+
+
+The recording of the talk &#34;Embracing gRPC in .NET by Irina Scurtu&#34; from Irina Scurtu is now available on YouTube at &lt;a href=https://www.youtube.com/watch?v&amp;#61;vdpnQXb_ddo&gt;https://www.youtube.com/watch?v=vdpnQXb_ddo&lt;/a&gt;.
+
+&lt;p&gt;Additional Links:&lt;/p&gt;
+
+Meetup.com: &lt;a href=https://www.meetup.com/dotnet-austria/events/276288853/&gt;https://www.meetup.com/dotnet-austria/events/276288853/&lt;/a&gt;
+
 </description>
       
     </item>
@@ -390,19 +412,6 @@ If you are the person, who is organizing them, please send us a notice to  &lt;a
       
         <description>&lt;p&gt;Currently we don&amp;rsquo;t know of any meetups in Vorarlberg.&lt;br&gt;
 If you are the person, who is organizing them, please send us a notice to  &lt;a href=&#34;mailto:team@dotnetdevs.at&#34;&gt;mailto:team@dotnetdevs.at&lt;/a&gt;.&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Slack</title>
-      <link>https://dotnetdevs.at/en/slack/</link>
-      <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
-      
-      <guid>https://dotnetdevs.at/en/slack/</guid>
-      
-        <description>&lt;p&gt;So that we can also exchange knowledge outside of the meetups, we created a Slack channgel.&lt;br&gt;
-Join and say hello:  &lt;a href=&#34;https://join.slack.com/t/dotnetdevsaustria/shared_invite/enQtMjcyNTA1NjMxNjg2LTEwYWE0NjY4YTg4YWM5ZmNhMDJkZWY4YjE5YmZjNTY5ZDVkMGVkYzU3ODI1OTA5ODAzMzg3OTkwZWU3ODU3NDk&#34;&gt;Slack Invite Page&lt;/a&gt;&lt;/p&gt;
 </description>
       
     </item>
