@@ -2,8 +2,8 @@ resources:
 - repo: self
   clean: true
 
-queue:
-  name: Hosted macOS
+pool:
+  vmImage: macOS-latest
 
 steps:
 - checkout: self
