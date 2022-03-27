@@ -413,19 +413,6 @@ Im Folgenden erklären wir, was Cookies sind und warum Sie genutzt werden, damit
     &lt;a href=&#34;https://www.rubicon.eu&#34; target=&#34;_blank&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
   &lt;/figure&gt;
 &lt;/div&gt;
-
-
-
-&lt;div class=&#34;box&#34;&gt;
-&lt;figure  itemprop=&#34;associatedMedia&#34;
-  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; 
-  style=&#34;max-width:300px&#34; &gt;
-    &lt;div class=&#34;img&#34;&gt;
-      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://dotnetdevs.at/images/sponsors/ogs.png&#34; /&gt;
-    &lt;/div&gt;
-    &lt;a href=&#34;https://www.ogs.at&#34; target=&#34;_blank&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;
 &lt;/p&gt;
 </description>
       
@@ -443,11 +430,11 @@ Im Folgenden erklären wir, was Cookies sind und warum Sie genutzt werden, damit
 
 
 
-Das Recording vom Talk &#34;Embracing gRPC in .NET by Irina Scurtu&#34; von Irina Scurtu ist jetzt auf YouTube unter &lt;a href=https://www.youtube.com/watch?v&amp;#61;vdpnQXb_ddo&gt;https://www.youtube.com/watch?v=vdpnQXb_ddo&lt;/a&gt; verfügbar.
+Das Recording vom Talk &#34;&#34; von  ist jetzt auf YouTube unter &lt;a href=&gt;&lt;/a&gt; verfügbar.
 
 &lt;p&gt;Weitere Links:&lt;/p&gt;
 
-Meetup.com: &lt;a href=https://www.meetup.com/dotnet-austria/events/276288853/&gt;https://www.meetup.com/dotnet-austria/events/276288853/&lt;/a&gt;
+Meetup.com: &lt;a href=&gt;&lt;/a&gt;
 
 </description>
       
