@@ -395,9 +395,9 @@ Im Folgenden erklären wir, was Cookies sind und warum Sie genutzt werden, damit
   itemscope itemtype=&#34;http://schema.org/ImageObject&#34; 
   style=&#34;max-width:300px&#34; &gt;
     &lt;div class=&#34;img&#34;&gt;
-      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://dotnetdevs.at/images/sponsors/tietoevry.jpg&#34; /&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://dotnetdevs.at/images/sponsors/tietoevry.svg&#34; /&gt;
     &lt;/div&gt;
-    &lt;a href=&#34;https://www.tieto.at&#34; target=&#34;_blank&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://www.tietoevry.at&#34; target=&#34;_blank&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
   &lt;/figure&gt;
 &lt;/div&gt;
 
