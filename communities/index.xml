@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Meetups on </title>
+    <link>https://dotnetdevs.at/communities/</link>
+    <description>Recent content in Meetups on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de</language>
+    <lastBuildDate>Sun, 20 Aug 2017 21:38:52 +0800</lastBuildDate><atom:link href="https://dotnetdevs.at/communities/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>.NET Community Austria</title>
+      <link>https://dotnetdevs.at/communities/dotnet_community_austria/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/communities/dotnet_community_austria/</guid>
+      <description>Die .NET Community Austria wurde von Jörg Egretzberger gegründet und seit Beginn 2017 haben Raoul Holzer und Andreas Willich die Organisation der Treffen übernommen.
+Um am letzten Stand über die neuesten Treffen zu bleiben, tritt dem Meetup auf https://www.meetup.com/dotnet-austria/ bei.
+Für zukünftige Treffen suchen wir noch Personen die etwas zu folgenden Themen vortragen:
+ NodaTime https://www.nodatime.org Erstellung von NuGet Paketen Verwendung von Paket https://fsprojects.github.io/Paket/ Simple Migrations https://github.com/canton7/Simple.Migrations In Depth Async/Await mit CancellationToken Verwendung  </description>
+    </item>
+    
+    <item>
+      <title>F# |&gt; Vienna</title>
+      <link>https://dotnetdevs.at/communities/fsharp_vienna/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/communities/fsharp_vienna/</guid>
+      <description>Andreas Schlapsi startete die F# |&amp;gt; Vienna Community zu Beginn 2015. Nach einem Hiatus von 2 Jahren wiederbelebte Gregor Beyerle und Andreas Willich das Meetup.
+Um am letzten Stand über die neuesten Treffen zu bleiben, tritt dem Meetup auf https://www.meetup.com/FSharp-Vienna/ bei.
+Für zukünftige Treffen suchen wir noch Personen die etwas zu folgenden Themen vortragen:
+ F# Sprachdetails  </description>
+    </item>
+    
+  </channel>
+</rss>

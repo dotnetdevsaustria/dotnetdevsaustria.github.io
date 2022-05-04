@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on </title>
+    <link>https://dotnetdevs.at/post/</link>
+    <description>Recent content in Posts on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de</language>
+    <lastBuildDate>Thu, 01 Apr 2021 08:30:39 +0100</lastBuildDate><atom:link href="https://dotnetdevs.at/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Willkommen bei den DotNetDevs.at</title>
+      <link>https://dotnetdevs.at/posts/willkommen-bei-den-dotnetdevs.at/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/posts/willkommen-bei-den-dotnetdevs.at/</guid>
+      <description>Die DotNetDevs.at sind ein Verein, dessen Tätigkeit nicht auf Gewinn gerichtet ist, bezweckt die Verbreitung von Wissen und Erfahrung zur Verwendung auf .NET Technologien basierter Software.
+Unsere Ziele sind:
+ neuen TeilnehmerInnen es einfacher zu machen, die bereits bestehenden Communities zu finden bestehenden TeilnehmerInnen mehr Angebot zur Verfügung stellen Förderung des Austausch zwischen den einzelnen Communities  Wir bedanken uns bei unseren Sponsoren:
+         </description>
+    </item>
+    
+    <item>
+      <title>Embracing gRPC in .NET by Irina Scurtu</title>
+      <link>https://dotnetdevs.at/posts/embracing-grpc-in-.net-by-irina-scurtu/</link>
+      <pubDate>Thu, 01 Apr 2021 08:30:39 +0100</pubDate>
+      
+      <guid>https://dotnetdevs.at/posts/embracing-grpc-in-.net-by-irina-scurtu/</guid>
+      <description> Das Recording vom Talk &#34;&#34; von ist jetzt auf YouTube unter  verfügbar. Weitere Links:
+Meetup.com:  </description>
+    </item>
+    
+    <item>
+      <title>OGS ist neuer Sponsor &amp; Videorecordings</title>
+      <link>https://dotnetdevs.at/posts/ogs-ist-neuer-sponsor-videorecordings/</link>
+      <pubDate>Fri, 26 Feb 2021 08:30:39 +0100</pubDate>
+      
+      <guid>https://dotnetdevs.at/posts/ogs-ist-neuer-sponsor-videorecordings/</guid>
+      <description>Wenn ihr bei einem Meetup wart, habt ihr es schon mitbekommen. Wir haben seit Jänner OGS Software &amp;amp; Services als Sponsor.
+Dies hilft uns weiter um zukünftige Events noch besser zu machen. Vielen Dank an OGS!
+Die Recordings unserer letzten beiden Meetups sind jetzt auch online:
+ Introduction to Open Source Uno Platform for cross-platform development The hidden gems of the .NET ecosystem  Viel Spaß beim Anschauen!</description>
+    </item>
+    
+    <item>
+      <title>Microsoft ist neuer Sponsor!</title>
+      <link>https://dotnetdevs.at/posts/microsoft-ist-neuer-sponsor/</link>
+      <pubDate>Mon, 23 Nov 2020 13:46:39 +0100</pubDate>
+      
+      <guid>https://dotnetdevs.at/posts/microsoft-ist-neuer-sponsor/</guid>
+      <description>Wir freuen uns, dass wir mitteilen können, das wir einen neuen Sponsor haben! Seit November ist Microsoft einer der Sponsoren des Vereins.
+    Dies hilft uns unsere Infrastruktur und unsere zukünftigen Events zu verbessern.
+Ein großer Dank geht an Christian Schwendtner, der dies möglich gemacht hat!</description>
+    </item>
+    
+    <item>
+      <title>What is The Clean Architecture and how you would build one in .NET?</title>
+      <link>https://dotnetdevs.at/posts/what-is-the-clean-architecture-and-how-you-would-build-one-in-.net/</link>
+      <pubDate>Mon, 26 Oct 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/posts/what-is-the-clean-architecture-and-how-you-would-build-one-in-.net/</guid>
+      <description>Das Recording vom Talk &amp;ldquo;What is The Clean Architecture and how you would build one in .NET?&amp;rdquo; von Ian Cooper ist jetzt auf YouTube unter https://youtu.be/efD2-GO50io verfügbar.
+Links vom Talk:
+Brighter auf GitHub: https://github.com/BrighterCommand/Brighter
+Alle Folien von Ian Cooper: https://github.com/iancooper/Presentations
+Ian Cooper auf Twitter: https://twitter.com/ICooper</description>
+    </item>
+    
+    <item>
+      <title>Show and tell of Visual Studio &amp; Visual Studio Code extensions hidden gems</title>
+      <link>https://dotnetdevs.at/posts/show-and-tell-of-visual-studio-visual-studio-code-extensions-hidden-gems/</link>
+      <pubDate>Sun, 04 Oct 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/posts/show-and-tell-of-visual-studio-visual-studio-code-extensions-hidden-gems/</guid>
+      <description>Das Recording vom Talk &amp;ldquo;Show and tell of Visual Studio &amp;amp; Visual Studio Code extensions hidden gems&amp;rdquo; von Martin, Andreas und Raoul ist jetzt auf YouTube unter https://youtu.be/daOE-iWeNm8 verfügbar.
+Hier ist die Liste der gezeigten Visual Studio und Visual Studio Code Extensions:
+VS Extensions  Resharper Tweaks
+Presentation Mode ist zurück!!! Productivity Power Tools 2017/2019
+Extensionpack mit einer Menge an nützlichen Extensions:  Fix Mixed Tabs PowerCommands Shrink Emtpy Lines (negativer Effect)   Markdown Editor Add New File</description>
+    </item>
+    
+    <item>
+      <title>Real-Time Serverless Apps with .NET, Azure Functions and Azure SignalR von Rainer Stropek</title>
+      <link>https://dotnetdevs.at/posts/real-time-serverless-apps-with-.net-azure-functions-and-azure-signalr-von-rainer-stropek/</link>
+      <pubDate>Sun, 27 Sep 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/posts/real-time-serverless-apps-with-.net-azure-functions-and-azure-signalr-von-rainer-stropek/</guid>
+      <description>Das Recording vom Talk &amp;ldquo;Real-Time Serverless Apps with .NET, Azure Functions and Azure SignalR&amp;rdquo; von Rainer Stropek ist jetzt auf YouTube unter https://youtu.be/TvLABG6Cl3Y verfügbar.
+Rainers Aufnahme ist hier zu finden
+Die Code- Samples sind auf GitHub unter https://github.com/rstropek/Samples/tree/master/AsyncBlazor zu finden.</description>
+    </item>
+    
+    <item>
+      <title>EF Core Hidden gems von Igor Rončević</title>
+      <link>https://dotnetdevs.at/posts/ef-core-hidden-gems-von-igor-ron%C4%8Devi%C4%87/</link>
+      <pubDate>Mon, 20 Jul 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/posts/ef-core-hidden-gems-von-igor-ron%C4%8Devi%C4%87/</guid>
+      <description>Das Recording vom Talk &amp;ldquo;EF Core Hidden gems&amp;rdquo; von Igor Rončević ist jetzt auf YouTube unter https://www.youtube.com/watch?v=rjwou1Nw8Bk verfügbar.
+Die Code- Samples sind auf GitHub unter https://github.com/ironcev-talks/entity-framework-core-hidden-gems zu finden.</description>
+    </item>
+    
+    <item>
+      <title>Streaming</title>
+      <link>https://dotnetdevs.at/posts/streaming/</link>
+      <pubDate>Mon, 30 Sep 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/posts/streaming/</guid>
+      <description>Seit ein paar .NET Meetups streamen wir diese auf Twitch.tv. Die Recordings sind mit ein wenig Verzögerung in unserem YouTube- Channel zu finden.</description>
+    </item>
+    
+    <item>
+      <title>Hello World!</title>
+      <link>https://dotnetdevs.at/posts/hello-world/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/posts/hello-world/</guid>
+      <description>Nach einiger Vorbereitungszeit sind wir nun endlich online!</description>
+    </item>
+    
+  </channel>
+</rss>

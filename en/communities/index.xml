@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Meetups on </title>
+    <link>https://dotnetdevs.at/en/communities/</link>
+    <description>Recent content in Meetups on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 20 Aug 2017 21:38:52 +0800</lastBuildDate><atom:link href="https://dotnetdevs.at/en/communities/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>.NET Community Austria</title>
+      <link>https://dotnetdevs.at/en/communities/dotnet_community_austria/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/communities/dotnet_community_austria/</guid>
+      <description>Die .NET Community Austria wurde von Jörg Egretzberger gegründet und seit Beginn 2017 haben Raoul Holzer und Andreas Willich die Organisation der Treffen übernommen.
+Um am letzten Stand über die neuesten Treffen zu bleiben, tritt dem Meetup auf https://www.meetup.com/dotnet-austria/ bei.
+Für zukünftige Treffen suchen wir noch Personen die etwas zu folgenden Themen vortragen:
+ NodaTime https://www.nodatime.org Erstellung von NuGet Paketen Verwendung von Paket https://fsprojects.github.io/Paket/ Simple Migrations https://github.com/canton7/Simple.Migrations In Depth Async/Await mit CancellationToken Verwendung  </description>
+    </item>
+    
+    <item>
+      <title>F# Sharp Vienna</title>
+      <link>https://dotnetdevs.at/en/communities/fsharp_vienna/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/communities/fsharp_vienna/</guid>
+      <description>asdf</description>
+    </item>
+    
+  </channel>
+</rss>
