@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bundeslands on </title>
+    <link>https://dotnetdevs.at/bundesland/</link>
+    <description>Recent content in Bundeslands on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de</language>
+    <lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0200</lastBuildDate><atom:link href="https://dotnetdevs.at/bundesland/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Burgenland</title>
+      <link>https://dotnetdevs.at/bundesland/burgenland/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/bundesland/burgenland/</guid>
+      <description>Wir wissen im Moment leider von keinen Meetups im Burgenland.
+Wenn du die Person bist, die im Burgenland Treffen organisiert, bitte melde dich bei uns unter mailto:team@dotnetdevs.at.</description>
+    </item>
+    
+    <item>
+      <title>Kärnten</title>
+      <link>https://dotnetdevs.at/bundesland/kaernten/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/bundesland/kaernten/</guid>
+      <description>Wir wissen im Moment leider von keinen Meetups in Kärnten.
+Wenn du die Person bist, die in Kärnten Treffen organisiert, bitte melde dich bei uns unter mailto:team@dotnetdevs.at.</description>
+    </item>
+    
+    <item>
+      <title>Niederösterreich</title>
+      <link>https://dotnetdevs.at/bundesland/niederoesterreich/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/bundesland/niederoesterreich/</guid>
+      <description>Wir wissen im Moment leider von keinen Meetups in Niederösterreich.
+Es gibt jedoch eine Menge an Meetups in Wien. Vielleicht willst du dort mal vorbeischauen.
+Wenn du die Person bist, die in Niederösterreich Treffen organisiert, bitte melde dich bei uns unter mailto:team@dotnetdevs.at.</description>
+    </item>
+    
+    <item>
+      <title>Oberösterreich</title>
+      <link>https://dotnetdevs.at/bundesland/oberoesterreich/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/bundesland/oberoesterreich/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Salzburg</title>
+      <link>https://dotnetdevs.at/bundesland/salzburg/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/bundesland/salzburg/</guid>
+      <description>Wir wissen im Moment leider von keinen Meetups in Salzburg.
+Wenn du die Person bist, die in Salzburg Treffen organisiert, bitte melde dich bei uns unter mailto:team@dotnetdevs.at.</description>
+    </item>
+    
+    <item>
+      <title>Steiermark</title>
+      <link>https://dotnetdevs.at/bundesland/steiermark/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/bundesland/steiermark/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tirol</title>
+      <link>https://dotnetdevs.at/bundesland/tirol/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/bundesland/tirol/</guid>
+      <description>Wir wissen im Moment leider von keinen Meetups in Tirol.
+Wenn du die Person bist, die in Tirol Treffen organisiert, bitte melde dich bei uns unter mailto:team@dotnetdevs.at.</description>
+    </item>
+    
+    <item>
+      <title>Vorarlberg</title>
+      <link>https://dotnetdevs.at/bundesland/vorarlberg/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/bundesland/vorarlberg/</guid>
+      <description>Wir wissen im Moment leider von keinen Meetups in Vorarlberg.
+Wenn du die Person bist, die in Vorarlberg Treffen organisiert, bitte melde dich bei uns unter mailto:team@dotnetdevs.at.</description>
+    </item>
+    
+    <item>
+      <title>Wien</title>
+      <link>https://dotnetdevs.at/bundesland/wien/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/bundesland/wien/</guid>
+      <description>In Wien gibt es mehrere Gruppen die sich mit .NET Themen beschäftigen.
+.NET Community Austria Dieses Meetup betrifft sich mit allen Themen rund um .NET und den Programmiersprachen dafür.
+Die behandelten Themen gehen von Grundlagen wie C# Features und MSBuild, zu .NET Core bis zu PWAs.
+Jeder der etwas über .NET wissen will, ist willkommen. Es gibt kein benötigtes Mindestwissen!
+Meetup Seite: https://www.meetup.com/dotnet-austria/
+F# |&amp;gt; Vienna In diese Meetup treffen sich Leute, die funktional auf der .</description>
+    </item>
+    
+  </channel>
+</rss>
