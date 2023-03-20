@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bundeslands on </title>
+    <link>https://dotnetdevs.at/en/bundesland/</link>
+    <description>Recent content in Bundeslands on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0200</lastBuildDate><atom:link href="https://dotnetdevs.at/en/bundesland/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Burgenland</title>
+      <link>https://dotnetdevs.at/en/bundesland/burgenland/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/bundesland/burgenland/</guid>
+      <description>Currently we don&amp;rsquo;t know of any meetups in Burgenland.
+If you are the person, who is organizing them, please send us a notice to mailto:team@dotnetdevs.at.</description>
+    </item>
+    
+    <item>
+      <title>Carinthia</title>
+      <link>https://dotnetdevs.at/en/bundesland/kaernten/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/bundesland/kaernten/</guid>
+      <description>Currently we don&amp;rsquo;t know of any meetups in Carinthia.
+If you are the person, who is organizing them, please send us a notice to mailto:team@dotnetdevs.at.</description>
+    </item>
+    
+    <item>
+      <title>Lower Austria</title>
+      <link>https://dotnetdevs.at/en/bundesland/niederoesterreich/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/bundesland/niederoesterreich/</guid>
+      <description>Currently we don&amp;rsquo;t know of any meetups in Lower Austria.
+But there a some in Vienna. So perhaps you want to visit them.
+If you are the person, who is organizing them, please send us a notice to mailto:team@dotnetdevs.at.</description>
+    </item>
+    
+    <item>
+      <title>Salzburg</title>
+      <link>https://dotnetdevs.at/en/bundesland/salzburg/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/bundesland/salzburg/</guid>
+      <description>Currently we don&amp;rsquo;t know of any meetups in Salzburg.
+If you are the person, who is organizing them, please send us a notice to mailto:team@dotnetdevs.at.</description>
+    </item>
+    
+    <item>
+      <title>Styria</title>
+      <link>https://dotnetdevs.at/en/bundesland/steiermark/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/bundesland/steiermark/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tyrol</title>
+      <link>https://dotnetdevs.at/en/bundesland/tirol/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/bundesland/tirol/</guid>
+      <description>Currently we don&amp;rsquo;t know of any meetups in Tyrol.
+If you are the person, who is organizing them, please send us a notice to mailto:team@dotnetdevs.at.</description>
+    </item>
+    
+    <item>
+      <title>Upper Austria</title>
+      <link>https://dotnetdevs.at/en/bundesland/oberoesterreich/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/bundesland/oberoesterreich/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vienna</title>
+      <link>https://dotnetdevs.at/en/bundesland/wien/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/bundesland/wien/</guid>
+      <description>There are multiple groups in Vienna, that are interested in .NET topics.
+.NET Community Austria Meetup Seite: https://www.meetup.com/dotnet-austria/
+F# |&amp;gt; Vienna Meetup Seite: https://www.meetup.com/FSharp-Vienna/</description>
+    </item>
+    
+    <item>
+      <title>Vorarlberg</title>
+      <link>https://dotnetdevs.at/en/bundesland/vorarlberg/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/bundesland/vorarlberg/</guid>
+      <description>Currently we don&amp;rsquo;t know of any meetups in Vorarlberg.
+If you are the person, who is organizing them, please send us a notice to mailto:team@dotnetdevs.at.</description>
+    </item>
+    
+  </channel>
+</rss>

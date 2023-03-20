@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <link>https://dotnetdevs.at/en/</link>
+    <description>Recent content on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 01 Apr 2021 08:30:39 +0100</lastBuildDate>
+    
+        <atom:link href="https://dotnetdevs.at/en/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Welcome to the .NET Developers Austria</title>
+      <link>https://dotnetdevs.at/en/posts/welcome-to-the-.net-developers-austria/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/posts/welcome-to-the-.net-developers-austria/</guid>
+      
+        <description>&lt;p&gt;The DotNetDevs.at is an association, which activities are not about gaining profit, it&amp;rsquo;s purpose is to spread knowledge and experience about the usage of .NET technologies.&lt;/p&gt;
+&lt;p&gt;Our goals are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;make it easier for new participants to find existing communities&lt;/li&gt;
+&lt;li&gt;offer existing members more choice&lt;/li&gt;
+&lt;li&gt;promote the exchange between the different communities&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We are thanking our sponsors:&lt;/p&gt;
+&lt;p&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://dotnetdevs.at/css/hugo-easy-gallery.css&#34; /&gt;
+&lt;div class=&#34;box&#34;&gt;
+&lt;figure  itemprop=&#34;associatedMedia&#34;
+  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; 
+  style=&#34;max-width:300px&#34; &gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://dotnetdevs.at/images/sponsors/tietoevry.svg&#34; alt=&#34;Tietoevry&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://www.tietoevry.at&#34; target=&#34;_blank&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+
+
+&lt;div class=&#34;box&#34;&gt;
+&lt;figure  itemprop=&#34;associatedMedia&#34;
+  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; 
+  style=&#34;max-width:300px&#34; &gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://dotnetdevs.at/images/sponsors/rubicon.svg&#34; /&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://www.rubicon.eu&#34; target=&#34;_blank&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Embracing gRPC in .NET by Irina Scurtu</title>
+      <link>https://dotnetdevs.at/en/posts/embracing-grpc-in-.net-by-irina-scurtu/</link>
+      <pubDate>Thu, 01 Apr 2021 08:30:39 +0100</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/posts/embracing-grpc-in-.net-by-irina-scurtu/</guid>
+      
+        <description>
+
+
+
+
+The recording of the talk &#34;&#34; from  is now available on YouTube at &lt;a href=&gt;&lt;/a&gt;.
+
+&lt;p&gt;Additional Links:&lt;/p&gt;
+
+Meetup.com: &lt;a href=&gt;&lt;/a&gt;
+
+</description>
+      
+    </item>
+    
+    <item>
+      <title>OGS is new Sponsor &amp; Videorecordings</title>
+      <link>https://dotnetdevs.at/en/posts/ogs-is-new-sponsor-videorecordings/</link>
+      <pubDate>Fri, 26 Feb 2021 08:30:39 +0100</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/posts/ogs-is-new-sponsor-videorecordings/</guid>
+      
+        <description>&lt;p&gt;If you attended one of the last meetups, you already noticed it.&lt;br&gt;
+Since January we have &lt;a href=&#34;https://ogs.at&#34;&gt;OGS Software &amp;amp; Services&lt;/a&gt; as sponsor.&lt;/p&gt;
+&lt;p&gt;This helps us to improve our infrastructure and our events for the future.&lt;/p&gt;
+&lt;p&gt;The recordings of our lasts meetups are now online:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/eWsHuvlTzRM&#34;&gt;Introduction to Open Source Uno Platform for cross-platform development&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/1xr7YAviACY&#34;&gt;The hidden gems of the .NET ecosystem&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Have fun with watching them!&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Microsoft Is a New Sponsor!</title>
+      <link>https://dotnetdevs.at/en/posts/microsoft-is-a-new-sponsor/</link>
+      <pubDate>Mon, 23 Nov 2020 13:46:39 +0100</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/posts/microsoft-is-a-new-sponsor/</guid>
+      
+        <description>&lt;p&gt;We are happy to announce that we have a new Sponsor! Starting with November Microsoft is sponsoring our non- profit- organisation.&lt;/p&gt;
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://dotnetdevs.at/css/hugo-easy-gallery.css&#34; /&gt;
+&lt;div class=&#34;box&#34;&gt;
+&lt;figure  itemprop=&#34;associatedMedia&#34;
+  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; 
+  style=&#34;max-width:300px&#34; &gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://dotnetdevs.at/images/sponsors/Microsoft.png&#34; /&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://www.microsoft.at&#34; target=&#34;_blank&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This helps us to improve our infrastructure and our events for the future.&lt;/p&gt;
+&lt;p&gt;Big thanks specially to Christian Schwendtner for making this possible!&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>What is The Clean Architecture and how you would build one in .NET?</title>
+      <link>https://dotnetdevs.at/en/posts/what-is-the-clean-architecture-and-how-you-would-build-one-in-.net/</link>
+      <pubDate>Mon, 26 Oct 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/posts/what-is-the-clean-architecture-and-how-you-would-build-one-in-.net/</guid>
+      
+        <description>&lt;p&gt;The recording of the talk &amp;ldquo;What is The Clean Architecture and how you would build one in .NET?&amp;rdquo; by &lt;a href=&#34;https://twitter.com/ICooper&#34;&gt;Ian Cooper&lt;/a&gt; is now on YouTube at &lt;a href=&#34;https://youtu.be/efD2-GO50io&#34;&gt;https://youtu.be/efD2-GO50io&lt;/a&gt; available.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Links of the Talk:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Brighter at GitHub: &lt;a href=&#34;https://github.com/BrighterCommand/Brighter&#34;&gt;https://github.com/BrighterCommand/Brighter&lt;/a&gt;&lt;br&gt;
+All Slides from Ian Cooper: &lt;a href=&#34;https://github.com/iancooper/Presentations&#34;&gt;https://github.com/iancooper/Presentations&lt;/a&gt;&lt;br&gt;
+Ian Cooper at Twitter: &lt;a href=&#34;https://twitter.com/ICooper&#34;&gt;https://twitter.com/ICooper&lt;/a&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Show and tell of Visual Studio &amp; Visual Studio Code extensions hidden gems</title>
+      <link>https://dotnetdevs.at/en/posts/show-and-tell-of-visual-studio-visual-studio-code-extensions-hidden-gems/</link>
+      <pubDate>Sun, 04 Oct 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/posts/show-and-tell-of-visual-studio-visual-studio-code-extensions-hidden-gems/</guid>
+      
+        <description>&lt;p&gt;The recording of the talk &amp;ldquo;Show and tell of Visual Studio &amp;amp; Visual Studio Code extensions hidden gems&amp;rdquo; by Martin, Andreas and Raoul is now on YouTube at &lt;a href=&#34;https://youtu.be/daOE-iWeNm8&#34;&gt;https://youtu.be/daOE-iWeNm8&lt;/a&gt; available.&lt;/p&gt;
+&lt;p&gt;Here is the list of the shown Visual Studio and Visual Studio Code extensions:&lt;/p&gt;
+&lt;h2 id=&#34;vs-extensions&#34;&gt;VS Extensions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=JetBrains.ReSharper&#34;&gt;Resharper&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MadsKristensen.Tweaks&#34;&gt;Tweaks&lt;/a&gt;&lt;br&gt;
+Presentation Mode is back!!!&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.ProductivityPowerPack2017&#34;&gt;Productivity Power Tools 2017/2019&lt;/a&gt;&lt;br&gt;
+Extensionpack with a lot of nice extensions:
+&lt;ul&gt;
+&lt;li&gt;Fix Mixed Tabs&lt;/li&gt;
+&lt;li&gt;PowerCommands&lt;/li&gt;
+&lt;li&gt;Shrink Emtpy Lines (negative Effect)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor&#34;&gt;Markdown Editor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MadsKristensen.AddNewFile&#34;&gt;Add New File&lt;/a&gt;&lt;br&gt;
+Makes it possible to create quickly emtpy files (also with a starting dot)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MikeWard-AnnArbor.VSColorOutput&#34;&gt;VSColorOutput&lt;/a&gt;&lt;br&gt;
+Makes the Output- Pane colorful&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer&#34;&gt;.NET Portability Analyzer&lt;/a&gt;
+In case you have to port .NET Framework project to .NET Core&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MadsKristensen.OpenCommandLine&#34;&gt;Open Commandline&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MadsKristensen.OpeninVisualStudioCode&#34;&gt;Open VS Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=WakaTime.WakaTime&#34;&gt;WakaTime&lt;/a&gt;&lt;br&gt;
+Analytics to see, how long you worked on a project&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ironcev.sharpen&#34;&gt;Sharpen&lt;/a&gt; - Community submitted&lt;br&gt;
+Code analyzer to use new C# features&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=StefanWenig.LicenseHeaderManager&#34;&gt;License Header Manager&lt;/a&gt; - Community submitted
+Managed the Lizenz Header of Project- Files&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=LaurentKempe.GitDiffMargin&#34;&gt;Git Diff Margin&lt;/a&gt; - Community submitted&lt;br&gt;
+Git Diff Margin displays live Git changes of the currently edited file on Visual Studio margin and scroll bar.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=JaredParMSFT.VsVim&#34;&gt;VsVim&lt;/a&gt; - Community submitted
+Vim for Visual Studio&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MattLaceyLtd.WarnAboutTODOs&#34;&gt;Warn About TODOs&lt;/a&gt; - Community submitted&lt;br&gt;
+TODOs are displayed as warnings&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MattLaceyLtd.CollapseComments&#34;&gt;Collapse Comments&lt;/a&gt; - Community submitted&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MattLaceyLtd.StringResourceVisualizer&#34;&gt;String Resource Visualizer&lt;/a&gt; - Community submitted
+Shows the values from the resx- files&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=Flash0Ware.F0-Analyzers-VS&#34;&gt;F0.Analyzers&lt;/a&gt; - Community submitted&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=PaulHarrington.EditorGuidelines&#34;&gt;Editor Guidelines&lt;/a&gt; - Community submitted&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=SonarSource.SonarLintforVisualStudio2019&#34;&gt;SonarLint for Visual Studio 2019&lt;/a&gt; - Community submitted&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=Sameerk.BruteClean&#34;&gt;Brute Clean&lt;/a&gt; - Community submitted&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;vs-code-extensions&#34;&gt;VS Code Extensions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl&#34;&gt;Remote - WSL&lt;/a&gt;&lt;br&gt;
+Remote Debugging/Working with WSL&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers&#34;&gt;Remote - Containers&lt;/a&gt;
+Remote Debugging/Working with  Docker Container&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint&#34;&gt;markdownlint&lt;/a&gt;
+Linter for Markdown&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp&#34;&gt;C#&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker&#34;&gt;Docker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare&#34;&gt;Live Share&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql&#34;&gt;SQL Server (mssql)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-vscode.azure-account&#34;&gt;Azure Account&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig&#34;&gt;EditorConfig for VS Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode&#34;&gt;Prettier - Code formatter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=WakaTime.vscode-wakatime&#34;&gt;WakaTime&lt;/a&gt;&lt;br&gt;
+Analytics to see, how long you worked on a project&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Real-Time Serverless Apps with .NET, Azure Functions and Azure SignalR by Rainer Stropek</title>
+      <link>https://dotnetdevs.at/en/posts/real-time-serverless-apps-with-.net-azure-functions-and-azure-signalr-by-rainer-stropek/</link>
+      <pubDate>Sun, 27 Sep 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/posts/real-time-serverless-apps-with-.net-azure-functions-and-azure-signalr-by-rainer-stropek/</guid>
+      
+        <description>&lt;p&gt;The recording of the talk &amp;ldquo;Real-Time Serverless Apps with .NET, Azure Functions and Azure SignalR&amp;rdquo; by Rainer Stropek is now on YouTube at &lt;a href=&#34;https://youtu.be/TvLABG6Cl3Y&#34;&gt;https://youtu.be/TvLABG6Cl3Y&lt;/a&gt; available.&lt;br&gt;
+Rainers recording is available &lt;a href=&#34;https://www.youtube.com/watch?v=h-l8uogXFvg&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The Code- Samples can be found on GitHub at &lt;a href=&#34;https://github.com/rstropek/Samples/tree/master/AsyncBlazor&#34;&gt;https://github.com/rstropek/Samples/tree/master/AsyncBlazor&lt;/a&gt;./&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>EF Core Hidden gems by Igor Rončević</title>
+      <link>https://dotnetdevs.at/en/posts/ef-core-hidden-gems-by-igor-ron%C4%8Devi%C4%87/</link>
+      <pubDate>Mon, 20 Jul 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/posts/ef-core-hidden-gems-by-igor-ron%C4%8Devi%C4%87/</guid>
+      
+        <description>&lt;p&gt;The recording of the talk &amp;ldquo;EF Core Hidden gems&amp;rdquo; by Igor Rončević is now on YouTube at &lt;a href=&#34;https://www.youtube.com/watch?v=rjwou1Nw8Bk&#34;&gt;https://www.youtube.com/watch?v=rjwou1Nw8Bk&lt;/a&gt; available.&lt;/p&gt;
+&lt;p&gt;The Code- Samples can be found on GitHub at &lt;a href=&#34;https://github.com/ironcev-talks/entity-framework-core-hidden-gems&#34;&gt;https://github.com/ironcev-talks/entity-framework-core-hidden-gems&lt;/a&gt;./&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Streaming</title>
+      <link>https://dotnetdevs.at/en/posts/streaming/</link>
+      <pubDate>Mon, 30 Sep 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/posts/streaming/</guid>
+      
+        <description>&lt;p&gt;Since some .NET Meetups we are streaming on &lt;a href=&#34;https://www.twitch.tv/dotnetdevsat&#34;&gt;Twitch.tv&lt;/a&gt;. The recordings are with a little delay on our &lt;a href=&#34;https://www.youtube.com/channel/UCuf0V0imn7bI_wST2fEHgXQ&#34;&gt;YouTube- Channel&lt;/a&gt; to find.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>.NET Community Austria</title>
+      <link>https://dotnetdevs.at/en/communities/dotnet_community_austria/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/communities/dotnet_community_austria/</guid>
+      
+        <description>&lt;p&gt;Die .NET Community Austria wurde von Jörg Egretzberger gegründet und seit Beginn 2017 haben Raoul Holzer und Andreas Willich die Organisation der Treffen übernommen.&lt;/p&gt;
+&lt;p&gt;Um am letzten Stand über die neuesten Treffen zu bleiben, tritt dem Meetup auf &lt;a href=&#34;https://www.meetup.com/dotnet-austria/&#34;&gt;https://www.meetup.com/dotnet-austria/&lt;/a&gt; bei.&lt;/p&gt;
+&lt;p&gt;Für zukünftige Treffen suchen wir noch Personen die etwas zu folgenden Themen vortragen:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;NodaTime &lt;a href=&#34;https://www.nodatime.org&#34;&gt;https://www.nodatime.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Erstellung von NuGet Paketen&lt;/li&gt;
+&lt;li&gt;Verwendung von Paket &lt;a href=&#34;https://fsprojects.github.io/Paket/&#34;&gt;https://fsprojects.github.io/Paket/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Simple Migrations &lt;a href=&#34;https://github.com/canton7/Simple.Migrations&#34;&gt;https://github.com/canton7/Simple.Migrations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;In Depth Async/Await mit CancellationToken Verwendung&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Burgenland</title>
+      <link>https://dotnetdevs.at/en/bundesland/burgenland/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/bundesland/burgenland/</guid>
+      
+        <description>&lt;p&gt;Currently we don&amp;rsquo;t know of any meetups in Burgenland.&lt;br&gt;
+If you are the person, who is organizing them, please send us a notice to  &lt;a href=&#34;mailto:team@dotnetdevs.at&#34;&gt;mailto:team@dotnetdevs.at&lt;/a&gt;.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Carinthia</title>
+      <link>https://dotnetdevs.at/en/bundesland/kaernten/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/bundesland/kaernten/</guid>
+      
+        <description>&lt;p&gt;Currently we don&amp;rsquo;t know of any meetups in Carinthia.&lt;br&gt;
+If you are the person, who is organizing them, please send us a notice to  &lt;a href=&#34;mailto:team@dotnetdevs.at&#34;&gt;mailto:team@dotnetdevs.at&lt;/a&gt;.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Hello World!</title>
+      <link>https://dotnetdevs.at/en/posts/hello-world/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/posts/hello-world/</guid>
+      
+        <description>&lt;p&gt;After some preparation time we are finally online!&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Lower Austria</title>
+      <link>https://dotnetdevs.at/en/bundesland/niederoesterreich/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/bundesland/niederoesterreich/</guid>
+      
+        <description>&lt;p&gt;Currently we don&amp;rsquo;t know of any meetups in Lower Austria.&lt;br&gt;
+But there a some in Vienna. So perhaps you want to visit them.&lt;/p&gt;
+&lt;p&gt;If you are the person, who is organizing them, please send us a notice to  &lt;a href=&#34;mailto:team@dotnetdevs.at&#34;&gt;mailto:team@dotnetdevs.at&lt;/a&gt;.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Salzburg</title>
+      <link>https://dotnetdevs.at/en/bundesland/salzburg/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/bundesland/salzburg/</guid>
+      
+        <description>&lt;p&gt;Currently we don&amp;rsquo;t know of any meetups in Salzburg.&lt;br&gt;
+If you are the person, who is organizing them, please send us a notice to  &lt;a href=&#34;mailto:team@dotnetdevs.at&#34;&gt;mailto:team@dotnetdevs.at&lt;/a&gt;.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Styria</title>
+      <link>https://dotnetdevs.at/en/bundesland/steiermark/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/bundesland/steiermark/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Tyrol</title>
+      <link>https://dotnetdevs.at/en/bundesland/tirol/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/bundesland/tirol/</guid>
+      
+        <description>&lt;p&gt;Currently we don&amp;rsquo;t know of any meetups in Tyrol.&lt;br&gt;
+If you are the person, who is organizing them, please send us a notice to  &lt;a href=&#34;mailto:team@dotnetdevs.at&#34;&gt;mailto:team@dotnetdevs.at&lt;/a&gt;.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Upper Austria</title>
+      <link>https://dotnetdevs.at/en/bundesland/oberoesterreich/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/bundesland/oberoesterreich/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Vienna</title>
+      <link>https://dotnetdevs.at/en/bundesland/wien/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/bundesland/wien/</guid>
+      
+        <description>&lt;p&gt;There are multiple groups in Vienna, that are interested in .NET topics.&lt;/p&gt;
+&lt;h1 id=&#34;net-community-austria&#34;&gt;.NET Community Austria&lt;/h1&gt;
+&lt;p&gt;Meetup Seite: &lt;a href=&#34;https://www.meetup.com/dotnet-austria/&#34;&gt;https://www.meetup.com/dotnet-austria/&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;f--vienna&#34;&gt;F# |&amp;gt; Vienna&lt;/h1&gt;
+&lt;p&gt;Meetup Seite: &lt;a href=&#34;https://www.meetup.com/FSharp-Vienna/&#34;&gt;https://www.meetup.com/FSharp-Vienna/&lt;/a&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Vorarlberg</title>
+      <link>https://dotnetdevs.at/en/bundesland/vorarlberg/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://dotnetdevs.at/en/bundesland/vorarlberg/</guid>
+      
+        <description>&lt;p&gt;Currently we don&amp;rsquo;t know of any meetups in Vorarlberg.&lt;br&gt;
+If you are the person, who is organizing them, please send us a notice to  &lt;a href=&#34;mailto:team@dotnetdevs.at&#34;&gt;mailto:team@dotnetdevs.at&lt;/a&gt;.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>
