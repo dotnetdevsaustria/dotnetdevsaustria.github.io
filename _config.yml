@@ -28,6 +28,9 @@ collections:
   speakers:
     output: true
     permalink: /speakers/:path/
+  sponsors:
+    output: true
+    permalink: /sponsors/:path/
 
 # Navigation
 nav:

@@ -12,8 +12,8 @@ Our goals are:
 make it easier for new participants to find existing communities
 offer existing members more choice
 promote the exchange between the different communities
-We are thanking our sponsors:
 
-- [Events](events.html)
-- [Sponsors](sponsors.html)
-- [Blog](/blog/)
+## Our Sponsors
+
+- [Rubicon](/sponsors/rubicon/)
+
