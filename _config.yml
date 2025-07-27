@@ -1,5 +1,44 @@
 title: DotNETDevs.at
-description: Monthly .NET events to spread knowledge and experience.
-baseurl: ""
-url: "https://dotnetdevs.at"
-theme: minima
+email: info@dotnetdevs.at
+description: >-
+  Monthly .NET events to spread knowledge and experience.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://dotnetdevs.at" # the base hostname & protocol for your site
+locale: "en"
+theme: "minimal-mistakes-jekyll"
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-include-cache
+  - jekyll-archives
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+  - jekyll-collections
+
+# Minimal Mistakes settings
+minimal_mistakes_skin: "default"
+search: true
+
+# Collections for events and speakers
+collections:
+  events:
+    output: true
+    permalink: /events/:path/
+  speakers:
+    output: true
+    permalink: /speakers/:path/
+
+# Navigation
+nav:
+  - title: "Events"
+    url: /events/
+  - title: "Speakers"
+    url: /speakers/
+  - title: "Sponsors"
+    url: /sponsors/
+  - title: "Impressum"
+    url: /impressum/
+
+# Analytics (Plausible)
+# Add plausible script in _includes/head-custom.html
