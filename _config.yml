@@ -18,7 +18,7 @@ plugins:
 
 # Minimal Mistakes settings
 minimal_mistakes_skin: "default"
-search: true
+search: false
 
 # Collections for events and speakers
 collections:
@@ -32,14 +32,13 @@ collections:
     output: true
     permalink: /sponsors/:path/
 
-# Navigation
-nav:
-  - title: "Events"
-    url: /events/
-  - title: "Speakers"
-    url: /speakers/
-  - title: "Sponsors"
-    url: /sponsors/
+
 
 # Analytics (Plausible)
 # Add plausible script in _includes/head-custom.html
+
+footer:
+  links:
+
+atom_feed:
+  hide: true
