@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-# Welcome to DotNETDevs.at
+# Welcome to DotNetDevs.at
 
 We organize monthly events to spread knowledge and experience in .NET.
 
