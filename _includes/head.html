@@ -1,0 +1,18 @@
+{% comment %} Minimal Mistakes head include {% endcomment %}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {%- if site.minimal_mistakes_skin -%}
+    <link rel="stylesheet" href="{{ '/assets/css/' | append: site.minimal_mistakes_skin | append: '.css' | relative_url }}">
+  {%- endif -%}
+  {%- if site.plausible_domain -%}
+    <!-- Plausible Analytics -->
+    <script async defer data-domain="{{ site.plausible_domain }}" src="https://plausible.io/js/plausible.js"></script>
+  {%- endif -%}
+  {%- if site.head_custom -%}
+    {{ site.head_custom }}
+  {%- endif -%}
+</head>

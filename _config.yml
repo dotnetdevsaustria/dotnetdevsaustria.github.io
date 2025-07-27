@@ -37,8 +37,6 @@ nav:
     url: /speakers/
   - title: "Sponsors"
     url: /sponsors/
-  - title: "Impressum"
-    url: /impressum/
 
 # Analytics (Plausible)
 # Add plausible script in _includes/head-custom.html
