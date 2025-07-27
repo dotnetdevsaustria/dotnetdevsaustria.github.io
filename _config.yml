@@ -32,6 +32,31 @@ collections:
     output: true
     permalink: /sponsors/:path/
 
+defaults:
+  # _sponsors
+  - scope:
+      path: ""
+      type: sponsors
+    values:
+      layout: single
+      author_profile: false
+      share: false
+  # events
+  - scope:
+      path: ""
+      type: events
+    values:
+      layout: single
+      author_profile: false
+      share: true
+  # speakers
+  - scope:
+      path: ""
+      type: speakers
+    values:
+      layout: single
+      author_profile: false
+      share: false
 
 
 # Analytics (Plausible)

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Recap: Introduction to Minimal APIs"
 date: 2025-07-01
 categories: [event, recap]

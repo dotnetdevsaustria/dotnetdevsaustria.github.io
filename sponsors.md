@@ -1,16 +1,8 @@
 ---
-layout: page
-title: Sponsors
+title: Events
+layout: collection
 permalink: /sponsors/
+collection: sponsors
+entries_layout: grid
+classes: wide
 ---
-
-## Our Sponsors
-
-<ul>
-  <li><img src="/assets/images/rubicon.svg" alt="Rubicon" style="height:40px;vertical-align:middle;"> Rubicon</li>
-  <li>Company A</li>
-  <li>Company B</li>
-  <li>Company C</li>
-</ul>
-
-*Thank you to all our sponsors for supporting our mission!*

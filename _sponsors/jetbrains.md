@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 title: JetBrains
 permalink: /sponsors/jetbrains/
 logo: /assets/images/jetbrains.svg

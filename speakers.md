@@ -1,8 +1,8 @@
 ---
-title: Events
+title: Speakers
 layout: collection
-permalink: /events/
-collection: events
+permalink: /speakers/
+collection: speakers
 entries_layout: grid
 classes: wide
 ---

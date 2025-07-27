@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Rubicon
 permalink: /sponsors/rubicon/
 logo: /assets/images/rubicon.svg
@@ -9,4 +8,3 @@ logo: /assets/images/rubicon.svg
 
 **Rubicon** ist ein Sponsor von DotNetDevs.at.
 
-[Zurück zur Sponsorenseite](/sponsors/)
