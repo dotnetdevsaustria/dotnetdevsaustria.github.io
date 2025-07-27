@@ -15,5 +15,5 @@ promote the exchange between the different communities
 
 ## Our Sponsors
 
-- [Rubicon](/sponsors/rubicon/)
-
+<a href="/sponsors/rubicon/"><img src="/assets/images/rubicon.svg" alt="Rubicon" style="height:80px;margin-right:20px;vertical-align:middle;"></a>
+<a href="/sponsors/jetbrains/"><img src="/assets/images/jetbrains.svg" alt="JetBrains" style="height:80px;margin-right:20px;vertical-align:middle;"></a>
