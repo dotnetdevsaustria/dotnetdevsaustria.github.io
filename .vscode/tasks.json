@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "Jekyll Build",
+			"command": "bundle exec jekyll build",
+			"group": "build",
+			"problemMatcher": [],
+			"args": []
+		}
+	]
+}
