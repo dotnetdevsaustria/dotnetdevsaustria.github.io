@@ -3,11 +3,24 @@
 	"tasks": [
 		{
 			"type": "shell",
-			"label": "Jekyll Build",
-			"command": "bundle exec jekyll build",
+			"label": "Bundle Install",
+			"command": "bundle install",
+			"group": "build"
+		},
+		{
+			"type": "shell",
+			"label": "Jekyll Serve",
+			"command": "bundle exec jekyll serve",
 			"group": "build",
-			"problemMatcher": [],
-			"args": []
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"type": "shell",
+			"label": "Open Localhost",
+			"command": "powershell -Command \"Start-Process 'http://127.0.0.1:4000/'\"",
+			"dependsOn": ["Jekyll Serve"],
+			"group": "none"
 		}
 	]
 }
