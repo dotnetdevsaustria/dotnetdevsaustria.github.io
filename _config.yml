@@ -25,6 +25,8 @@ collections:
   events:
     output: true
     permalink: /events/:path/
+    sort_by: date
+    sort_order: desc
   speakers:
     output: true
     permalink: /speakers/:path/

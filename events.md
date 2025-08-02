@@ -1,10 +1,9 @@
----
-title: Events
-layout: collection
-permalink: /events/
-collection: events
-entries_layout: grid
-classes: wide
-sort_by: date
-sort_order: desc
----
+{% assign events = site.events  %}
+{% for event in events reversed  %}
+  <div class="event">
+    <h2>{{ event.date | date: "%Y-%m-%d" }} - {{ event.title }}</h2>
+    <p>Speakers: {{ event.speakers | join: ", " }}</p>
+    <p>{{ event.abstract }}</p>
+    <a href="{{ event.url }}" class="btn">Learn More</a>
+  </div>
+{% endfor %}

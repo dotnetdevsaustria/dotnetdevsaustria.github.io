@@ -1,5 +1,5 @@
 ---
-title: Events
+title: Sponsors
 layout: collection
 permalink: /sponsors/
 collection: sponsors

@@ -49,22 +49,33 @@ layout: default
           </aside>
         {% endif %}
 
-        {% for speaker in page.speakers %}{{ speaker }}{% endfor %}.
+        {% if page.date %}Date: {{ page.date | date: "%Y-%m-%d" }}<br>{% endif %}
+        <br>
+        Speakers: {% for speaker in page.speakers %}{{ speaker }}{% endfor %}
+        <br>
+        
+        {% if page.location %}Location: {{ page.location }}<br>{% endif %}
+        
+        {% if page.RecordingLink and page.RecordingLink != "" %}
+          <h2>Recording</h2>
+        
 
-        {% if page.RecordingLink contains 'youtube.com' or page.RecordingLink contains 'youtu.be' %}
-          <div class="video-embed">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ page.RecordingLink | split: '/' | last | split: 'v=' | last | split: '&' | first }}" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <p>Link to Recording: <a href="{{ page.RecordingLink }}">{{ page.RecordingLink }}</a></p>
-        {% elsif page.RecordingLink %}
-          <video width="560" height="315" controls>
-            <source src="{{ page.RecordingLink }}">
-            Your browser does not support the video tag.
-          </video>
-          <p>Link to Recording: <a href="{{ page.RecordingLink }}">{{ page.RecordingLink }}</a></p>
+          {% if page.RecordingLink contains 'youtube.com' or page.RecordingLink contains 'youtu.be' %}
+            <div class="video-embed">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ page.RecordingLink | split: '/' | last | split: 'v=' | last | split: '&' | first }}" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p>Link to Recording: <a href="{{ page.RecordingLink }}">{{ page.RecordingLink }}</a></p>
+          {% elsif page.RecordingLink %}
+            <video width="560" height="315" controls>
+              <source src="{{ page.RecordingLink }}">
+              Your browser does not support the video tag.
+            </video>
+            <p>Link to Recording: <a href="{{ page.RecordingLink }}">{{ page.RecordingLink }}</a></p>
+          {% endif %}
+
         {% endif %}
         
-        {{ content }}
+        {{ page.abstract }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 

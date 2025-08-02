@@ -3,3 +3,45 @@
    ========================================================================== */
 
 // Intentionally left blank
+
+/* ==========================================================================  
+   .NET Brand skin (customized from default)  
+   ========================================================================== */
+
+$background-color: #ffffff !default;
+$text-color: black !default;
+$muted-text-color: #c5c5c5 !default;
+$primary-color: #512bd4 !default;
+$border-color: #b180d7 !default;
+$footer-background-color: #512bd4 !default;
+$link-color: #512bd4 !default;
+$link-color-hover: #b180d7 !default;
+$link-color-visited: #b180d7 !default;
+$masthead-background-color: #512bd4 !default;
+$masthead-link-color: #ffffff !default;
+$masthead-link-color-hover: #b180d7 !default;
+$navicon-link-color-hover: #b180d7 !default;
+
+.page__footer {
+  color: #fff !important;
+}
+
+.page__footer-follow .social-icons i,
+.page__footer-follow .social-icons .svg-inline--fa {
+  color: #b180d7;
+}
+
+.pagination--pager {
+  color: #fff;
+  background-color: #512bd4;
+  border-color: #b180d7;
+}
+
+.greedy-nav {
+   background: #512bd4 !important;
+}
+
+.initial-content {
+   background-color: #ffffff;
+   padding: 10px;
+}
