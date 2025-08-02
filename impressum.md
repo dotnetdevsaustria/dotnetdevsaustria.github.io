@@ -4,8 +4,6 @@ title: Impressum
 permalink: /impressum/
 ---
 
-# Impressum
-
 Informationspflicht laut §5 E-Commerce Gesetz, §14 Unternehmensgesetzbuch, §63 Gewerbeordnung und Offenlegungspflicht laut §25 Mediengesetz.
 
 **DotNetDevs.at - Verein zur Unterstützung von .NET Entwickler/innen in Österreich**  
@@ -15,7 +13,9 @@ Erdbergstraße 74/1/15, 1030 Wien, Österreich
 
 Organschaftliche Vertreter:  
 Obmann: Andreas Willich  
-Obmann Stellvertreter: Martin Ullrich
+Obmann Stellvertreter: Stefan Pölz
+Kassier: Raoul Holzer
+Kassier Stellvertreter: Martin Ullrich
 
 Vereinssitz: Wien  
 E-Mail: [team@dotnetdevs.at](mailto:team@dotnetdevs.at)

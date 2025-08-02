@@ -4,8 +4,6 @@ title: Datenschutzerklärung
 permalink: /privacy/
 ---
 
-# Datenschutzerklärung
-
 ## Einleitung und Überblick
 
 Wir haben diese Datenschutzerklärung (Fassung 15.03.2022-121968095) verfasst, um Ihnen gemäß der Vorgaben der Datenschutz-Grundverordnung (EU) 2016/679 und anwendbaren nationalen Gesetzen zu erklären, welche personenbezogenen Daten (kurz Daten) wir als Verantwortliche – und die von uns beauftragten Auftragsverarbeiter (z. B. Provider) – verarbeiten, zukünftig verarbeiten werden und welche rechtmäßigen Möglichkeiten Sie haben. Die verwendeten Begriffe sind geschlechtsneutral zu verstehen.
@@ -67,7 +65,7 @@ Sie können Ihren Browser so einrichten, dass Sie über das Setzen von Cookies i
 
 Wir hosten unsere Website bei einem externen Dienstleister (Provider). Personenbezogene Daten, die auf dieser Website erfasst werden, werden auf den Servern des Providers gespeichert. Hierbei kann es sich v. a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln.
 
-## Web Analytics
+<!-- ## Web Analytics
 
 Wir verwenden auf unserer Website Software zur Auswertung des Verhaltens der Website-Besucher (Web Analytics). Dabei werden Daten gesammelt, die der jeweilige Analytic-Tool-Anbieter speichert, verwaltet und verarbeitet. Mit Hilfe der Daten werden Analysen über das Nutzerverhalten auf unserer Website erstellt und uns als Websitebetreiber zur Verfügung gestellt.
 
@@ -75,7 +73,7 @@ Wir verwenden auf unserer Website Software zur Auswertung des Verhaltens der Web
 
 Wir verwenden auf unserer Website das Analyse-Tracking Tool Google Analytics des amerikanischen Unternehmens Google Inc. Für den europäischen Raum ist das Unternehmen Google Ireland Limited (Gordon House, Barrow Street Dublin 4, Irland) für alle Google-Dienste verantwortlich. Google Analytics sammelt Daten über Ihre Handlungen auf unserer Website. Wenn Sie beispielsweise einen Link anklicken, wird diese Aktion in einem Cookie gespeichert und an Google Analytics versandt. Mithilfe der Berichte, die wir von Google Analytics erhalten, können wir unsere Website und unser Service besser an Ihre Wünsche anpassen.
 
-Mehr Informationen zur Datenverarbeitung durch Google Analytics finden Sie unter [https://support.google.com/analytics/answer/6004245?hl=de](https://support.google.com/analytics/answer/6004245?hl=de).
+Mehr Informationen zur Datenverarbeitung durch Google Analytics finden Sie unter [https://support.google.com/analytics/answer/6004245?hl=de](https://support.google.com/analytics/answer/6004245?hl=de). -->
 
 ## Kontakt
 

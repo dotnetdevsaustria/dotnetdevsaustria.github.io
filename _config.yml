@@ -5,6 +5,7 @@ description: >-
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://dotnetdevs.at" # the base hostname & protocol for your site
 locale: "en"
+future: true
 theme: "minimal-mistakes-jekyll"
 plugins:
   - jekyll-feed
@@ -19,14 +20,13 @@ plugins:
 # Minimal Mistakes settings
 minimal_mistakes_skin: "default"
 search: false
+logo: "/assets/images/DotNET_Community_Icon_Austria.png"
 
 # Collections for events and speakers
 collections:
   events:
     output: true
     permalink: /events/:path/
-    sort_by: date
-    sort_order: desc
   speakers:
     output: true
     permalink: /speakers/:path/
@@ -61,11 +61,25 @@ defaults:
       share: false
 
 
-# Analytics (Plausible)
-# Add plausible script in _includes/head-custom.html
-
 footer:
   links:
-
+    - label: "GitHub"
+      url: "https://github.com/dotnetdevsaustria"
+      icon: "fab fa-fw fa-github"
+    - label: "YouTube"
+      url: "https://www.youtube.com/channel/UCuf0V0imn7bI_wST2fEHgXQ"
+      icon: "fab fa-fw fa-youtube"
+    - label: "Twitch"
+      url: "https://www.twitch.tv/dotnetdevsat"
+      icon: "fab fa-fw fa-twitch"
+    - label: "LinkedIn"
+      url: "https://www.linkedin.com/company/dotnetdevs-austria/"
+      icon: "fab fa-fw fa-linkedin"
+    - label: "Meetup"
+      url: "https://www.meetup.com/dotnet-austria"
+      icon: "fab fa-fw fa-meetup"
+    - label: "BlueSky"
+      url: "https://bsky.app/profile/dotnetdevs.at"
+      icon: "fab fa-fw fa-bluesky"
 atom_feed:
   hide: true

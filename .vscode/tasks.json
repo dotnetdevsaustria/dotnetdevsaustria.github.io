@@ -10,7 +10,7 @@
 		{
 			"type": "shell",
 			"label": "Jekyll Serve",
-			"command": "bundle exec jekyll serve",
+			"command": "bundle exec jekyll serve --incremental --livereload",
 			"group": "build",
 			"isBackground": true,
 			"problemMatcher": []
