@@ -56,7 +56,7 @@ defaults:
       path: ""
       type: speakers
     values:
-      layout: single
+      layout: speaker
       author_profile: false
       share: false
 
