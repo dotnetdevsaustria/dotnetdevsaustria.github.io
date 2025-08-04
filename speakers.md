@@ -1,5 +1,6 @@
 ---
 title: Speakers
+permalink: /speakers/
 ---
 
 These are all speakers that have been featured in our events. If you are interested in speaking at one of our events, please [contact us](mailto:team@dotnetdevs.at).
@@ -16,4 +17,6 @@ These are all speakers that have been featured in our events. If you are interes
     <a href="{{ speaker.url }}" class="speaker-link"><h3 class="speaker-name">{{ speaker_name }}</h3></a>
     <p class="speaker-bio">{{ speaker_bio }}</p>
   </div>
+
+  <hr>
 {% endfor %}

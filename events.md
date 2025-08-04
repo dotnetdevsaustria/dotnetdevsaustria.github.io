@@ -1,3 +1,10 @@
+---
+title: Events
+permalink: /events/
+---
+
+These are our events. If you are interested in organizing an event with us, please [contact us](mailto:team@dotnetdevs.at).
+
 {% assign events = site.events  %}
 {% for event in events reversed  %}
   {% if event.public == nil or event.public == false %}
@@ -10,4 +17,7 @@
     <p>{{ event.abstract | markdownify }}</p>
     <a href="{{ event.url }}" class="btn-large">Go to Details</a>
   </div>
+
+  <hr>
+
 {% endfor %}
