@@ -51,8 +51,10 @@ layout: default
 
         {% if page.date %}Date: {{ page.date | date: "%Y-%m-%d" }}<br>{% endif %}
         <br>
-        Speakers: {% for speaker in page.speakers %}{{ speaker }}{% endfor %}
-        <br>
+        Speakers: 
+        <ul>
+          {% for speaker in page.speakers %}<li>{{ speaker }}</li>{% endfor %}
+        </ul>
         
         {% if page.location %}Location: {{ page.location }}<br>{% endif %}
         
