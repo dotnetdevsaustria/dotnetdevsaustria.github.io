@@ -58,6 +58,33 @@ layout: default
         {{ page.bio | markdownify}}
         
         {{ content }}
+
+        <h2>Talks:</h2>
+
+        {% assign events = site.events  %}
+        {% for event in events  %}
+          {% if event.public == nil or event.public == false %}
+            {% continue %}
+          {% endif %}
+
+          {% assign speaker_found = false %}
+          {% for speaker in event.speakers %}
+            {% if speaker == page.name %}
+              {% assign speaker_found = true %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+
+          {% if speaker_found %}
+            <ul>
+              <li><a href="{{ event.url }}">{{ event.title }}</a></li>
+            </ul>
+          {% endif %}
+
+        {% endfor %}
+
+
+
         
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>

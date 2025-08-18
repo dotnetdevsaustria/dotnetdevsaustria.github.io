@@ -1,8 +1,5 @@
 ---
 name: Tim Paulus
+bio: |
+    As a developer, Tim faces the typical challenge of inheriting a software project with proven business value in its domain, yet needing to transform its architecture to meet new technical and organizational requirements.
 ---
-
-# Tim Paulus
-
-## Talks
-- [Evolving Modular Monoliths with architectural fitness functions](../_events/2025-06-05.md)
