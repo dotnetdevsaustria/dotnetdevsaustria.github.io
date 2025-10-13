@@ -67,18 +67,24 @@ layout: default
               <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ page.RecordingLink | split: '/' | last | split: 'v=' | last | split: '&' | first }}" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
             </div>
             <p>Link to Recording: <a href="{{ page.RecordingLink }}">{{ page.RecordingLink }}</a></p>
-          {% elsif page.RecordingLink %}
-            <video width="560" height="315" controls>
-              <source src="{{ page.RecordingLink }}">
-              Your browser does not support the video tag.
-            </video>
-            <p>Link to Recording: <a href="{{ page.RecordingLink }}">{{ page.RecordingLink }}</a></p>
           {% endif %}
-
         {% endif %}
         
         {{ page.abstract | markdownify }}
-        {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
+        
+        {% if page.RecordingLink contains 'youtube.com' or page.RecordingLink contains 'youtu.be' %}
+            
+        {% else %}
+            <h2>Registration:</h2>
+
+            {% if page.InPersonLink %}
+              <p>In-person event link: <a href="{{ page.InPersonLink }}">{{ page.InPersonLink }}</a></p>
+            {% endif %}
+            {% if page.RemoteLink %}
+              <p>Remote event link: <a href="{{ page.RemoteLink }}">{{ page.RemoteLink }}</a></p>
+            {% endif %}
+        {% endif %}
+        
       </section>
 
       <footer class="page__meta">
