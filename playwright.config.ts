@@ -50,6 +50,7 @@ export default defineConfig({
   },
 
   /* Snapshot settings for approval testing */
+  snapshotPathTemplate: '{testDir}/{testFileDir}/{testFileName}-snapshots/{arg}{ext}',
   expect: {
     toHaveScreenshot: {
       // Allow up to 2% pixel difference for cross-machine font rendering variations

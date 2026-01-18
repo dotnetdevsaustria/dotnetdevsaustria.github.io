@@ -1,0 +1,19 @@
+# Handle line endings automatically for files detected as text
+* text=auto
+
+# Force LF line endings for snapshot files to ensure cross-platform consistency
+tests/**/*-snapshots/*.txt text eol=lf
+
+# Ensure shell scripts always have LF line endings
+*.sh text eol=lf
+
+# Ensure common web files have LF line endings
+*.js text eol=lf
+*.ts text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.md text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.scss text eol=lf
