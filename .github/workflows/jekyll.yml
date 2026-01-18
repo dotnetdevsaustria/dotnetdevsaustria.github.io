@@ -32,10 +32,10 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Test job - runs Playwright tests
+  # Test job - runs Playwright tests on Windows (matches local dev environment)
   test:
     timeout-minutes: 60
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
