@@ -33,7 +33,11 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: { 
+        ...devices['Desktop Chrome'],
+        // Standardize viewport for consistent screenshots
+        viewport: { width: 1280, height: 720 },
+      },
     },
   ],
 
@@ -48,7 +52,10 @@ export default defineConfig({
   /* Snapshot settings for approval testing */
   expect: {
     toHaveScreenshot: {
-      maxDiffPixels: 100,
+      // Allow up to 2% pixel difference for cross-machine font rendering variations
+      maxDiffPixelRatio: 0.02,
+      // Threshold for color difference (0-1, higher = more tolerant)
+      threshold: 0.3,
     },
     toMatchSnapshot: {
       maxDiffPixelRatio: 0.1,
