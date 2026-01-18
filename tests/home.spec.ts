@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { verifyPageLoads, createPageStructureSnapshot, extractTextContent } from './test-utils';
+import { verifyPageLoads, createPageStructureSnapshot, extractTextContent, toNormalizedSnapshot } from './test-utils';
 
 test.describe('Home Page', () => {
   test('should load successfully', async ({ page }) => {
@@ -51,7 +51,7 @@ test.describe('Home Page', () => {
     await page.goto('/');
     const structure = await createPageStructureSnapshot(page);
     
-    expect(JSON.stringify(structure, null, 2)).toMatchSnapshot('home-page-structure.txt');
+    expect(toNormalizedSnapshot(structure)).toMatchSnapshot('home-page-structure.txt');
   });
 
   test('visual snapshot', async ({ page }) => {

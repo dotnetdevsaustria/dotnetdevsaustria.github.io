@@ -5,6 +5,24 @@ import { expect, Page } from '@playwright/test';
  */
 
 /**
+ * Normalizes line endings to LF and removes empty lines for cross-platform snapshot comparison
+ */
+export function normalizeLineEndings(text: string): string {
+  return text
+    .replace(/\r\n/g, '\n')  // Convert CRLF to LF
+    .replace(/\r/g, '\n')     // Convert remaining CR to LF
+    .replace(/\n\s*\n/g, '\n') // Remove empty lines
+    .trim();
+}
+
+/**
+ * Creates a normalized JSON string for snapshot comparison
+ */
+export function toNormalizedSnapshot(obj: object): string {
+  return normalizeLineEndings(JSON.stringify(obj, null, 2));
+}
+
+/**
  * Normalizes HTML content for approval testing by removing dynamic content
  * like timestamps, session IDs, etc.
  */

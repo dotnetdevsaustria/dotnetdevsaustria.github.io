@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { verifyPageLoads, createPageStructureSnapshot } from './test-utils';
+import { verifyPageLoads, createPageStructureSnapshot, toNormalizedSnapshot } from './test-utils';
 
 /**
  * Comprehensive tests that verify ALL collection items render correctly
@@ -182,7 +182,7 @@ test.describe('Page Content Snapshots', () => {
     await page.waitForLoadState('networkidle');
     
     const structure = await createPageStructureSnapshot(page);
-    expect(JSON.stringify(structure, null, 2)).toMatchSnapshot('all-home-structure.txt');
+    expect(toNormalizedSnapshot(structure)).toMatchSnapshot('all-home-structure.txt');
   });
 
   test('events page content snapshot', async ({ page }) => {
@@ -190,7 +190,7 @@ test.describe('Page Content Snapshots', () => {
     await page.waitForLoadState('networkidle');
     
     const structure = await createPageStructureSnapshot(page);
-    expect(JSON.stringify(structure, null, 2)).toMatchSnapshot('all-events-structure.txt');
+    expect(toNormalizedSnapshot(structure)).toMatchSnapshot('all-events-structure.txt');
   });
 
   test('sponsors page content snapshot', async ({ page }) => {
@@ -198,7 +198,7 @@ test.describe('Page Content Snapshots', () => {
     await page.waitForLoadState('networkidle');
     
     const structure = await createPageStructureSnapshot(page);
-    expect(JSON.stringify(structure, null, 2)).toMatchSnapshot('all-sponsors-structure.txt');
+    expect(toNormalizedSnapshot(structure)).toMatchSnapshot('all-sponsors-structure.txt');
   });
 
   test('speakers page content snapshot', async ({ page }) => {
@@ -206,6 +206,6 @@ test.describe('Page Content Snapshots', () => {
     await page.waitForLoadState('networkidle');
     
     const structure = await createPageStructureSnapshot(page);
-    expect(JSON.stringify(structure, null, 2)).toMatchSnapshot('all-speakers-structure.txt');
+    expect(toNormalizedSnapshot(structure)).toMatchSnapshot('all-speakers-structure.txt');
   });
 });
