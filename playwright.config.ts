@@ -29,6 +29,9 @@ export default defineConfig({
     screenshot: 'only-on-failure',
   },
 
+  /* Platform-agnostic snapshot paths (no OS suffix) */
+  snapshotPathTemplate: '{testDir}/{testFileDir}/{testFileName}-snapshots/{arg}{ext}',
+
   /* Configure projects for major browsers */
   projects: [
     {
