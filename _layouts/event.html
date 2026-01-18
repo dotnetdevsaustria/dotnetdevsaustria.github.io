@@ -53,7 +53,20 @@ layout: default
         <br>
         Speakers: 
         <ul>
-          {% for speaker in page.speakers %}<li>{{ speaker }}</li>{% endfor %}
+          {% for speaker in page.speakers %}
+            {% assign speaker_page = nil %}
+            {% for s in site.speakers %}
+              {% if s.name == speaker %}
+                {% assign speaker_page = s %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
+            {% if speaker_page %}
+              <li><a href="{{ speaker_page.url | relative_url }}">{{ speaker }}</a></li>
+            {% else %}
+              <li>{{ speaker }}</li>
+            {% endif %}
+          {% endfor %}
         </ul>
         
         {% if page.location %}Location: {{ page.location }}<br>{% endif %}
