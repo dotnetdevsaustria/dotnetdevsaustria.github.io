@@ -1,0 +1,13 @@
+{
+  "title": "Welcome to DotNetDevs.at",
+  "url": "http://127.0.0.1:4000/",
+  "hasNavigation": true,
+  "hasFooter": true,
+  "hasMainContent": false,
+  "headings": [
+    "Our goals are:",
+    "Our Sponsors:"
+  ],
+  "links": 19,
+  "images": 3
+}

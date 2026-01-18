@@ -1,0 +1,10 @@
+{
+  "title": "Sponsors - DotNetDevs.at",
+  "url": "http://127.0.0.1:4000/sponsors/",
+  "hasNavigation": true,
+  "hasFooter": true,
+  "hasMainContent": false,
+  "headings": [],
+  "links": 20,
+  "images": 3
+}

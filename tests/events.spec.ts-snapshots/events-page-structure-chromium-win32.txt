@@ -1,0 +1,29 @@
+{
+  "title": "Events - DotNetDevs.at",
+  "url": "http://127.0.0.1:4000/events/",
+  "hasNavigation": true,
+  "hasFooter": true,
+  "hasMainContent": false,
+  "headings": [
+    "2026-01-20 - DevContainers: Development environments as code",
+    "2025-12-16 - Testcontainers - Integration Testing Done Right",
+    "2025-10-21 - Do you trust your NuGet packages?",
+    "2025-08-12 - Aspire vs Testcontainers for .NET Testing",
+    "2025-08-12 - From Events to Evidence: .NET Observability with OpenTelemetry, Serilog, Grafana Cloud & Aspire",
+    "2025-08-12 - C# Interceptors: Native AOT & Performance for free",
+    "2025-07-08 - Database Updates - Not As Easy As You Think",
+    "2025-04-29 - DataSync CommunityToolkit : Effortlessly Integrating Data in Modern Offline Client",
+    "2025-03-18 - Building Event-Driven Microservices at scale with Azure Cosmos DB",
+    "2025-02-20 - Observability – Seeing Beyond the Logs",
+    "2025-01-14 - AI Assistance Systems for .NET – Current State and Developments",
+    "2024-12-19 - An Aspiring evening in .NET land",
+    "2024-06-27 - Tips and tricks for VS debugger",
+    "2024-05-28 - Getting fat again with WinUI 3",
+    "2024-04-16 - Solving the integration testing puzzle with contract-based testing",
+    "2024-03-26 - Real time 1v1 multiplayer game using .NET and Unity3D",
+    "2024-02-20 - GitHub Copilot - Gimmick or Useful?",
+    "2024-01-23 - Going Functional with Railway Oriented Programming in C#"
+  ],
+  "links": 54,
+  "images": 1
+}

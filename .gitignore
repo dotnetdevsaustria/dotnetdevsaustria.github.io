@@ -7,3 +7,8 @@ node_modules/
 *.swp
 *.swo
 .env
+
+# Playwright test artifacts
+test-results/
+playwright-report/
+playwright/.cache/

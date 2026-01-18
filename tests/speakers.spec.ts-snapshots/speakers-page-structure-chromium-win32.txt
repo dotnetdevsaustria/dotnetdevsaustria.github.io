@@ -1,0 +1,33 @@
+{
+  "title": "Speakers - DotNetDevs.at",
+  "url": "http://127.0.0.1:4000/speakers/",
+  "hasNavigation": true,
+  "hasFooter": true,
+  "hasMainContent": false,
+  "headings": [
+    "Alex Gavrilescu",
+    "Alex Thissen",
+    "Andreas Willich",
+    "Bas Dijkstra",
+    "Christian Schabetsberger",
+    "Christoph Wille",
+    "David Eiwen",
+    "David Walsner",
+    "Davide Bellone",
+    "Jiří Činčura",
+    "Manuel Juran",
+    "Martin Ullrich",
+    "Matthias Koch",
+    "Michael Ketting",
+    "Patrick Säuerl",
+    "Paul Rohorzka",
+    "Rainer Stropek",
+    "Raoul Holzer",
+    "Roman Jasek",
+    "Shahab Ganji",
+    "Stefan Pölz",
+    "Tim Paulus"
+  ],
+  "links": 40,
+  "images": 3
+}
