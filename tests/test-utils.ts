@@ -9,9 +9,11 @@ import { expect, Page } from '@playwright/test';
  */
 export function normalizeLineEndings(text: string): string {
   return text
-    .replace(/\r\n/g, '\n')  // Convert CRLF to LF
-    .replace(/\r/g, '\n')     // Convert remaining CR to LF
-    .replace(/\n\s*\n/g, '\n') // Remove empty lines
+    .replace(/\r\n/g, '\n')           // Convert CRLF to LF
+    .replace(/\r/g, '\n')              // Convert remaining CR to LF
+    .split('\n')                       // Split into lines
+    .filter(line => line.trim() !== '') // Remove empty/whitespace-only lines
+    .join('\n')                        // Rejoin with LF
     .trim();
 }
 
