@@ -188,15 +188,24 @@ a {
   }
   
   .hidden-links {
-    background: var(--masthead-background);
-    border-color: var(--border-color);
+    background: var(--masthead-background) !important;
+    border-color: var(--masthead-link-hover) !important;
     
     a {
       color: var(--masthead-link-color) !important;
       
       &:hover {
         color: var(--masthead-link-hover) !important;
+        background: rgba(255, 255, 255, 0.1) !important;
       }
+    }
+    
+    &::before {
+      border-color: var(--masthead-link-hover) transparent !important;
+    }
+    
+    &::after {
+      border-color: var(--masthead-background) transparent !important;
     }
   }
 }

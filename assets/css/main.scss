@@ -180,6 +180,27 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 2px 8px var(--shadow-color);
 }
 
+/* Hamburger menu icon visibility fix */
+.greedy-nav__toggle {
+  .navicon,
+  .navicon::before,
+  .navicon::after {
+    background: var(--masthead-link-color) !important;
+  }
+  
+  &:hover {
+    .navicon,
+    .navicon::before,
+    .navicon::after {
+      background: var(--masthead-link-hover) !important;
+    }
+  }
+  
+  &.close .navicon {
+    background: transparent !important;
+  }
+}
+
 .site-logo img {
   border-radius: 8px;
   transition: transform 0.2s ease;
@@ -192,6 +213,38 @@ h1, h2, h3, h4, h5, h6 {
     &:hover {
       transform: none;
     }
+  }
+}
+
+/* Mobile navigation optimizations */
+@media (max-width: 768px) {
+  .greedy-nav {
+    a.site-title {
+      font-size: 0.9em;
+      margin-inline-end: 0.5rem !important;
+    }
+    
+    .visible-links {
+      margin-inline-end: 0.5rem;
+      
+      li:first-child {
+        flex: 0 0 auto !important;
+      }
+      
+      a {
+        margin: 0 0.5rem !important;
+        font-size: 0.9em;
+      }
+    }
+    
+    .theme-toggle {
+      margin-inline-start: 0.25rem;
+      padding: 0.4em;
+    }
+  }
+  
+  .site-logo img {
+    max-height: 1.5rem !important;
   }
 }
 
