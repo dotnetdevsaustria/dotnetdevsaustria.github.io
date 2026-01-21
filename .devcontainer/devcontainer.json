@@ -11,8 +11,7 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "rebornix.Ruby",
-        "wingrunr21.vscode-ruby",
+        "shopify.ruby-lsp",
         "ms-playwright.playwright",
         "yzhang.markdown-all-in-one",
         "DavidAnson.vscode-markdownlint"
