@@ -11,10 +11,10 @@ These are all speakers that have been featured in our events. If you are interes
   {% assign speaker_image = speaker.image %}
 
   <div class="speaker">
+    <a href="{{ speaker.url }}" class="speaker-link"><h3 class="speaker-name">{{ speaker_name }}</h3></a>
     {% if speaker_image != nil %}
       <img src="{{ speaker_image }}" alt="{{ speaker_name }}" class="speaker-image">
     {% endif %}
-    <a href="{{ speaker.url }}" class="speaker-link"><h3 class="speaker-name">{{ speaker_name }}</h3></a>
     <p class="speaker-bio">{{ speaker_bio }}</p>
   </div>
 
