@@ -339,7 +339,32 @@ figcaption {
 .sponsor-logo,
 a[href*="/sponsors/"] img {
   background-color: #ffffff;
-  padding: 12px 16px;
+  padding: 20px;
   border-radius: 8px;
   box-shadow: 0 1px 3px var(--shadow-color);
+  display: inline-block;
+  margin-bottom: 20px;
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  
+  @media (max-width: 768px) {
+    display: block;
+    margin: 0 auto 30px;
+    height: 60px;
+    max-width: 100%;
+    padding: 16px;
+  }
+}
+
+// Ensure sponsor links are centered on mobile
+a[href*="/sponsors/"] {
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

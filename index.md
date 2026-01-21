@@ -12,6 +12,9 @@ DotNetDevs.at is a non-profit association whose purpose is to spread knowledge a
 - promote the exchange between the different communities
 
 ## Our Sponsors:
+{: .text-center}
 
+<div style="text-align: center;">
 <a href="/sponsors/rubicon/"><img src="/assets/images/rubicon.svg" alt="Rubicon" style="height:80px;margin-right:40px;vertical-align:middle;"></a>
 <a href="/sponsors/jetbrains/"><img src="/assets/images/jetbrains.svg" alt="JetBrains" style="height:80px;margin-right:40px;vertical-align:middle;"></a>
+</div>
