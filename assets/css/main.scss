@@ -8,3 +8,355 @@ search: false
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
+/* ==========================================================================
+   Modern Enhancements - Custom Styles
+   ========================================================================== */
+
+/* Smooth transitions for theme switching */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==========================================================================
+   Typography Enhancements
+   ========================================================================== */
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.025em;
+}
+
+/* ==========================================================================
+   Card & Surface Styles
+   ========================================================================== */
+
+.archive__item {
+  padding: 1.25em;
+  margin-bottom: 1.5em;
+  background-color: var(--surface-color);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 1px 3px var(--shadow-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow-color-strong);
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+.archive__item-teaser {
+  border-radius: 8px;
+  overflow: hidden;
+  
+  img {
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover img {
+    transform: scale(1.02);
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    &:hover img {
+      transform: none;
+    }
+  }
+}
+
+/* ==========================================================================
+   Button Enhancements
+   ========================================================================== */
+
+.btn {
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px var(--shadow-color-strong);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    &:hover,
+    &:active {
+      transform: none;
+    }
+  }
+}
+
+.pagination--pager {
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-1px);
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+/* ==========================================================================
+   Navigation Enhancements
+   ========================================================================== */
+
+.greedy-nav {
+  border-radius: 0;
+  
+  a {
+    transition: color 0.2s ease;
+  }
+  
+  .visible-links a {
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background-color: var(--masthead-link-hover);
+      transition: width 0.2s ease, left 0.2s ease;
+    }
+    
+    &:hover::after {
+      width: 100%;
+      left: 0;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .visible-links a::after {
+      transition: none;
+    }
+  }
+}
+
+/* ==========================================================================
+   Masthead Enhancements
+   ========================================================================== */
+
+.masthead {
+  border-bottom: none;
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.site-logo img {
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+/* ==========================================================================
+   Footer Enhancements
+   ========================================================================== */
+
+.page__footer {
+  border-top: none;
+  
+  a {
+    transition: color 0.2s ease;
+    
+    &:hover {
+      color: var(--primary-color-lighter);
+    }
+  }
+}
+
+.page__footer-follow li {
+  transition: transform 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+/* ==========================================================================
+   Content Enhancements
+   ========================================================================== */
+
+.initial-content {
+  border-radius: 0;
+}
+
+.page__content {
+  h2 {
+    border-bottom-color: var(--border-color);
+  }
+  
+  a:not(.btn) {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    
+    &:hover {
+      text-decoration-color: var(--primary-color);
+    }
+  }
+}
+
+/* Code blocks */
+pre {
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+:not(pre) > code {
+  border-radius: 4px;
+  padding: 0.15em 0.4em;
+}
+
+/* Blockquote styling */
+blockquote {
+  border-radius: 0 8px 8px 0;
+  background-color: var(--surface-elevated);
+  padding: 1em 1.5em;
+  border-left-width: 4px;
+}
+
+/* ==========================================================================
+   Form Enhancements
+   ========================================================================== */
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+  border-radius: 8px;
+  padding: 0.75em 1em;
+  border: 1px solid var(--input-border);
+  background-color: var(--input-background);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  
+  &:focus {
+    border-color: var(--input-focus-border);
+    box-shadow: 0 0 0 3px rgba(81, 43, 212, 0.15);
+    outline: none;
+  }
+}
+
+/* ==========================================================================
+   Table Enhancements
+   ========================================================================== */
+
+table {
+  border-radius: 8px;
+  overflow: hidden;
+  border-collapse: separate;
+  border-spacing: 0;
+  
+  th {
+    background-color: var(--surface-elevated);
+  }
+  
+  tr:hover td {
+    background-color: var(--surface-elevated);
+  }
+}
+
+/* ==========================================================================
+   Sidebar Enhancements
+   ========================================================================== */
+
+.sidebar {
+  border-radius: 8px;
+}
+
+.author__avatar img {
+  border-radius: 50%;
+  border: 3px solid var(--primary-color);
+}
+
+/* ==========================================================================
+   Mobile Responsiveness
+   ========================================================================== */
+
+@media (max-width: 600px) {
+  .archive__item {
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 8px;
+  }
+  
+  .initial-content {
+    padding: 1.5em;
+  }
+  
+  .theme-toggle {
+    padding: 0.375em;
+    
+    svg {
+      width: 1.125em;
+      height: 1.125em;
+    }
+  }
+}
+
+/* ==========================================================================
+   Focus Styles for Accessibility
+   ========================================================================== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+

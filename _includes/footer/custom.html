@@ -1,3 +1,43 @@
 <!-- start custom footer snippets -->
 
+<!-- Dark mode toggle handler -->
+<script>
+  (function() {
+    var toggleBtn = document.querySelector('.theme-toggle');
+    if (!toggleBtn) return;
+    
+    function getPreferredTheme() {
+      var stored = sessionStorage.getItem('theme');
+      if (stored) return stored;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    
+    function setTheme(theme) {
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+      }
+      sessionStorage.setItem('theme', theme);
+    }
+    
+    // Set initial theme
+    setTheme(getPreferredTheme());
+    
+    // Toggle handler
+    toggleBtn.addEventListener('click', function() {
+      var current = document.documentElement.getAttribute('data-theme');
+      var newTheme = current === 'dark' ? 'light' : 'dark';
+      setTheme(newTheme);
+    });
+    
+    // Listen for system theme changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+      if (!sessionStorage.getItem('theme')) {
+        setTheme(e.matches ? 'dark' : 'light');
+      }
+    });
+  })();
+</script>
+
 <!-- end custom footer snippets -->

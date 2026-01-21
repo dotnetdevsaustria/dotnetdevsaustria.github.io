@@ -5,43 +5,332 @@
 // Intentionally left blank
 
 /* ==========================================================================  
-   .NET Brand skin (customized from default)  
+   .NET Brand skin (customized from default) with CSS Custom Properties
+   for runtime dark mode switching
    ========================================================================== */
 
+// Light mode colors (used as Sass fallbacks)
 $background-color: #ffffff !default;
-$text-color: black !default;
-$muted-text-color: #c5c5c5 !default;
+$text-color: #1a1a1a !default;
+$muted-text-color: #6b7280 !default;
 $primary-color: #512bd4 !default;
-$border-color: #b180d7 !default;
+$border-color: #e5e7eb !default;
 $footer-background-color: #512bd4 !default;
 $link-color: #512bd4 !default;
-$link-color-hover: #b180d7 !default;
-$link-color-visited: #b180d7 !default;
+$link-color-hover: #7c3aed !default;
+$link-color-visited: #6d28d9 !default;
 $masthead-background-color: #512bd4 !default;
 $masthead-link-color: #ffffff !default;
-$masthead-link-color-hover: #b180d7 !default;
-$navicon-link-color-hover: #b180d7 !default;
+$masthead-link-color-hover: #c4b5fd !default;
+$navicon-link-color-hover: #c4b5fd !default;
+$code-background-color: #f3f4f6 !default;
 
+// CSS Custom Properties for runtime theme switching
+:root {
+  // Core colors
+  --background-color: #ffffff;
+  --text-color: #1a1a1a;
+  --muted-text-color: #6b7280;
+  --primary-color: #512bd4;
+  --primary-color-light: #7c3aed;
+  --primary-color-lighter: #c4b5fd;
+  --border-color: #e5e7eb;
+  
+  // Link colors
+  --link-color: #512bd4;
+  --link-color-hover: #7c3aed;
+  --link-color-visited: #6d28d9;
+  
+  // Component colors
+  --masthead-background: #512bd4;
+  --masthead-link-color: #ffffff;
+  --masthead-link-hover: #c4b5fd;
+  --footer-background: #512bd4;
+  --footer-text-color: #ffffff;
+  
+  // Code blocks
+  --code-background: #f3f4f6;
+  --code-text-color: #1f2937;
+  
+  // Cards & surfaces
+  --surface-color: #ffffff;
+  --surface-elevated: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --shadow-color-strong: rgba(0, 0, 0, 0.15);
+  
+  // Form elements
+  --input-background: #ffffff;
+  --input-border: #d1d5db;
+  --input-focus-border: #512bd4;
+}
+
+// Dark mode colors
+[data-theme="dark"] {
+  // Core colors
+  --background-color: #0f0f1a;
+  --text-color: #e5e7eb;
+  --muted-text-color: #9ca3af;
+  --primary-color: #8b5cf6;
+  --primary-color-light: #a78bfa;
+  --primary-color-lighter: #c4b5fd;
+  --border-color: #374151;
+  
+  // Link colors
+  --link-color: #a78bfa;
+  --link-color-hover: #c4b5fd;
+  --link-color-visited: #8b5cf6;
+  
+  // Component colors
+  --masthead-background: #1a1a2e;
+  --masthead-link-color: #e5e7eb;
+  --masthead-link-hover: #c4b5fd;
+  --footer-background: #1a1a2e;
+  --footer-text-color: #e5e7eb;
+  
+  // Code blocks
+  --code-background: #1f2937;
+  --code-text-color: #e5e7eb;
+  
+  // Cards & surfaces
+  --surface-color: #1a1a2e;
+  --surface-elevated: #252542;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --shadow-color-strong: rgba(0, 0, 0, 0.5);
+  
+  // Form elements
+  --input-background: #1f2937;
+  --input-border: #4b5563;
+  --input-focus-border: #8b5cf6;
+}
+
+// Apply CSS variables to base elements
+html {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color) !important;
+}
+
+// Text elements - ensure they use CSS variables
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color);
+}
+
+p, li, td, th, dt, dd, span, label {
+  color: var(--text-color);
+}
+
+.page__content,
+.archive__item-excerpt,
+.page__lead {
+  color: var(--text-color);
+}
+
+// Muted text
+.page__meta,
+figcaption,
+.archive__item-excerpt {
+  color: var(--muted-text-color);
+}
+
+// Links
+a {
+  color: var(--link-color);
+  
+  &:visited {
+    color: var(--link-color-visited);
+  }
+  
+  &:hover {
+    color: var(--link-color-hover);
+  }
+}
+
+// Page footer
 .page__footer {
-  color: #fff !important;
+  background-color: var(--footer-background) !important;
+  color: var(--footer-text-color) !important;
 }
 
 .page__footer-follow .social-icons i,
 .page__footer-follow .social-icons .svg-inline--fa {
-  color: #b180d7;
+  color: var(--primary-color-lighter);
 }
 
+// Pagination
 .pagination--pager {
   color: #fff;
-  background-color: #512bd4;
-  border-color: #b180d7;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color-light);
+  
+  &:hover {
+    background-color: var(--primary-color-light);
+  }
 }
 
+// Navigation
 .greedy-nav {
-   background: #512bd4 !important;
+  background: var(--masthead-background) !important;
+  
+  a {
+    color: var(--masthead-link-color) !important;
+    
+    &:hover {
+      color: var(--masthead-link-hover) !important;
+    }
+  }
+  
+  .visible-links a:before {
+    background: var(--masthead-link-hover);
+  }
+  
+  .hidden-links {
+    background: var(--masthead-background);
+    border-color: var(--border-color);
+    
+    a {
+      color: var(--masthead-link-color) !important;
+      
+      &:hover {
+        color: var(--masthead-link-hover) !important;
+      }
+    }
+  }
 }
 
+// Masthead
+.masthead {
+  background-color: var(--masthead-background) !important;
+  border-bottom-color: var(--masthead-background);
+}
+
+.site-title,
+.site-subtitle {
+  color: var(--masthead-link-color) !important;
+}
+
+// Main content area
 .initial-content {
-   background-color: #ffffff;
-   padding: 50px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 50px;
+}
+
+// Code blocks
+code,
+pre {
+  background-color: var(--code-background);
+  color: var(--code-text-color);
+}
+
+// Borders
+hr {
+  border-color: var(--border-color);
+}
+
+// Archive items
+.archive__subtitle {
+  color: var(--muted-text-color);
+  border-bottom-color: var(--border-color);
+}
+
+// Page title
+.page__title {
+  color: var(--text-color);
+  
+  a {
+    color: var(--text-color) !important;
+    
+    &:hover {
+      color: var(--link-color-hover) !important;
+    }
+  }
+}
+
+// Page header elements
+.page__inner-wrap header {
+  color: var(--text-color);
+}
+
+.page__meta,
+.page__meta-date,
+.page__meta-readtime {
+  color: var(--muted-text-color);
+}
+
+.page__lead {
+  color: var(--text-color);
+}
+
+// Blockquote
+blockquote {
+  border-color: var(--primary-color);
+}
+
+// Tables
+table {
+  border-color: var(--border-color);
+}
+
+th, td {
+  border-color: var(--border-color);
+}
+
+// Forms
+input, textarea, select {
+  background-color: var(--input-background);
+  border-color: var(--input-border);
+  color: var(--text-color);
+  
+  &:focus {
+    border-color: var(--input-focus-border);
+  }
+}
+
+// Figure captions
+figcaption {
+  color: var(--muted-text-color);
+}
+
+// Sidebar
+.sidebar {
+  background-color: var(--surface-color);
+}
+
+// Author profile
+.author__bio {
+  color: var(--muted-text-color);
+}
+
+// Navigation toc
+.toc {
+  background-color: var(--surface-color);
+  border-color: var(--border-color);
+  
+  .nav__title {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+  
+  a {
+    color: var(--text-color);
+    
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}
+
+// Sponsor logos - ensure visibility in dark mode
+.sponsor-image,
+.sponsor img,
+.sponsor-logo,
+a[href*="/sponsors/"] img {
+  background-color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px var(--shadow-color);
 }
