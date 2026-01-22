@@ -219,27 +219,33 @@ h1, h2, h3, h4, h5, h6 {
 /* Mobile navigation optimizations */
 @media (max-width: 768px) {
   .greedy-nav {
+    flex-wrap: nowrap !important;
+    
     a.site-title {
-      font-size: 0.9em;
-      margin-inline-end: 0.5rem !important;
+      font-size: 0.85em;
+      margin-inline-end: 0.3rem !important;
+      white-space: nowrap;
     }
     
     .visible-links {
-      margin-inline-end: 0.5rem;
+      margin-inline-end: 0.25rem;
+      flex-wrap: nowrap !important;
       
-      li:first-child {
+      li {
         flex: 0 0 auto !important;
       }
       
       a {
-        margin: 0 0.5rem !important;
-        font-size: 0.9em;
+        margin: 0 0.3rem !important;
+        font-size: 0.85em;
+        white-space: nowrap;
       }
     }
     
     .theme-toggle {
-      margin-inline-start: 0.25rem;
-      padding: 0.4em;
+      margin-inline-start: 0.15rem;
+      padding: 0.35em;
+      flex-shrink: 0;
     }
   }
   
@@ -401,13 +407,34 @@ table {
     padding: 1.5em;
   }
   
-  .theme-toggle {
-    padding: 0.375em;
-    
-    svg {
-      width: 1.125em;
-      height: 1.125em;
+  .greedy-nav {
+    a.site-title {
+      font-size: 0.8em;
+      margin-inline-end: 0.2rem !important;
     }
+    
+    .visible-links {
+      margin-inline-end: 0.15rem;
+      
+      a {
+        margin: 0 0.2rem !important;
+        font-size: 0.8em;
+      }
+    }
+    
+    .theme-toggle {
+      margin-inline-start: 0.1rem;
+      padding: 0.3em;
+      
+      svg {
+        width: 1em;
+        height: 1em;
+      }
+    }
+  }
+  
+  .site-logo img {
+    max-height: 1.3rem !important;
   }
 }
 
