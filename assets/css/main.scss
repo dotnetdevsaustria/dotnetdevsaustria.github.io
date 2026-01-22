@@ -228,10 +228,11 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .visible-links {
-      margin-inline-end: 0.25rem;
+      margin-inline-end: 0.3rem;
       flex-wrap: nowrap !important;
       
       li {
+        /* All items need flex: 0 0 auto to prevent shrinking and stay on one line */
         flex: 0 0 auto !important;
       }
       
@@ -414,7 +415,7 @@ table {
     }
     
     .visible-links {
-      margin-inline-end: 0.15rem;
+      margin-inline-end: 0.2rem;
       
       a {
         margin: 0 0.2rem !important;
