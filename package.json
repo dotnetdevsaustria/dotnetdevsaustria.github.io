@@ -10,7 +10,8 @@
     "test:report": "playwright show-report",
     "build": "bundle exec jekyll build",
     "serve": "bundle exec jekyll serve --incremental",
-    "test:ci": "npm run build && playwright test"
+    "test:ci": "npm run build && playwright test",
+    "generate:onsite": "node scripts/generate.js templates/onsite_event.txt"
   },
   "devDependencies": {
     "@playwright/test": "^1.40.0"
@@ -22,5 +23,8 @@
     "approval-testing"
   ],
   "author": "DotNetDevs Austria",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "gray-matter": "^4.0.3"
+  }
 }
