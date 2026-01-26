@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+echo "📦 Installing ImageMagick development libraries..."
+sudo apt-get update && sudo apt-get install -y libmagickwand-dev
+
 echo "📦 Installing Ruby dependencies..."
 bundle install
 
