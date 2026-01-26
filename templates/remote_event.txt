@@ -1,23 +1,22 @@
-This event is for people who join the event in person at %Location% (%LocationUrl%).
+This is the event for people who join the event via Stream.
 
-If you join the event remotely, please RSVP here: %RemoteLink%
+If you join the event in-person, please RSVP here: %InPersonLink%
 
 This meetup is organized by DotNetDevs.at (https://dotnetdevs.at/).
 
-Abstract
+Abstract:
 %abstract%
 
 %speakers_bio%
 
-Location, Food & Drinks are sponsored by %Location%.
-
 Timetable:
 
-- 18:00: Door opens at %Location%
+- 18:00: Stream starts at
+https://www.twitch.tv/dotnetdevsat or
+https://www.youtube.com/c/DotNetDevsAustria
 - 18:15: Intro
 - 18:20: Talk starts
-- 19:30: Food & Drinks
-- 21:00: End
+- about 19:30: End
 Recordings will be available afterward at https://go.dotnetdevs.at/recordings
 
 This meetup is organized by DotNetDevs.at (https://dotnetdevs.at/).

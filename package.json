@@ -11,7 +11,8 @@
     "build": "bundle exec jekyll build",
     "serve": "bundle exec jekyll serve --incremental",
     "test:ci": "npm run build && playwright test",
-    "generate:onsite": "node scripts/generate.js templates/onsite_event.txt"
+    "generate:onsite": "node scripts/generate.js templates/onsite_event.txt",
+    "generate:remote": "node scripts/generate.js templates/remote_event.txt"
   },
   "devDependencies": {
     "@playwright/test": "^1.40.0"

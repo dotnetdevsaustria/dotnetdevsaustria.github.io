@@ -1,7 +1,11 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
+const path = require('path');
 const matter = require('gray-matter');
+
+// Speakers directory (relative to script location)
+const SPEAKERS_DIR = path.join(__dirname, '..', '_speakers');
 
 function printUsage() {
   console.error('Usage: node generate.js <template-file> <data-file.md> [output-file]');
@@ -15,6 +19,60 @@ function printUsage() {
   console.error('  node generate.js templates/onsite_event.txt _events/2026-01-20.md');
   console.error('  node generate.js templates/onsite_event.txt _events/2026-01-20.md output.md');
   process.exit(1);
+}
+
+/**
+ * Load all speakers from _speakers directory and index by name
+ */
+function loadAllSpeakers() {
+  const speakers = {};
+  const files = fs.readdirSync(SPEAKERS_DIR).filter(f => f.endsWith('.md'));
+  
+  for (const file of files) {
+    const filepath = path.join(SPEAKERS_DIR, file);
+    const speakerFile = matter(fs.readFileSync(filepath, 'utf8'));
+    const name = speakerFile.data.name;
+    if (name) {
+      speakers[name] = speakerFile.data;
+    }
+  }
+  
+  return speakers;
+}
+
+/**
+ * Load speaker bio by name
+ */
+function loadSpeakerBio(speakerName, speakersIndex) {
+  const speaker = speakersIndex[speakerName];
+  
+  if (!speaker) {
+    console.error(`Warning: Speaker not found: ${speakerName}`);
+    return null;
+  }
+  
+  return speaker.bio ? speaker.bio.trim() : null;
+}
+
+/**
+ * Build combined speakers bio section
+ */
+function buildSpeakersBio(speakers, speakersIndex) {
+  if (!speakers || !Array.isArray(speakers) || speakers.length === 0) {
+    return '';
+  }
+  
+  const bios = speakers
+    .map(speakerName => {
+      const bio = loadSpeakerBio(speakerName, speakersIndex);
+      if (bio) {
+        return `About ${speakerName}:\n${bio}`;
+      }
+      return null;
+    })
+    .filter(Boolean);
+  
+  return bios.join('\n\n');
 }
 
 // Check arguments
@@ -43,6 +101,12 @@ const data = dataFile.data;
 
 // Also make the content available as %content%
 data.content = dataFile.content.trim();
+
+// Load speakers index and build speakers_bio from speakers array
+if (data.speakers) {
+  const speakersIndex = loadAllSpeakers();
+  data.speakers_bio = buildSpeakersBio(data.speakers, speakersIndex);
+}
 
 // Read the template
 let output = fs.readFileSync(templateFilePath, 'utf8');
