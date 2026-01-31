@@ -5,6 +5,7 @@
   "hasFooter": true,
   "hasMainContent": false,
   "headings": [
+    "2026-02-19 - Evolving Modular Monoliths with architectural fitness functions",
     "2026-01-20 - DevContainers: Development environments as code",
     "2025-12-16 - Testcontainers - Integration Testing Done Right",
     "2025-10-21 - Do you trust your NuGet packages?",
@@ -24,6 +25,6 @@
     "2024-02-20 - GitHub Copilot - Gimmick or Useful?",
     "2024-01-23 - Going Functional with Railway Oriented Programming in C#"
   ],
-  "links": 54,
+  "links": 56,
   "images": 1
 }
