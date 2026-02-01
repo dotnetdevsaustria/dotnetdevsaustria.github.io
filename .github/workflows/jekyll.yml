@@ -150,7 +150,7 @@ jobs:
 
   # Deployment job when tests failed - requires manual approval
   deploy_manual:
-    if: needs.test.result == 'failure'
+    if: always() && needs.test.result == 'failure' && needs.build.result == 'success'
     environment:
       name: github-pages-approval
       url: ${{ steps.deployment.outputs.page_url }}
