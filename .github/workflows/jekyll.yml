@@ -112,7 +112,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: test
     # Only build on push to master (not on PRs)
-    if: github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && !inputs.update_snapshots)
+    if: always() && !cancelled() && (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && !inputs.update_snapshots))
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -136,12 +136,26 @@ jobs:
 
   # Deployment job - only runs after build succeeds
   deploy:
+    if: needs.test.result == 'success' && needs.build.result == 'success'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build
+    needs: [test, build]
     steps:
       - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  # Deployment job when tests failed - requires manual approval
+  deploy_manual:
+    if: needs.test.result == 'failure' && needs.build.result == 'success'
+    environment:
+      name: github-pages-approval
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: [test, build]
+    steps:
+      - name: Deploy to GitHub Pages (manual approval)
         id: deployment
         uses: actions/deploy-pages@v4
