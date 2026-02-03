@@ -11,9 +11,9 @@ These are our sponsors who support the .NET Developers Austria community.
   {% assign sponsor_name = sponsor.name | default: sponsor.title %}
   {% assign sponsor_logo = sponsor.logo %}
 
-  <div class="sponsor">
-    <a href="{{ sponsor.url }}" class="sponsor-link">
-        <img src="{{ sponsor_logo }}" alt="{{ sponsor_name }}" style="height:80px;margin-right:40px;vertical-align:middle;" class="sponsor-image">
+  <div class="supporter">
+    <a href="{{ sponsor.url }}" class="supporter-link">
+        <img src="{{ sponsor_logo }}" alt="{{ sponsor_name }}" style="height:80px;margin-right:40px;vertical-align:middle;" class="supporter-image">
     </a>
   </div>
 

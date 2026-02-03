@@ -333,10 +333,10 @@ figcaption {
   }
 }
 
-// Sponsor logos - ensure visibility in dark mode
-.sponsor-image,
-.sponsor img,
-.sponsor-logo,
+// Supporter logos - ensure visibility in dark mode
+.supporter-image,
+.supporter img,
+.supporter-logo,
 a[href*="/sponsors/"] img {
   background-color: #ffffff;
   padding: 20px;
@@ -357,7 +357,7 @@ a[href*="/sponsors/"] img {
   }
 }
 
-// Ensure sponsor links are centered on mobile
+// Ensure supporter links are centered on mobile
 a[href*="/sponsors/"] {
   @media (max-width: 768px) {
     display: flex;

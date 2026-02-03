@@ -4,7 +4,11 @@
   "hasNavigation": true,
   "hasFooter": true,
   "hasMainContent": false,
-  "headings": [],
+  "headings": [
+    "Our Sponsors",
+    "Why Sponsor Us?",
+    "Sponsorship Packages Suggestions"
+  ],
   "links": 20,
   "images": 3
 }
