@@ -1,134 +1,68 @@
 # 🤖 Agent Instructions
 
-> This repository contains the Jekyll-based static website for **[DotNetDevs.at](https://dotnetdevs.at)**, a non-profit Austrian .NET developer community hosting monthly meetup events.
+Jekyll website for DotNetDevs.at (Minimal Mistakes theme), hosted on GitHub Pages.
 
----
-
-## 🛠️ Tech Stack
-
-| Technology | Purpose |
-|------------|---------|
-| Jekyll >= 3.7 | Static site generator (Minimal Mistakes theme) |
-| Ruby | Managed via Gemfile (`github-pages` gem) |
-| Node.js | Testing only |
-| Playwright | Approval/visual snapshot testing |
-| GitHub Pages | Hosting |
-
----
-
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
-bundle install   # Install Ruby gems
-npm install      # Install Node.js dependencies
-npm run serve    # Start dev server → http://127.0.0.1:4000
+bundle install
+npm install
+npm run serve
 ```
 
----
+Local URL: http://127.0.0.1:4000
 
-## 📋 Commands
+## Core Commands
 
-| Command | Description |
-|---------|-------------|
-| `npm run serve` | Start local dev server with live reload |
-| `npm run build` | Build the Jekyll site |
-| `npm test` | Run Playwright tests |
-| `npm run test:update-snapshots` | Update visual/approval snapshots |
-| `npm run test:ui` | Run tests with Playwright UI |
-| `npm run test:ci` | Build site and run full test suite |
+```bash
+bundle exec jekyll build
+bundle exec jekyll serve --incremental
+npm test
+npm run test:update-snapshots
+npm run test:ci
+```
 
----
+## Content Rules
 
-## 📁 Content Structure
+- Events live in `_events/` using `YYYY-MM-DD.md` (or `YYYY-MM-DD-talkN.md`).
+- Speakers live in `_speakers/` using `firstname-lastname.md`.
+- Sponsors live in `_sponsors/`.
+- Event files must include `date`, `title`, `speakers`, and `public: true` to be listed.
+- Speaker names in `speakers:` must exactly match each speaker file `name`.
+- Use ISO date format (`YYYY-MM-DD`) in filenames and front matter.
 
-### 📅 Events (`_events/`)
+## Event Template Fields
 
-**Filename pattern:** `YYYY-MM-DD.md` or `YYYY-MM-DD-talkN.md` for multiple talks on the same day.
-
-<details>
-<summary><strong>Required front matter</strong></summary>
+Recommended event front matter:
 
 ```yaml
 ---
-date: 2025-01-14
-title: "Event Title"
+date: 2026-01-20
+title: "Talk Title"
 speakers:
   - Speaker Name
-Location: "Rubicon"
-InPersonLink: "https://meetup.com/..."
-RemoteLink: "https://meetup.com/..."
-RecordingLink: ""  # YouTube URL after event, empty string before
+InPersonLink: https://meetup.com/...
+RemoteLink: https://meetup.com/...
+RecordingLink: ""
 Registrations: 0
 Participants: 0
 Viewers: 0
-public: true  # Set to false to hide from listing
+public: true
 abstract: |
-    Talk description...
+  Talk description...
 ---
 ```
 
-</details>
+## Testing & CI
 
-### 🎤 Speakers (`_speakers/`)
+- Always run `npm test` before committing.
+- Update snapshots only for intentional visual changes.
+- CI workflow is `.github/workflows/jekyll.yml` (build → test → deploy).
 
-**Filename:** `firstname-lastname.md` (kebab-case)
-
-```yaml
----
-name: Full Name
----
-```
-
-### 🏢 Sponsors (`_sponsors/`)
-
-```yaml
----
-title: Sponsor Name
-permalink: /sponsors/sponsor-slug/
-logo: /assets/images/sponsor.svg
----
-```
-
----
-
-## ⚠️ Important Rules
-
-| # | Rule |
-|---|------|
-| 1 | **Always run tests** with `npm test` before committing |
-| 2 | **Update snapshots** with `npm run test:update-snapshots` after intentional visual changes |
-| 3 | **Event visibility** — Set `public: true` for events to appear on the website |
-| 4 | **Speaker name matching** — Names in event files must exactly match the `name` field in speaker files |
-| 5 | **Date format** — Use ISO format `YYYY-MM-DD` in filenames and front matter |
-| 6 | **Future events** — Displayed because `future: true` is set in `_config.yml` |
-
----
-
-## 🧪 Testing
-
-The project uses **approval testing** with Playwright:
-
-- 📸 **Visual snapshots** — Screenshots compared against baselines
-- 📊 **Structure snapshots** — JSON snapshots of page structure
-- 📂 **Test files** — Located in `tests/` directory
+## Useful Scripts
 
 ```bash
-npm run test:ci  # Build site and run full test suite
-```
-
----
-
-## 🗂️ Project Structure
-
-```
-├── _config.yml      # Jekyll configuration
-├── _data/           # Navigation and UI text
-├── _events/         # Event markdown files
-├── _speakers/       # Speaker profiles
-├── _sponsors/       # Sponsor information
-├── _includes/       # Reusable HTML partials
-├── _layouts/        # Page templates
-├── _sass/           # SCSS stylesheets
-├── assets/          # Images, CSS, JS
-└── tests/           # Playwright test specs
+npm run generate:onsite _events/2026-01-20.md
+npm run generate:remote _events/2026-01-20.md
+ruby scripts/generate_meetup_image.rb
 ```
