@@ -12,7 +12,8 @@
     "serve": "bundle exec jekyll serve --incremental",
     "test:ci": "npm run build && playwright test",
     "generate:onsite": "node scripts/generate.js templates/onsite_event.txt",
-    "generate:remote": "node scripts/generate.js templates/remote_event.txt"
+    "generate:remote": "node scripts/generate.js templates/remote_event.txt",
+    "generate:recording-title": "node scripts/generate_recording_title_image.js"
   },
   "devDependencies": {
     "@playwright/test": "^1.40.0"
