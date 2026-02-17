@@ -2,7 +2,16 @@
 set -e
 
 echo "📦 Installing ImageMagick development libraries..."
-sudo apt-get update && sudo apt-get install -y libmagickwand-dev
+echo "🔑 Configuring Yarn APT signing key..."
+sudo mkdir -p /usr/share/keyrings
+curl -fsSL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo gpg --dearmor -o /usr/share/keyrings/yarn-archive-keyring.gpg
+sudo chmod 644 /usr/share/keyrings/yarn-archive-keyring.gpg
+
+
+if ! sudo apt-get update; then
+	echo "⚠️ apt-get update failed (likely due to an external repo). Continuing with existing package indexes..."
+fi
+sudo apt-get install -y imagemagick libmagickwand-dev pkg-config
 
 echo "📦 Installing Ruby dependencies..."
 bundle install
