@@ -1,0 +1,9 @@
+---
+date: "2021-02-23"
+Name: "February 2021"
+Title: "The hidden gems of the .NET ecosystem"
+Link: "https://www.meetup.com/dotnet-austria/events/276092732/"
+Registrations: 160
+Participants: 92
+permalink: /events/2021-02-23/
+---

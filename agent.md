@@ -24,10 +24,12 @@ npm run test:ci
 
 ## Content Rules
 
-- Events live in `_events/` using `YYYY-MM-DD.md` (or `YYYY-MM-DD-talkN.md`).
+- Events live in `_events/<slug>/index.md` where `<slug>` is `YYYY-MM-DD` (or `YYYY-MM-DD-talkN`).
 - Speakers live in `_speakers/` using `firstname-lastname.md`.
 - Sponsors live in `_sponsors/`.
 - Event files must include `date`, `title`, `speakers`, and `public: true` to be listed.
+- Event files should include `permalink: /events/<slug>/` to keep stable URLs.
+- Event-related archival files (details, images, slides) are stored in the same event folder and are not exposed as download links on pages.
 - Speaker names in `speakers:` must exactly match each speaker file `name`.
 - Use ISO date format (`YYYY-MM-DD`) in filenames and front matter.
 
@@ -38,6 +40,7 @@ Recommended event front matter:
 ```yaml
 ---
 date: 2026-01-20
+permalink: /events/2026-01-20/
 title: "Talk Title"
 speakers:
   - Speaker Name
@@ -62,7 +65,7 @@ abstract: |
 ## Useful Scripts
 
 ```bash
-npm run generate:onsite _events/2026-01-20.md
-npm run generate:remote _events/2026-01-20.md
+npm run generate:onsite _events/2026-01-20/index.md
+npm run generate:remote _events/2026-01-20/index.md
 ruby scripts/generate_meetup_image.rb
 ```

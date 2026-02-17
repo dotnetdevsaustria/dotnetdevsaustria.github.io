@@ -24,7 +24,7 @@
 
   "postCreateCommand": "bash .devcontainer/post-create.sh",
 
-  "forwardPorts": [4000, 35729],
+  "forwardPorts": [4000, 9323, 35729],
 
   "portsAttributes": {
     "4000": {

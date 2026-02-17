@@ -1,0 +1,34 @@
+DotNetDevs.at
+
+Homepage: https://www.dotnetdevs.at
+Twitter: https://twitter.com/DotNetDevsAT
+Twitch.tv: https://www.twitch.tv/dotnetdevsat
+YouTube: http://go.dotnetdevs.at/recordings
+Slack: https://dotnetdevs.at/slack/
+
+Website .NET Foundation: dotnetfoundation.org  
+Meetup.com .NET Virtual User Group: https://www.meetup.com/dotnet-virtual-user-group/
+
+https://go.dotnetdevs.at/kv2022
+
+
+https://mktoevents.com/Microsoft+Event/322881/157-GQE-382
+
+
+https://pulse.microsoft.com/de-at/skill-forward-de-at/na/fa1-get-rewarded-for-gaining-tech-skills-and-free-certifications-at-the-microsoft-spring-skills-challenge/?ocid=aid3045407_AdditionalResources_ThankYou_DevComm&eventId=RustMeetupLinz-Feb2022_vcemchD6h0wc
+
+Sponsoring: 
+https://dotnetdevs.at/sponsoring/
+
+Topic- Requests: https://github.com/dotnetdevsaustria/topic-requests
+
+
+
+Homepage: https://www.dotnetdevs.at
+Twitter: https://twitter.com/DotNetDevsAT
+Twitch.tv: https://www.twitch.tv/dotnetdevsat
+YouTube: http://go.dotnetdevs.at/recordings
+Slack: https://dotnetdevs.at/slack/
+
+https://go.dotnetdevs.at/feedback-202203
+ 

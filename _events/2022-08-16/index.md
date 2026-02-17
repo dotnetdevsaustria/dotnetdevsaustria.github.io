@@ -1,0 +1,11 @@
+---
+Name: "August 2022"
+Title: "Event Title Here"
+Speaker: "Speaker Name"
+Link: "https://www.meetup.com/dotnet-austria/events/xxxxxx/"
+RecordingLink: "https://youtube.com/live/xxxxxx"
+Registrations: 0
+Participants: 0
+date: "2022-08-16"
+permalink: /events/2022-08-16/
+---

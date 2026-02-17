@@ -1,0 +1,10 @@
+---
+Title: WinForms on ARM64 with .NET 7
+speakers: [Stefan Koell]
+Link: https://www.meetup.com/dotnet-austria/events/289809188/
+RecordingLink: https://youtube.com/live/oLXm9DmZLao
+Registrations: 25
+Participants: 30
+date: 2022-12-20
+permalink: /events/2022-12-20/
+---

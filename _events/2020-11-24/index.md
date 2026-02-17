@@ -1,0 +1,9 @@
+---
+date: "2020-11-24"
+Name: "November 2020"
+Title: ".NET 5 & C#9 Round- Table- Discussion"
+Link: "https://www.meetup.com/dotnet-austria/events/274353317/"
+Registrations: 152
+Participants: 150
+permalink: /events/2020-11-24/
+---

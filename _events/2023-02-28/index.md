@@ -1,0 +1,10 @@
+---
+Title: "Real-World Distributed Systems with Microsoft Orleans"
+speakers: ["Raffael Rehberger", "Paul Rohorzka"]
+Link: "https://www.meetup.com/dotnet-austria/events/291441150/"
+RecordingLink: "https://youtube.com/live/-czMnCL2d1Y"
+Registrations: 87
+Participants: 70
+date: "2023-02-28"
+permalink: /events/2023-02-28/
+---

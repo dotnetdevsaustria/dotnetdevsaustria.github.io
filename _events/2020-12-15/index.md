@@ -1,0 +1,9 @@
+---
+date: "2020-12-15"
+Name: "December 2020"
+Title: "GraphQL - when to wakeup from your REST"
+Link: "https://www.meetup.com/dotnet-austria/events/274983007/"
+Registrations: 69
+Participants: 72
+permalink: /events/2020-12-15/
+---

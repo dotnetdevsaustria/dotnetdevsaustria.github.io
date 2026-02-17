@@ -1,0 +1,8 @@
+---
+Name: "August 2020"
+Title: "Real-Time Serverless Apps with .NET Azure Functions and Azure SignalR"
+Link: "https://www.meetup.com/dotnet-austria/events/272098453/"
+Registrations: 72
+Participants: 60
+permalink: /events/2020-08-25/
+---

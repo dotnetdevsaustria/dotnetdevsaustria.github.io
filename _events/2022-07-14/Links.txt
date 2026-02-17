@@ -1,0 +1,31 @@
+DotNetDevs.at
+
+Homepage: https://www.dotnetdevs.at
+Twitter: https://twitter.com/DotNetDevsAT
+Twitch.tv: https://www.twitch.tv/dotnetdevsat
+YouTube: http://go.dotnetdevs.at/recordings
+Slack: https://dotnetdevs.at/slack/
+
+Website .NET Foundation: dotnetfoundation.org  
+Meetup.com .NET Virtual User Group: https://www.meetup.com/dotnet-virtual-user-group/
+
+
+
+
+
+https://aka.ms/Build2022-AfterParties-Feedback
+
+Sponsoring: 
+https://dotnetdevs.at/sponsoring/
+
+Topic- Requests: https://github.com/dotnetdevsaustria/topic-requests
+
+
+
+Homepage: https://www.dotnetdevs.at
+Twitter: https://twitter.com/DotNetDevsAT
+Twitch.tv: https://www.twitch.tv/dotnetdevsat
+YouTube: http://go.dotnetdevs.at/recordings
+Slack: https://dotnetdevs.at/slack/
+
+https://go.dotnetdevs.at/feedback-202207

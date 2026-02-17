@@ -1,0 +1,15 @@
+DotNetDevs.at
+
+Homepage: https://www.dotnetdevs.at
+
+
+Website .NET Foundation: dotnetfoundation.org  
+Meetup.com .NET Virtual User Group: https://www.meetup.com/dotnet-virtual-user-group/
+
+https://www.meetup.com/cloud-native-computing-vienna/events/295901588
+https://www.meetup.com/agile-test-automation-meetup-vienna/events/296146498/
+
+
+Homepage: https://www.dotnetdevs.at
+
+https://go.dotnetdevs.at/feedback-202309

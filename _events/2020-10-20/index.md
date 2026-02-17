@@ -1,0 +1,9 @@
+---
+date: "2020-10-20"
+Name: "October 2020"
+Title: "What is The Clean Architecture and how you would build one in .NET?"
+Link: "https://www.meetup.com/dotnet-austria/events/273662890/"
+Registrations: 235
+Participants: 171
+permalink: /events/2020-10-20/
+---

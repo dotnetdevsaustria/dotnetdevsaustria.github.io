@@ -1,0 +1,8 @@
+---
+Name: "September 2020"
+Title: "Show and tell of Visual Studio & Visual Studio Code extensions hidden gems"
+Link: "https://www.meetup.com/dotnet-austria/events/273228095/"
+Registrations: 117
+Participants: 72
+permalink: /events/2020-09-29/
+---

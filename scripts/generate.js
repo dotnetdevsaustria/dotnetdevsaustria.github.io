@@ -16,8 +16,8 @@ function printUsage() {
   console.error('  output-file    Optional: Output file path (defaults to stdout)');
   console.error('');
   console.error('Example:');
-  console.error('  node generate.js templates/onsite_event.txt _events/2026-01-20.md');
-  console.error('  node generate.js templates/onsite_event.txt _events/2026-01-20.md output.md');
+  console.error('  node generate.js templates/onsite_event.txt _events/2026-01-20/index.md');
+  console.error('  node generate.js templates/onsite_event.txt _events/2026-01-20/index.md output.md');
   process.exit(1);
 }
 
