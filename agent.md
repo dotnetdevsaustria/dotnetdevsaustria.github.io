@@ -74,7 +74,9 @@ npm run generate:recording-title -- _events/2026-01-20/index.md
 Recording title image notes:
 
 - The generator reads `title`, `date`, and `speakers` from event front matter.
-- It writes `_events/<slug>/Title for Recording.png` and overwrites existing output.
-- The background template is `templates/Title for Recording.png`.
+- It writes `_events/<slug>/Title for Recording.png`, `_events/<slug>/Start Streaming.png`, and `_events/<slug>/Stop Streaming.png` and overwrites existing outputs.
+- Background templates are `templates/Title for Recording.png`, `templates/Start Streaming.png`, and `templates/Stop Streaming.png`.
 - Text rendering uses Consolas.
+- `Title for Recording.png` renders `.NET Meetup <Month Year>`, then title, then `by <speaker(s)>`.
+- `Start Streaming.png` and `Stop Streaming.png` render title and `by <speaker(s)>`.
 - Validate correctness by comparing generated outputs for `_events/2026-01-20/Title for Recording.png` and `_events/2025-12-16/Title for Recording.png` with their existing examples; only minor anti-aliasing/font-rendering differences are acceptable.

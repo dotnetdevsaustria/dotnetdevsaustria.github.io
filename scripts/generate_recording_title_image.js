@@ -6,8 +6,26 @@ const matter = require('gray-matter');
 const { chromium } = require('@playwright/test');
 
 const ROOT_DIR = path.join(__dirname, '..');
-const TEMPLATE_PATH = path.join(ROOT_DIR, 'templates', 'Title for Recording.png');
-const OUTPUT_FILENAME = 'Title for Recording.png';
+const IMAGE_PROFILES = [
+  {
+    name: 'recording',
+    templatePath: path.join(ROOT_DIR, 'templates', 'Title for Recording.png'),
+    outputFilename: 'Title for Recording.png'
+  },
+  {
+    name: 'start',
+    templatePath: path.join(ROOT_DIR, 'templates', 'Start Streaming.png'),
+    outputFilename: 'Start Streaming.png'
+  },
+  {
+    name: 'stop',
+    templatePath: path.join(ROOT_DIR, 'templates', 'Stop Streaming.png'),
+    outputFilename: 'Stop Streaming.png'
+  }
+];
+
+const CANVAS_WIDTH = 1920;
+const CANVAS_HEIGHT = 1080;
 
 function printUsageAndExit() {
   console.error('Missing parameter: event markdown file path is required.');
@@ -59,7 +77,7 @@ function escapeHtml(value) {
     .replace(/'/g, '&#039;');
 }
 
-function buildHtml({ meetupLine, title, speakerLine, templateBase64 }) {
+function buildRecordingHtml({ meetupLine, title, speakerLine, templateBase64 }) {
   return `<!DOCTYPE html>
 <html>
 <head>
@@ -67,8 +85,8 @@ function buildHtml({ meetupLine, title, speakerLine, templateBase64 }) {
   <style>
     html, body {
       margin: 0;
-      width: 1920px;
-      height: 1080px;
+      width: ${CANVAS_WIDTH}px;
+      height: ${CANVAS_HEIGHT}px;
       overflow: hidden;
       font-family: Consolas, "Liberation Mono", Menlo, Monaco, monospace;
       color: #6E2B7E;
@@ -76,8 +94,8 @@ function buildHtml({ meetupLine, title, speakerLine, templateBase64 }) {
 
     .canvas {
       position: relative;
-      width: 1920px;
-      height: 1080px;
+      width: ${CANVAS_WIDTH}px;
+      height: ${CANVAS_HEIGHT}px;
       background-image: url('data:image/png;base64,${templateBase64}');
       background-size: cover;
       background-position: center;
@@ -133,6 +151,79 @@ function buildHtml({ meetupLine, title, speakerLine, templateBase64 }) {
 </html>`;
 }
 
+function buildStreamingHtml({ title, speakerLine, templateBase64 }) {
+  return `<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    html, body {
+      margin: 0;
+      width: ${CANVAS_WIDTH}px;
+      height: ${CANVAS_HEIGHT}px;
+      overflow: hidden;
+      font-family: Consolas, "Liberation Mono", Menlo, Monaco, monospace;
+      color: #6E2B7E;
+    }
+
+    .canvas {
+      position: relative;
+      width: ${CANVAS_WIDTH}px;
+      height: ${CANVAS_HEIGHT}px;
+      background-image: url('data:image/png;base64,${templateBase64}');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .content {
+      position: absolute;
+      left: 140px;
+      right: 140px;
+      top: 330px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .title {
+      font-size: 88px;
+      line-height: 1.1;
+      font-weight: 700;
+      max-width: 1560px;
+      word-break: break-word;
+    }
+
+    .by {
+      font-size: 44px;
+      line-height: 1.16;
+      font-weight: 700;
+      max-width: 1560px;
+      word-break: break-word;
+    }
+  </style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="content">
+      <div class="title">${escapeHtml(title)}</div>
+      <div class="by">by ${escapeHtml(speakerLine)}</div>
+    </div>
+  </div>
+</body>
+</html>`;
+}
+
+function buildHtml(profileName, data) {
+  if (profileName === 'recording') {
+    return buildRecordingHtml(data);
+  }
+
+  return buildStreamingHtml(data);
+}
+
 async function main() {
   const eventFileArg = process.argv[2];
   if (!eventFileArg) {
@@ -141,7 +232,9 @@ async function main() {
 
   const eventFilePath = path.resolve(ROOT_DIR, eventFileArg);
   assertFileExists(eventFilePath, 'Event file');
-  assertFileExists(TEMPLATE_PATH, 'Background template');
+  IMAGE_PROFILES.forEach(profile => {
+    assertFileExists(profile.templatePath, `${profile.outputFilename} template`);
+  });
 
   const raw = fs.readFileSync(eventFilePath, 'utf8');
   const parsed = matter(raw);
@@ -160,36 +253,42 @@ async function main() {
 
   const meetupLine = formatMeetupLine(date);
   const speakerLine = normalizeSpeakers(speakers);
-  const templateBase64 = fs.readFileSync(TEMPLATE_PATH).toString('base64');
+  const eventDir = path.dirname(eventFilePath);
 
   const browser = await chromium.launch();
 
   try {
     const page = await browser.newPage({
-      viewport: { width: 1920, height: 1080 },
+      viewport: { width: CANVAS_WIDTH, height: CANVAS_HEIGHT },
       deviceScaleFactor: 1
     });
 
-    const html = buildHtml({
-      meetupLine,
-      title: String(title).trim(),
-      speakerLine,
-      templateBase64
-    });
+    const titleText = String(title).trim();
 
-    await page.setContent(html, { waitUntil: 'networkidle' });
+    for (const profile of IMAGE_PROFILES) {
+      const templateBase64 = fs.readFileSync(profile.templatePath).toString('base64');
+      const html = buildHtml(profile.name, {
+        meetupLine,
+        title: titleText,
+        speakerLine,
+        templateBase64
+      });
 
-    const outputPath = path.join(path.dirname(eventFilePath), OUTPUT_FILENAME);
-    await page.screenshot({ path: outputPath, type: 'png' });
+      await page.setContent(html, { waitUntil: 'networkidle' });
 
-    console.log(`Generated: ${outputPath}`);
+      const outputPath = path.join(eventDir, profile.outputFilename);
+      await page.screenshot({ path: outputPath, type: 'png' });
+
+      console.log(`Generated: ${outputPath}`);
+    }
+
   } finally {
     await browser.close();
   }
 }
 
 main().catch(error => {
-  console.error('Error while generating recording image:');
+  console.error('Error while generating streaming images:');
   console.error(error instanceof Error ? error.message : String(error));
   process.exit(1);
 });
