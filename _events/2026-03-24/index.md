@@ -4,8 +4,8 @@ title: "Pattern-based C#: if it quacks like a duck…"
 speakers:
   - Eva Ditzelmüller
   - Stefan Pölz
-InPersonLink: TBD
-RemoteLink: TBD
+InPersonLink: https://www.meetup.com/dotnet-austria/events/313495752
+RemoteLink: https://www.meetup.com/dotnet-austria/events/313495808
 RecordingLink:
 Registrations:
 Participants:
@@ -29,17 +29,17 @@ permalink: /events/2026-03-24/
 ---
 Tasks:
 
-- [ ] Location fixiert
-- [ ] Title, Abstract & Bio von Speaker
-- [ ] Meetup.com Event angelegt
-  - [ ] Main - Onsite Event
-  - [ ] Main - Remote Event
+- [x] Location fixiert
+- [x] Title, Abstract & Bio von Speaker
+- [x] Meetup.com Event angelegt
+  - [x] Main - Onsite Event
+  - [x] Main - Remote Event
   - [ ] Visual Studio User Group Wien - Event
   - [ ] .NET User Group Austria - Event
 - [ ] Social Media
   - [ ] LinkedIn Event
   - [ ] BluSky Posts
 - [ ] Streaming Prep
-  - [ ] Grafiken
+  - [x] Grafiken
   - [ ] StreamYard Event
     - [ ] Invite Link an Speaker schicken
