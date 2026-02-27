@@ -125,3 +125,35 @@ test.describe('All Public Events Render', () => {
     }
   });
 });
+
+test.describe('Dark Mode Inline Code', () => {
+  test('event 2026-03-24 inline code should be readable in dark mode', async ({ page }) => {
+    await page.goto('/events/2026-03-24/');
+
+    await page.evaluate(() => {
+      sessionStorage.setItem('theme', 'dark');
+    });
+    await page.reload();
+    await page.waitForLoadState('networkidle');
+
+    await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
+
+    const firstInlineCode = page.locator('.page__content :not(pre) > code').first();
+    await expect(firstInlineCode).toBeVisible();
+
+    const styles = await firstInlineCode.evaluate((element) => {
+      const computed = window.getComputedStyle(element);
+      return {
+        color: computed.color,
+        backgroundColor: computed.backgroundColor,
+      };
+    });
+
+    expect(styles.color).not.toBe(styles.backgroundColor);
+
+    const content = page.locator('.page__content');
+    await expect(content).toHaveScreenshot('event-2026-03-24-dark-inline-code.png', {
+      animations: 'disabled',
+    });
+  });
+});
