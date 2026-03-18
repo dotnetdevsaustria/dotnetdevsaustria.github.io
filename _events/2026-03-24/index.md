@@ -34,10 +34,10 @@ Tasks:
 - [x] Meetup.com Event angelegt
   - [x] Main - Onsite Event
   - [x] Main - Remote Event
-  - [ ] Visual Studio User Group Wien - Event
-  - [ ] .NET User Group Austria - Event
-- [ ] Social Media
-  - [ ] LinkedIn Event
+  - [x] Visual Studio User Group Wien - Event
+  - [x] .NET User Group Austria - Event
+- [x] Social Media
+  - [x] LinkedIn Event
   - [ ] BluSky Posts
 - [ ] Streaming Prep
   - [x] Grafiken
