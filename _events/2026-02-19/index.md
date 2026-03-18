@@ -6,10 +6,10 @@ speakers:
   - Patrick Säuerl
 InPersonLink: https://www.meetup.com/dotnet-austria/events/313068818
 RemoteLink: https://www.meetup.com/dotnet-austria/events/313069017
-RecordingLink: 
-Registrations: 
-Participants: 
-Viewers: 
+RecordingLink: https://www.youtube.com/live/McEn3ZaZhnQ?si=vk5YAIszTB64J8GM
+Registrations: 60
+Participants: 25
+Viewers: 15
 abstract: |
     In this talk, Patrick Säuerl (Tech Lead/Architect) and Tim Paulus (Developer) will share their journey of evolving a software project towards a modular monolith with consistent layering.
     The system started over 10 years ago as a monolith, and many teams have developed within it, adding their flavors and understanding of the architectural patterns and the architecture trends at that time.
