@@ -3,8 +3,8 @@ date: 2026-04-28
 title: "Kafka through the lens of .NET"
 speakers:
   - Shahab Ganji
-InPersonLink: TBD
-RemoteLink: TBD
+InPersonLink: https://www.meetup.com/dotnet-austria/events/313929442
+RemoteLink: https://www.meetup.com/dotnet-austria/events/313929458
 RecordingLink:
 Registrations:
 Participants:
@@ -21,7 +21,7 @@ abstract: |
     use them in your .NET applications.
 public: true
 Location: SQUER
-LocationUrl: TBD
+LocationUrl: https://www.squer.io/
 permalink: /events/2026-04-28/
 ---
 Tasks:
