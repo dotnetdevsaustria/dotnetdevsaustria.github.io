@@ -1,0 +1,36 @@
+This is the event for people who join the event via Stream.
+
+If you join the event in-person, please RSVP here: TBD
+
+This meetup is organized by DotNetDevs.at (https://dotnetdevs.at/).
+
+Abstract:
+So you want to build an event-driven system and wonder how to put your data in motion?
+Well, Kafka is one of the answers! With its rich ecosystem, it will help you to achieve this goal.
+
+Through patterns and examples, we will look into building blocks of Kafka, be it records, partitions, (de)serialization,
+schema registry and kafka streams, to libraries and frameworks that are existing for it in the .NET ecosystem.
+
+This session is designed for .NET developers, team leads and architects who want to learn how to use Kafka in their
+applications. By the end of this session, you will have a solid understanding of the basic concepts of Kafka and how to
+use them in your .NET applications.
+
+
+
+
+Timetable:
+
+- 18:00: Stream starts at
+https://www.twitch.tv/dotnetdevsat or
+https://www.youtube.com/c/DotNetDevsAustria
+- 18:15: Intro
+- 18:20: Talk starts
+- about 19:30: End
+Recordings will be available afterward at https://go.dotnetdevs.at/recordings
+
+This meetup is organized by DotNetDevs.at (https://dotnetdevs.at/).
+
+DotNetDevs.at is sponsored by:
+
+- RUBICON IT GmbH (https://www.rubicon.eu/rubicon/)
+- JetBrains (https://jetbrains.com)
