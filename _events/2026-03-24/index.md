@@ -6,10 +6,10 @@ speakers:
   - Stefan Pölz
 InPersonLink: https://www.meetup.com/dotnet-austria/events/313495752
 RemoteLink: https://www.meetup.com/dotnet-austria/events/313495808
-RecordingLink:
+RecordingLink: https://youtube.com/live/JUNs0wF3kH0
 Registrations: 70
 Participants: 25
-Viewers: 12
+Viewers: 23
 abstract: |
     C# is a strongly typed programming language, used to communicate expectations in a statically verifiable fashion across the .NET ecosystem.
     There is a set of language features that can be enabled by satisfying a particular shape rather than inheritance or interface implementation.
