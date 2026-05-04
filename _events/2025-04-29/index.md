@@ -6,10 +6,10 @@ speakers:
   - David Eiwen
 InPersonLink: "https://www.meetup.com/dotnet-austria/events/306938843/"
 RemoteLink: https://www.meetup.com/dotnet-austria/events/306938890
-RecordingLink: ""
-Registrations: 0
-Participants: 0
-Viewers: 0
+RecordingLink: "https://www.youtube.com/watch?v=hLIuiOiT6U8"
+Registrations: 40
+Participants: 25
+Viewers: 10
 public: true
 abstract: |
   In this talk, we will explore the DataSync CommunityToolkit, a powerful tool designed to simplify the integration of data in modern offline clients. We will discuss how it can be used to synchronize data between local and remote sources, ensuring that your applications remain responsive and up-to-date even when offline.

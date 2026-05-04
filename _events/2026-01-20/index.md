@@ -7,7 +7,7 @@ InPersonLink: https://www.meetup.com/dotnet-austria/events/312766302/
 RemoteLink: https://www.meetup.com/dotnet-austria/events/312766347/
 RecordingLink: https://www.youtube.com/watch?v=N18JJB5DARQ
 Registrations: 85
-Participants: 20
+Participants: 25
 Viewers: 20
 abstract: |
     Are you struggling to maintain your development environment setup? Does it take long? If so, come check out devcontainers: full-featured development containers for your dev environment. Get started with a new machine, codebase or project in minutes, not days. Clean up in seconds.

@@ -13,7 +13,9 @@
     "test:ci": "npm run build && playwright test",
     "generate:onsite": "node scripts/generate.js templates/onsite_event.txt",
     "generate:remote": "node scripts/generate.js templates/remote_event.txt",
-    "generate:recording-title": "node scripts/generate_recording_title_image.js"
+    "generate:recording-title": "node scripts/generate_recording_title_image.js",
+    "generate:slides": "node scripts/generate_event_slides.js",
+    "extract_statistics": "node scripts/extract_statistics.js"
   },
   "devDependencies": {
     "@playwright/test": "^1.40.0"
@@ -27,6 +29,7 @@
   "author": "DotNetDevs Austria",
   "license": "MIT",
   "dependencies": {
-    "gray-matter": "^4.0.3"
+    "gray-matter": "^4.0.3",
+    "qrcode": "^1.5.4"
   }
 }

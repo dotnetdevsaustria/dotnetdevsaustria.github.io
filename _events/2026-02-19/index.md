@@ -6,7 +6,7 @@ speakers:
   - Patrick Säuerl
 InPersonLink: https://www.meetup.com/dotnet-austria/events/313068818
 RemoteLink: https://www.meetup.com/dotnet-austria/events/313069017
-RecordingLink: https://www.youtube.com/live/McEn3ZaZhnQ?si=vk5YAIszTB64J8GM
+RecordingLink: https://www.youtube.com/live/McEn3ZaZhnQ
 Registrations: 60
 Participants: 25
 Viewers: 15
