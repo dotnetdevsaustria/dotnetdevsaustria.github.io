@@ -1,11 +1,11 @@
 ---
 date: 2026-09-15
 permalink: /events/2026-09-15/
-title: "C# Abstractions, the lies they tell us, and the fact your likely still doing it wrong"
+title: "C# Abstractions, the lies you still believe"
 speakers:
   - Rodney Littles II
-InPersonLink: ""
-RemoteLink: ""
+InPersonLink: https://www.meetup.com/dotnet-austria/events/316061716
+RemoteLink: https://www.meetup.com/dotnet-austria/events/316061860
 RecordingLink: ""
 Registrations: 0
 Participants: 0

@@ -1,0 +1,41 @@
+This event is for people who join the event in person at TBD (TBD).
+
+If you join the event remotely, please RSVP here: TODO_REMOTE_MEETUP_LINK
+
+This meetup is organized by DotNetDevs.at (https://dotnetdevs.at/).
+
+Abstract
+Most of us build abstractions like we're hoarding for winter, then act surprised when the codebase turns into a dependency escape room. In this session, we'll cut through the noise on abstraction's two major techniques - inheritance and composition - and why most of us reach for the wrong one out of habit. Using Single Responsibility, Liskov Substitution, and Interface Segregation as actual design tools, we'll explore when abstraction earns its keep and when it's just complexity with good PR. Add, modern C# techniques that make clean boundaries possible without the chaos. You'll leave with sharper instincts. Your codebase will thank you.
+
+Difficulty: Intermediate
+
+Prerequisites:
+
+- C#
+- Language Version 8
+- Composition
+- Inheritance
+- Testability
+- Abstractions
+
+
+About Rodney Littles II:
+Rodney Littles, II is a Senior Software Engineer and has been working on dotnet technologies since 2004. Rodney is currently working with mobile and cloud infrastructure. Rodney is a former Microsoft MVP and ReactiveUI maintainer who has been a vocal functional advocate. Outside of the daily he is a Kung Fu instructor spreading the arts, and breaking his brain trying to become a full-fledged Rx Wizard!
+
+Location, Food & Drinks are sponsored by TBD.
+
+Timetable:
+
+- 18:00: Door opens at TBD
+- 18:15: Intro
+- 18:20: Talk starts
+- 19:30: Food & Drinks
+- 21:00: End
+Recordings will be available afterward at https://go.dotnetdevs.at/recordings
+
+This meetup is organized by DotNetDevs.at (https://dotnetdevs.at/).
+
+DotNetDevs.at is sponsored by:
+
+- RUBICON IT GmbH (https://www.rubicon.eu/rubicon/)
+- JetBrains (https://jetbrains.com)
