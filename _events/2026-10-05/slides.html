@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Move over, WPF! Avalonia for X-Plat Desktop Apps (with a lot of AI help) - DotNetDevs.at Slides</title>
+  <style>
+    @page {
+      size: 13.333in 7.5in;
+      margin: 0;
+    }
+
+    :root {
+      --canvas: #efe9df;
+      --paper: #fffdfa;
+      --paper-alt: #f8f2ea;
+      --text: #251835;
+      --muted: #695b78;
+      --brand: #6e2b7e;
+      --brand-dark: #441750;
+      --accent: #eb4a43;
+      --line: rgba(68, 23, 80, 0.14);
+      --shadow: 0 30px 80px rgba(52, 22, 61, 0.14);
+      --stage-width: min(96vw, calc((100vh - 108px) * 16 / 9));
+      --stage-height: calc(var(--stage-width) * 9 / 16);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background:
+        radial-gradient(circle at top left, rgba(110, 43, 126, 0.08), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(235, 74, 67, 0.1), transparent 22%),
+        linear-gradient(145deg, #faf7f1 0%, var(--canvas) 55%, #efe5d8 100%);
+      color: var(--text);
+      font-family: "Segoe UI", "Aptos", sans-serif;
+      overflow: hidden;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      inset: auto;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::before {
+      top: 32px;
+      right: 54px;
+      width: 164px;
+      height: 164px;
+      border-radius: 50%;
+      border: 16px solid rgba(110, 43, 126, 0.08);
+    }
+
+    body::after {
+      left: 46px;
+      bottom: 40px;
+      width: 220px;
+      height: 12px;
+      background: linear-gradient(90deg, #ed2939 0%, #ed2939 33%, #fff 33%, #fff 66%, #ed2939 66%, #ed2939 100%);
+      border-radius: 999px;
+      box-shadow: 0 0 0 1px rgba(68, 23, 80, 0.08);
+    }
+
+    .app {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      padding: 28px 28px 80px;
+    }
+
+    .stage {
+      position: relative;
+      width: var(--stage-width);
+      height: var(--stage-height);
+      max-height: calc(100vh - 108px);
+      aspect-ratio: 16 / 9;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(10px);
+    }
+
+    .deck {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: none;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.95));
+    }
+
+    .slide.is-active {
+      display: block;
+      animation: slide-enter 280ms ease;
+    }
+
+    .slide__frame {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.92), var(--paper)),
+        radial-gradient(circle at top right, rgba(110, 43, 126, 0.05), transparent 28%);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      overflow: hidden;
+    }
+
+    .slide__frame::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 18px;
+      background: linear-gradient(90deg, var(--brand-dark) 0%, var(--brand) 62%, var(--accent) 100%);
+      pointer-events: none;
+    }
+
+    .slide__frame::after {
+      content: "";
+      position: absolute;
+      right: 36px;
+      bottom: 26px;
+      width: 140px;
+      height: 8px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #ed2939 0%, #ed2939 33%, #fff 33%, #fff 66%, #ed2939 66%, #ed2939 100%);
+      pointer-events: none;
+    }
+
+    .slide__brandbar,
+    .slide__content,
+    .slide__footer {
+      position: relative;
+      z-index: 1;
+    }
+
+    .slide__brandbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 34px 54px 12px;
+    }
+
+    .slide__brandtext,
+    .slide__eyebrow,
+    .slide__kicker,
+    .mini-card__label,
+    .feature-card__label,
+    .stat-card__label,
+    .speaker-card__label,
+    .link-card__label {
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--brand);
+    }
+
+    .slide__brandmark {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.35), transparent 36%),
+        linear-gradient(145deg, var(--brand) 0%, var(--brand-dark) 100%);
+      box-shadow: inset 0 0 0 8px rgba(255, 255, 255, 0.16);
+    }
+
+    .slide__content {
+      padding: 8px 54px 34px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      overflow: hidden;
+    }
+
+    .slide__kicker {
+      color: var(--accent);
+      margin-top: -8px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      font-family: Consolas, "Aptos Display", "Segoe UI", sans-serif;
+      line-height: 1.04;
+      color: var(--brand-dark);
+    }
+
+    h1 {
+      max-width: 10ch;
+      font-size: clamp(3.2rem, 6vw, 5.6rem);
+    }
+
+    h2 {
+      font-size: clamp(2.1rem, 3.2vw, 3rem);
+    }
+
+    h3 {
+      font-size: clamp(1.1rem, 1.7vw, 1.5rem);
+    }
+
+    p,
+    li,
+    a {
+      margin: 0;
+    }
+
+    p,
+    li {
+      line-height: 1.42;
+      font-size: clamp(0.98rem, 1.35vw, 1.2rem);
+      color: var(--text);
+    }
+
+    .slide__lead {
+      max-width: 42rem;
+      font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+      color: var(--muted);
+    }
+
+    .slide__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 54px 24px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .slide__footer-index {
+      font-variant-numeric: tabular-nums;
+    }
+
+    .hero-layout,
+    .two-column-grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.95fr);
+      align-items: start;
+    }
+
+    .hero-layout {
+      flex: 1;
+    }
+
+    .hero-layout--talk {
+      grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.8fr);
+    }
+
+    .hero-copy {
+      display: grid;
+      align-content: start;
+      gap: 18px;
+      padding-top: 12px;
+    }
+
+    .slide--hero h1 {
+      max-width: 8ch;
+      font-size: clamp(3.1rem, 5.2vw, 4.9rem);
+    }
+
+    .slide--talk h1 {
+      max-width: 10ch;
+      font-size: clamp(2.9rem, 4.8vw, 5rem);
+    }
+
+    .hero-copy__month {
+      font-family: Consolas, "Aptos Display", "Segoe UI", sans-serif;
+      font-size: clamp(1.3rem, 2vw, 1.8rem);
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .hero-copy__meta {
+      max-width: 28rem;
+      color: var(--muted);
+      font-size: 1.15rem;
+    }
+
+    .hero-sidebar,
+    .mini-grid,
+    .stats-grid,
+    .speaker-grid,
+    .link-grid,
+    .sponsor-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .flag-bar {
+      height: 12px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #ed2939 0%, #ed2939 33%, #fff 33%, #fff 66%, #ed2939 66%, #ed2939 100%);
+      box-shadow: 0 0 0 1px rgba(68, 23, 80, 0.1);
+      margin-bottom: 4px;
+    }
+
+    .stats-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .mini-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-content: start;
+    }
+
+    .mini-grid--events,
+    .speaker-grid,
+    .link-grid,
+    .sponsor-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-content: start;
+    }
+
+    .prose {
+      display: grid;
+      gap: 14px;
+      max-width: 56rem;
+    }
+
+    .slide--dense .prose p,
+    .speaker-card--dense .speaker-card__bio p {
+      font-size: 1rem;
+      line-height: 1.33;
+    }
+
+    .bullet-list {
+      margin: 0;
+      padding-left: 1.3rem;
+      display: grid;
+      gap: 10px;
+    }
+
+    .mini-card,
+    .feature-card,
+    .stat-card,
+    .speaker-card,
+    .link-card,
+    .sponsor-card {
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), var(--paper-alt));
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85);
+    }
+
+    .mini-card,
+    .feature-card,
+    .speaker-card,
+    .link-card,
+    .sponsor-card {
+      padding: 18px;
+      display: grid;
+      gap: 12px;
+      align-content: start;
+    }
+
+    .feature-card--accent,
+    .slide--hero .feature-card,
+    .slide--talk .feature-card {
+      background:
+        linear-gradient(180deg, rgba(110, 43, 126, 0.96), rgba(68, 23, 80, 0.96)),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0));
+      color: #fff;
+      border-color: rgba(110, 43, 126, 0.36);
+    }
+
+    .feature-card--accent p,
+    .feature-card--accent li,
+    .slide--hero .feature-card p,
+    .slide--talk .feature-card p {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .feature-card--accent .feature-card__label,
+    .slide--hero .feature-card .feature-card__label,
+    .slide--talk .feature-card .feature-card__label {
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .stat-card {
+      padding: 18px;
+      display: grid;
+      gap: 4px;
+      text-align: left;
+      align-content: center;
+      min-height: 108px;
+    }
+
+    .stat-card__value {
+      font-family: Consolas, "Aptos Display", "Segoe UI", sans-serif;
+      font-size: 2.4rem;
+      line-height: 1;
+      color: var(--brand-dark);
+    }
+
+    .speaker-card__bio {
+      display: grid;
+      gap: 10px;
+    }
+
+    .link-grid,
+    .sponsor-grid,
+    .speaker-grid {
+      overflow: auto;
+      padding-right: 4px;
+    }
+
+    .link-card--empty {
+      min-height: 280px;
+      place-content: center;
+      text-align: center;
+    }
+
+    .link-card__qr-wrap {
+      display: grid;
+      place-items: center;
+      padding: 12px;
+      border-radius: 16px;
+      background: linear-gradient(180deg, rgba(110, 43, 126, 0.05), rgba(255, 255, 255, 0.72));
+    }
+
+    .link-card__qr {
+      width: min(100%, 168px);
+      aspect-ratio: 1;
+      object-fit: contain;
+    }
+
+    .sponsor-card {
+      grid-template-rows: auto 1fr;
+    }
+
+    .sponsor-card__media {
+      min-height: 88px;
+      display: grid;
+      place-items: start;
+    }
+
+    .sponsor-card__logo {
+      max-width: 160px;
+      max-height: 52px;
+      object-fit: contain;
+    }
+
+    .sponsor-card__placeholder {
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(110, 43, 126, 0.08);
+      color: var(--brand-dark);
+      font-weight: 700;
+    }
+
+    a {
+      color: var(--brand-dark);
+      text-decoration-thickness: 0.08em;
+      overflow-wrap: anywhere;
+    }
+
+    .deck-ui {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 14px;
+      background: rgba(33, 21, 49, 0.74);
+      color: #fff;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 30px rgba(33, 21, 49, 0.16);
+      z-index: 2;
+      opacity: 0.78;
+    }
+
+    .deck-ui button {
+      border: 0;
+      border-radius: 10px;
+      padding: 8px 12px;
+      background: rgba(255, 255, 255, 0.12);
+      color: inherit;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .deck-ui button:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .deck-ui__meta {
+      min-width: 142px;
+      text-align: center;
+      font-size: 0.9rem;
+      line-height: 1.3;
+    }
+
+    .deck-ui__hint {
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    @keyframes slide-enter {
+      from {
+        opacity: 0;
+        transform: translateY(8px) scale(0.994);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @media (max-width: 900px) {
+      :root {
+        --stage-width: 100vw;
+        --stage-height: 100vh;
+      }
+
+      .app {
+        padding: 0;
+      }
+
+      .stage {
+        border-radius: 0;
+        max-height: 100vh;
+      }
+
+      .slide__brandbar,
+      .slide__content,
+      .slide__footer {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      .slide__content {
+        padding-bottom: 18px;
+      }
+
+      .hero-layout,
+      .two-column-grid,
+      .mini-grid,
+      .mini-grid--events,
+      .speaker-grid,
+      .link-grid,
+      .sponsor-grid,
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .deck-ui {
+        left: 12px;
+        right: 12px;
+        top: auto;
+        bottom: 12px;
+        justify-content: space-between;
+      }
+    }
+
+    @media print {
+      html,
+      body {
+        background: #fff;
+        overflow: visible;
+      }
+
+      body::before,
+      body::after,
+      .deck-ui {
+        display: none;
+      }
+
+      .app,
+      .stage,
+      .deck {
+        display: block;
+        width: auto;
+        height: auto;
+        max-height: none;
+        padding: 0;
+        box-shadow: none;
+        background: transparent;
+      }
+
+      .slide {
+        position: relative;
+        display: block !important;
+        min-height: 7.5in;
+        page-break-after: always;
+      }
+
+      .slide__frame {
+        min-height: 7.5in;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="stage">
+      <div class="deck">
+        
+    <section class="slide slide--hero" data-slide-title="Welcome">
+      <div class="slide__frame">
+        <div class="slide__brandbar">
+          <div class="slide__brandtext">DotNetDevs.at</div>
+          <div class="slide__brandmark" aria-hidden="true"></div>
+        </div>
+        <div class="slide__content">
+          <div class="slide__eyebrow">Slide 1</div>
+          <div class="slide__kicker">Monday, October 5, 2026</div>
+          <h2>.NET Community Austria October 2026</h2>
+          <p class="slide__lead">Monthly .NET meetup for developers, architects, and community members across Austria.</p>
+          
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <h1>.NET Community Austria</h1>
+            <div class="hero-copy__month">October 2026</div>
+            <p class="hero-copy__meta">Feature session: Move over, WPF! Avalonia for X-Plat Desktop Apps (with a lot of AI help) by Christoph Wille, Siegfried Pammer</p>
+          </div>
+          <div class="hero-sidebar">
+            <div class="flag-bar" aria-hidden="true"></div>
+            <div class="stats-grid">
+    <article class="stat-card">
+      <div class="stat-card__value">0</div>
+      <div class="stat-card__label">Registrations</div>
+    </article>
+    <article class="stat-card">
+      <div class="stat-card__value">0</div>
+      <div class="stat-card__label">Onsite</div>
+    </article>
+    <article class="stat-card">
+      <div class="stat-card__value">0</div>
+      <div class="stat-card__label">Viewers</div>
+    </article></div>
+          </div>
+        </div>
+        </div>
+        <div class="slide__footer">
+          <span>https://dotnetdevs.at</span>
+          <span class="slide__footer-index"></span>
+        </div>
+      </div>
+    </section>
+    <section class="slide" data-slide-title="Thank you for joining!">
+      <div class="slide__frame">
+        <div class="slide__brandbar">
+          <div class="slide__brandtext">DotNetDevs.at</div>
+          <div class="slide__brandmark" aria-hidden="true"></div>
+        </div>
+        <div class="slide__content">
+          <div class="slide__eyebrow">Slide 2</div>
+          
+          <h2>Thank you for joining!</h2>
+          <p class="slide__lead">A quick welcome before we move into community updates and the feature talk.</p>
+          
+        <div class="two-column-grid">
+          <div class="feature-card">
+            <div class="feature-card__label">Tonight</div>
+            <ul class="bullet-list"><li>Say hello, ask questions, and keep the chat active.</li><li>Slides, links, and recordings stay archived with the event.</li><li>Stick around until the end for announcements and raffle details.</li></ul>
+          </div>
+          <div class="mini-grid">
+    <article class="mini-card mini-card--channel">
+      <div class="mini-card__label">Meetup</div>
+      <a href="https://www.meetup.com/dotnet-austria">www.meetup.com/dotnet-austria</a>
+    </article>
+    <article class="mini-card mini-card--channel">
+      <div class="mini-card__label">YouTube</div>
+      <a href="https://www.youtube.com/channel/UCuf0V0imn7bI_wST2fEHgXQ">www.youtube.com/channel/UCuf0V0imn7bI_wST2fE...</a>
+    </article>
+    <article class="mini-card mini-card--channel">
+      <div class="mini-card__label">GitHub</div>
+      <a href="https://github.com/dotnetdevsaustria">github.com/dotnetdevsaustria</a>
+    </article>
+    <article class="mini-card mini-card--channel">
+      <div class="mini-card__label">LinkedIn</div>
+      <a href="https://www.linkedin.com/company/dotnetdevs-austria/">www.linkedin.com/company/dotnetdevs-austria/</a>
+    </article></div>
+        </div>
+        </div>
+        <div class="slide__footer">
+          <span>https://dotnetdevs.at</span>
+          <span class="slide__footer-index"></span>
+        </div>
+      </div>
+    </section>
+    <section class="slide" data-slide-title="Thanks for hosting!">
+      <div class="slide__frame">
+        <div class="slide__brandbar">
+          <div class="slide__brandtext">DotNetDevs.at</div>
+          <div class="slide__brandmark" aria-hidden="true"></div>
+        </div>
+        <div class="slide__content">
+          <div class="slide__eyebrow">Slide 3</div>
+          
+          <h2>Thanks for hosting!</h2>
+          <p class="slide__lead">Rubicon helps make the meetup possible with venue and event support.</p>
+          
+        <div class="two-column-grid">
+          <article class="feature-card">
+            <div class="feature-card__label">Host support</div>
+            <h3>Rubicon</h3>
+            <p>Rubicon support us financially and with a location, food and drinks for our events.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-card__label">Community operations</div>
+            <ul class="bullet-list"><li>Event planning and speaker coordination</li><li>Onsite setup, streaming, and moderation</li><li>Slides, recordings, and community follow-up</li></ul>
+          </article>
+        </div>
+        </div>
+        <div class="slide__footer">
+          <span>https://dotnetdevs.at</span>
+          <span class="slide__footer-index"></span>
+        </div>
+      </div>
+    </section>
+    <section class="slide" data-slide-title="Our Sponsors">
+      <div class="slide__frame">
+        <div class="slide__brandbar">
+          <div class="slide__brandtext">DotNetDevs.at</div>
+          <div class="slide__brandmark" aria-hidden="true"></div>
+        </div>
+        <div class="slide__content">
+          <div class="slide__eyebrow">Slide 6</div>
+          
+          <h2>Our Sponsors</h2>
+          <p class="slide__lead">Sponsors support the meetup with venue, logistics, and prizes.</p>
+          <div class="sponsor-grid">
+      <article class="sponsor-card">
+        <div class="sponsor-card__media"><img class="sponsor-card__logo" src="../../assets/images/jetbrains.svg" alt="JetBrains logo" /></div>
+        <div class="sponsor-card__body">
+          <h3>JetBrains</h3>
+          <p>JetBrains sponsors us with 12- month product vouchers that we are raffling at each event.</p>
+        </div>
+      </article>
+      <article class="sponsor-card">
+        <div class="sponsor-card__media"><img class="sponsor-card__logo" src="../../assets/images/rubicon.svg" alt="Rubicon logo" /></div>
+        <div class="sponsor-card__body">
+          <h3>Rubicon</h3>
+          <p>Rubicon support us financially and with a location, food and drinks for our events.</p>
+        </div>
+      </article></div>
+        </div>
+        <div class="slide__footer">
+          <span>https://dotnetdevs.at</span>
+          <span class="slide__footer-index"></span>
+        </div>
+      </div>
+    </section>
+    <section class="slide" data-slide-title="How to take part in the raffle?">
+      <div class="slide__frame">
+        <div class="slide__brandbar">
+          <div class="slide__brandtext">DotNetDevs.at</div>
+          <div class="slide__brandmark" aria-hidden="true"></div>
+        </div>
+        <div class="slide__content">
+          <div class="slide__eyebrow">Slide 7</div>
+          
+          <h2>How to take part in the raffle?</h2>
+          <p class="slide__lead">JetBrains sponsors the raffle for the meetup.</p>
+          
+        <div class="two-column-grid">
+          <article class="feature-card">
+            <div class="feature-card__label">How it works</div>
+            <ul class="bullet-list"><li>Join the session and stay until the wrap-up.</li><li>Be present when the winner is drawn.</li><li>One prize per attendee so the raffle stays fair.</li></ul>
+          </article>
+          <article class="feature-card">
+            <div class="feature-card__label">Prize</div>
+            <p>JetBrains sponsors us with 12- month product vouchers that we are raffling at each event.</p>
+          </article>
+        </div>
+        </div>
+        <div class="slide__footer">
+          <span>https://dotnetdevs.at</span>
+          <span class="slide__footer-index"></span>
+        </div>
+      </div>
+    </section>
+    <section class="slide" data-slide-title="Community News">
+      <div class="slide__frame">
+        <div class="slide__brandbar">
+          <div class="slide__brandtext">DotNetDevs.at</div>
+          <div class="slide__brandmark" aria-hidden="true"></div>
+        </div>
+        <div class="slide__content">
+          <div class="slide__eyebrow">Slide 8</div>
+          
+          <h2>Community News</h2>
+          <p class="slide__lead">A few useful reminders and community touchpoints before the talk starts.</p>
+          
+        <div class="two-column-grid">
+          <article class="feature-card">
+            <div class="feature-card__label">Highlights</div>
+            <ul class="bullet-list"><li>Monthly onsite and remote .NET meetups for the Austrian community.</li><li>Event pages collect speaker bios, links, recordings, and follow-up material.</li><li>Slides and recordings stay archived per event so talks remain reusable.</li><li>Community touchpoints live across Meetup, YouTube, GitHub, and LinkedIn.</li></ul>
+          </article>
+          <div class="mini-grid">
+    <article class="mini-card mini-card--channel">
+      <div class="mini-card__label">Meetup</div>
+      <a href="https://www.meetup.com/dotnet-austria">www.meetup.com/dotnet-austria</a>
+    </article>
+    <article class="mini-card mini-card--channel">
+      <div class="mini-card__label">YouTube</div>
+      <a href="https://www.youtube.com/channel/UCuf0V0imn7bI_wST2fEHgXQ">www.youtube.com/channel/UCuf0V0imn7bI_wST2fE...</a>
+    </article>
+    <article class="mini-card mini-card--channel">
+      <div class="mini-card__label">GitHub</div>
+      <a href="https://github.com/dotnetdevsaustria">github.com/dotnetdevsaustria</a>
+    </article>
+    <article class="mini-card mini-card--channel">
+      <div class="mini-card__label">LinkedIn</div>
+      <a href="https://www.linkedin.com/company/dotnetdevs-austria/">www.linkedin.com/company/dotnetdevs-austria/</a>
+    </article></div>
+        </div>
+        </div>
+        <div class="slide__footer">
+          <span>https://dotnetdevs.at</span>
+          <span class="slide__footer-index"></span>
+        </div>
+      </div>
+    </section>
+    <section class="slide" data-slide-title="Next meetups">
+      <div class="slide__frame">
+        <div class="slide__brandbar">
+          <div class="slide__brandtext">DotNetDevs.at</div>
+          <div class="slide__brandmark" aria-hidden="true"></div>
+        </div>
+        <div class="slide__content">
+          <div class="slide__eyebrow">Slide 9</div>
+          
+          <h2>Next meetups</h2>
+          <p class="slide__lead">Here is what is already on the calendar after this session.</p>
+          <div class="mini-grid mini-grid--events"><article class="mini-card"><div class="mini-card__label">Planning</div><p>Upcoming events can be added once they are published.</p></article></div>
+        </div>
+        <div class="slide__footer">
+          <span>https://dotnetdevs.at</span>
+          <span class="slide__footer-index"></span>
+        </div>
+      </div>
+    </section>
+    <section class="slide" data-slide-title="If you want host a meetup?">
+      <div class="slide__frame">
+        <div class="slide__brandbar">
+          <div class="slide__brandtext">DotNetDevs.at</div>
+          <div class="slide__brandmark" aria-hidden="true"></div>
+        </div>
+        <div class="slide__content">
+          <div class="slide__eyebrow">Slide 10</div>
+          
+          <h2>If you want host a meetup?</h2>
+          <p class="slide__lead">We are always looking for speakers, topics, venues, and community partners.</p>
+          
+        <div class="two-column-grid">
+          <article class="feature-card">
+            <div class="feature-card__label">Get involved</div>
+            <ul class="bullet-list"><li>Propose a talk or live coding session.</li><li>Offer a venue, food, or logistics support.</li><li>Help with moderation, streaming, or community outreach.</li></ul>
+          </article>
+          <article class="feature-card">
+            <div class="feature-card__label">Contact</div>
+            <p>Email us at <a href="mailto:info@dotnetdevs.at">info@dotnetdevs.at</a> and include your topic, availability, or sponsorship idea.</p>
+            <p>Community hub: <a href="https://dotnetdevs.at">https://dotnetdevs.at</a></p>
+          </article>
+        </div>
+        </div>
+        <div class="slide__footer">
+          <span>https://dotnetdevs.at</span>
+          <span class="slide__footer-index"></span>
+        </div>
+      </div>
+    </section>
+    <section class="slide slide--talk" data-slide-title="Talk Title">
+      <div class="slide__frame">
+        <div class="slide__brandbar">
+          <div class="slide__brandtext">DotNetDevs.at</div>
+          <div class="slide__brandmark" aria-hidden="true"></div>
+        </div>
+        <div class="slide__content">
+          <div class="slide__eyebrow">Slide 11</div>
+          <div class="slide__kicker">.NET Meetup October 2026</div>
+          <h2>Move over, WPF! Avalonia for X-Plat Desktop Apps (with a lot of AI help)</h2>
+          <p class="slide__lead">by Christoph Wille, Siegfried Pammer</p>
+          
+        <div class="hero-layout hero-layout--talk">
+          <div class="hero-copy">
+            <h1>Move over, WPF! Avalonia for X-Plat Desktop Apps (with a lot of AI help)</h1>
+            <p class="hero-copy__meta">Monday, October 5, 2026</p>
+          </div>
+          <article class="feature-card feature-card--accent">
+            <div class="feature-card__label">Event file</div>
+            <p>_events\2026-10-05\index.md</p>
+          </article>
+        </div>
+        </div>
+        <div class="slide__footer">
+          <span>https://dotnetdevs.at</span>
+          <span class="slide__footer-index"></span>
+        </div>
+      </div>
+    </section>
+    <section class="slide" data-slide-title="Speakers">
+      <div class="slide__frame">
+        <div class="slide__brandbar">
+          <div class="slide__brandtext">DotNetDevs.at</div>
+          <div class="slide__brandmark" aria-hidden="true"></div>
+        </div>
+        <div class="slide__content">
+          <div class="slide__eyebrow">Speaker</div>
+          
+          <h2>Speakers</h2>
+          <p class="slide__lead">Background and context for the featured speaker or speakers.</p>
+          <div class="speaker-grid">
+      <article class="speaker-card">
+        <div class="speaker-card__label">Speaker</div>
+        <h3>Christoph Wille</h3>
+        <div class="speaker-card__bio"><p>[Christoph Wille](https://github.com/christophwille) has written the first-ever book on C# in 2000 that was handed out to all attendees at the Professional Developers Conference where .NET was revealed. He has contributed ever since to various communities and open source projects (e.g. ILSpy), and in his day to day work is helping companies build large enterprise and/or Internet-facing solutions with .NET and Azure.</p></div>
+      </article>
+      <article class="speaker-card">
+        <div class="speaker-card__label">Speaker</div>
+        <h3>Siegfried Pammer</h3>
+        <div class="speaker-card__bio"><p>[Siegfried Pammer](https://github.com/siegfriedpammer) is a core developer on the ILSpy project since its early days in 2011. He knows his ways around just about every part of the project, even the ones no one really wants to touch. In his day to day work, Siegfried is working on static code analysis tools for Qt/Axivion.</p></div>
+      </article></div>
+        </div>
+        <div class="slide__footer">
+          <span>https://dotnetdevs.at</span>
+          <span class="slide__footer-index"></span>
+        </div>
+      </div>
+    </section>
+    <section class="slide slide--dense" data-slide-title="Abstract">
+      <div class="slide__frame">
+        <div class="slide__brandbar">
+          <div class="slide__brandtext">DotNetDevs.at</div>
+          <div class="slide__brandmark" aria-hidden="true"></div>
+        </div>
+        <div class="slide__content">
+          <div class="slide__eyebrow">Talk overview</div>
+          
+          <h2>Abstract</h2>
+          <p class="slide__lead">What this session is about and what attendees should expect.</p>
+          <div class="prose"><p>[ILSpy](https://github.com/icsharpcode/ILSpy/) started its life in 2011 as a ramshackle application on .NET Framework and made its way through one major UI refactoring up to .NET 10, all the while using WPF as its UI framework. Third-party projects (forks) built frontends using other UI frameworks, but we stayed put. Until... you&#039;ll hear that story in the talk.</p><p>Replatforming your UI on a different framework doesn&#039;t start with coding, it starts with evaluating your options, analyzing the pros and cons, the community, the strengths and weaknesses and what it ultimately comes down to, your preferences. It is a big investment you are making, and you don&#039;t want for it to come back and haunt you.</p><p>Once you have settled on a framework of your choice, modern tooling takes center stage: coding agents, which are really good at porting work and frontends in general. But is one-shotting a good idea? What surprises do they have in store for you? Where do they really excel? Costs? And that is not the end of it... What happens with platform idiosyncrasies? Your CI system? The deployment story?</p><p>You will get a first-hand experience report with all the oopsies and facepalms, not protecting the guilty, who are your speakers today!</p></div>
+        </div>
+        <div class="slide__footer">
+          <span>https://dotnetdevs.at</span>
+          <span class="slide__footer-index"></span>
+        </div>
+      </div>
+    </section>
+    <section class="slide" data-slide-title="Event Links">
+      <div class="slide__frame">
+        <div class="slide__brandbar">
+          <div class="slide__brandtext">DotNetDevs.at</div>
+          <div class="slide__brandmark" aria-hidden="true"></div>
+        </div>
+        <div class="slide__content">
+          <div class="slide__eyebrow">Join and share</div>
+          
+          <h2>Event Links</h2>
+          <p class="slide__lead">Scan the QR codes or open the event links directly.</p>
+          <div class="link-grid">
+      <article class="link-card">
+        <div class="link-card__qr-wrap">
+          <img class="link-card__qr" src="data:image/png;base64,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" alt="QR code for In person" />
+        </div>
+        <div class="link-card__body">
+          <div class="link-card__label">In person</div>
+          <a href="TBD">TBD</a>
+        </div>
+      </article>
+      <article class="link-card">
+        <div class="link-card__qr-wrap">
+          <img class="link-card__qr" src="data:image/png;base64,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" alt="QR code for Remote" />
+        </div>
+        <div class="link-card__body">
+          <div class="link-card__label">Remote</div>
+          <a href="TBD">TBD</a>
+        </div>
+      </article></div>
+        </div>
+        <div class="slide__footer">
+          <span>https://dotnetdevs.at</span>
+          <span class="slide__footer-index"></span>
+        </div>
+      </div>
+    </section>
+    <section class="slide slide--closing" data-slide-title="See you next Month!">
+      <div class="slide__frame">
+        <div class="slide__brandbar">
+          <div class="slide__brandtext">DotNetDevs.at</div>
+          <div class="slide__brandmark" aria-hidden="true"></div>
+        </div>
+        <div class="slide__content">
+          <div class="slide__eyebrow">Closing</div>
+          
+          <h2>See you next Month!</h2>
+          <p class="slide__lead">Thank you for being part of the community.</p>
+          
+        <div class="two-column-grid">
+          <article class="feature-card feature-card--accent">
+            <div class="feature-card__label">Keep in touch</div>
+            <p>https://dotnetdevs.at</p>
+            <p>info@dotnetdevs.at</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-card__label">Next step</div>
+            <ul class="bullet-list"><li>Share feedback after the talk.</li><li>Invite a colleague to the next meetup.</li><li>Reach out if you want to speak or support the group.</li></ul>
+          </article>
+        </div>
+        </div>
+        <div class="slide__footer">
+          <span>https://dotnetdevs.at</span>
+          <span class="slide__footer-index"></span>
+        </div>
+      </div>
+    </section>
+      </div>
+    </div>
+  </div>
+
+  <div class="deck-ui" aria-label="Slide controls">
+    <button type="button" data-action="previous">Previous</button>
+    <div class="deck-ui__meta">
+      <div id="slide-counter"></div>
+      <div class="deck-ui__hint">Arrow keys, space, home, end</div>
+    </div>
+    <button type="button" data-action="next">Next</button>
+  </div>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const counter = document.getElementById('slide-counter');
+    const buttons = document.querySelectorAll('[data-action]');
+    const footerIndices = document.querySelectorAll('.slide__footer-index');
+    const baseTitle = document.title;
+    let currentIndex = 0;
+
+    footerIndices.forEach((element, index) => {
+      element.textContent = `${index + 1} / ${slides.length}`;
+    });
+
+    function parseHashIndex() {
+      const match = window.location.hash.match(/^#slide-(\d+)$/);
+      if (!match) {
+        return 0;
+      }
+
+      const parsedIndex = Number(match[1]) - 1;
+      if (Number.isNaN(parsedIndex)) {
+        return 0;
+      }
+
+      return Math.min(Math.max(parsedIndex, 0), slides.length - 1);
+    }
+
+    function updateUi() {
+      slides.forEach((slide, index) => {
+        slide.classList.toggle('is-active', index === currentIndex);
+      });
+
+      const title = slides[currentIndex]?.dataset.slideTitle || `Slide ${currentIndex + 1}`;
+      counter.textContent = `${currentIndex + 1} / ${slides.length} - ${title}`;
+      document.title = `${baseTitle} (${currentIndex + 1}/${slides.length})`;
+      window.location.hash = `slide-${currentIndex + 1}`;
+    }
+
+    function goToSlide(index) {
+      currentIndex = Math.min(Math.max(index, 0), slides.length - 1);
+      updateUi();
+    }
+
+    function moveBy(offset) {
+      goToSlide(currentIndex + offset);
+    }
+
+    document.addEventListener('keydown', event => {
+      if (event.key === 'ArrowRight' || event.key === 'PageDown' || event.key === ' ') {
+        event.preventDefault();
+        moveBy(1);
+      } else if (event.key === 'ArrowLeft' || event.key === 'PageUp') {
+        event.preventDefault();
+        moveBy(-1);
+      } else if (event.key === 'Home') {
+        event.preventDefault();
+        goToSlide(0);
+      } else if (event.key === 'End') {
+        event.preventDefault();
+        goToSlide(slides.length - 1);
+      }
+    });
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        if (button.dataset.action === 'previous') {
+          moveBy(-1);
+        } else {
+          moveBy(1);
+        }
+      });
+    });
+
+    window.addEventListener('hashchange', () => {
+      const nextIndex = parseHashIndex();
+      if (nextIndex !== currentIndex) {
+        currentIndex = nextIndex;
+        updateUi();
+      }
+    });
+
+    currentIndex = parseHashIndex();
+    updateUi();
+  </script>
+</body>
+</html>

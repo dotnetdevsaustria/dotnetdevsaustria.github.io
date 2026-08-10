@@ -1,0 +1,28 @@
+This event is for people who join the event in person. The location will be announced.
+
+If you join the event remotely, please RSVP here: %RemoteLink%
+
+This meetup is organized by DotNetDevs.at (https://dotnetdevs.at/).
+
+Abstract
+%abstract%
+
+%speakers_bio%
+
+Location, Food & Drinks sponsor will be announced.
+
+Timetable:
+
+- 18:00: Door opens
+- 18:15: Intro
+- 18:20: Talk starts
+- 19:30: Food & Drinks
+- 21:00: End
+Recordings will be available afterward at https://go.dotnetdevs.at/recordings
+
+This meetup is organized by DotNetDevs.at (https://dotnetdevs.at/).
+
+DotNetDevs.at is sponsored by:
+
+- RUBICON IT GmbH (https://www.rubicon.eu/rubicon/)
+- JetBrains (https://jetbrains.com)

@@ -1,0 +1,38 @@
+This is the event for people who join the event via Stream.
+
+If you join the event in-person, please RSVP here: TBD
+
+This meetup is organized by DotNetDevs.at (https://dotnetdevs.at/).
+
+Abstract:
+[ILSpy](https://github.com/icsharpcode/ILSpy/) started its life in 2011 as a ramshackle application on .NET Framework and made its way through one major UI refactoring up to .NET 10, all the while using WPF as its UI framework. Third-party projects (forks) built frontends using other UI frameworks, but we stayed put. Until... you'll hear that story in the talk.
+
+Replatforming your UI on a different framework doesn't start with coding, it starts with evaluating your options, analyzing the pros and cons, the community, the strengths and weaknesses and what it ultimately comes down to, your preferences. It is a big investment you are making, and you don't want for it to come back and haunt you.
+
+Once you have settled on a framework of your choice, modern tooling takes center stage: coding agents, which are really good at porting work and frontends in general. But is one-shotting a good idea? What surprises do they have in store for you? Where do they really excel? Costs? And that is not the end of it... What happens with platform idiosyncrasies? Your CI system? The deployment story?
+
+You will get a first-hand experience report with all the oopsies and facepalms, not protecting the guilty, who are your speakers today!
+
+
+About Christoph Wille:
+[Christoph Wille](https://github.com/christophwille) has written the first-ever book on C# in 2000 that was handed out to all attendees at the Professional Developers Conference where .NET was revealed. He has contributed ever since to various communities and open source projects (e.g. ILSpy), and in his day to day work is helping companies build large enterprise and/or Internet-facing solutions with .NET and Azure.
+
+About Siegfried Pammer:
+[Siegfried Pammer](https://github.com/siegfriedpammer) is a core developer on the ILSpy project since its early days in 2011. He knows his ways around just about every part of the project, even the ones no one really wants to touch. In his day to day work, Siegfried is working on static code analysis tools for Qt/Axivion.
+
+Timetable:
+
+- 18:00: Stream starts at
+https://www.twitch.tv/dotnetdevsat or
+https://www.youtube.com/c/DotNetDevsAustria
+- 18:15: Intro
+- 18:20: Talk starts
+- about 19:30: End
+Recordings will be available afterward at https://go.dotnetdevs.at/recordings
+
+This meetup is organized by DotNetDevs.at (https://dotnetdevs.at/).
+
+DotNetDevs.at is sponsored by:
+
+- RUBICON IT GmbH (https://www.rubicon.eu/rubicon/)
+- JetBrains (https://jetbrains.com)
