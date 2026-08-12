@@ -7,4 +7,6 @@ gem "minimal-mistakes-jekyll"
 gem "csv"
 gem "base64"
 gem "logger"
-gem "rmagick"  # For meetup image generation
+group :meetup_image, optional: true do
+  gem "rmagick"  # For meetup image generation
+end
