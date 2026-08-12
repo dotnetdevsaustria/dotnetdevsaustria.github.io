@@ -1,6 +1,6 @@
 This event is for people who join the event in person. The location will be announced.
 
-If you join the event remotely, please RSVP here: TBD
+If you join the event remotely, please RSVP here: https://www.meetup.com/dotnet-austria/events/316062272
 
 This meetup is organized by DotNetDevs.at (https://dotnetdevs.at/).
 

@@ -1,6 +1,6 @@
 ---
-date: 2026-10-05
-permalink: /events/2026-10-05/
+date: 2026-10-06
+permalink: /events/2026-10-06/
 title: "Move over, WPF! Avalonia for X-Plat Desktop Apps (with a lot of AI help)"
 speakers:
   - Christoph Wille
