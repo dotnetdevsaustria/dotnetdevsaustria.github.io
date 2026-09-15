@@ -6,10 +6,10 @@ speakers:
   - Rodney Littles II
 InPersonLink: https://www.meetup.com/dotnet-austria/events/316061716
 RemoteLink: https://www.meetup.com/dotnet-austria/events/316061860
-RecordingLink: ""
-Registrations: 0
-Participants: 0
-Viewers: 0
+RecordingLink: https://www.youtube.com/live/1Q5-M02TOW0?si=8pv3LZbQST6c1LLt
+Registrations: 82
+Participants: 25
+Viewers: 12
 public: true
 abstract: |
   Most of us build abstractions like we're hoarding for winter, then act surprised when the codebase turns into a dependency escape room. In this session, we'll cut through the noise on abstraction's two major techniques - inheritance and composition - and why most of us reach for the wrong one out of habit. Using Single Responsibility, Liskov Substitution, and Interface Segregation as actual design tools, we'll explore when abstraction earns its keep and when it's just complexity with good PR. Add, modern C# techniques that make clean boundaries possible without the chaos. You'll leave with sharper instincts. Your codebase will thank you.
@@ -25,7 +25,6 @@ abstract: |
   - Testability
   - Abstractions
 Location: SQUER
-permalink: /events/2026-09-15/
 ---
 Tasks:
 
