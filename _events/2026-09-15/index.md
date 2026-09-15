@@ -24,6 +24,8 @@ abstract: |
   - Inheritance
   - Testability
   - Abstractions
+Location: SQUER
+permalink: /events/2026-09-15/
 ---
 Tasks:
 
