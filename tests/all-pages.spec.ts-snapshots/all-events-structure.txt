@@ -5,6 +5,7 @@
   "hasFooter": true,
   "hasMainContent": false,
   "headings": [
+    "2026-11-05 - AI Agents in Our Daily Work – Where Do We Still Take Over?",
     "2026-10-06 - Move over, WPF! Avalonia for X-Plat Desktop Apps (with a lot of AI help)",
     "2026-09-15 - C# Abstractions, the lies you still believe",
     "2026-04-28 - Kafka through the lens of .NET",
@@ -29,6 +30,6 @@
     "2024-02-20 - GitHub Copilot - Gimmick or Useful?",
     "2024-01-23 - Going Functional with Railway Oriented Programming in C#"
   ],
-  "links": 65,
+  "links": 67,
   "images": 1
 }

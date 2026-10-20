@@ -9,6 +9,7 @@
     "Alex Thissen",
     "Andreas Willich",
     "Bas Dijkstra",
+    "Bojan Spasevski",
     "Christian Schabetsberger",
     "Christoph Wille",
     "David Eiwen",
@@ -20,6 +21,7 @@
     "Martin Ullrich",
     "Matthias Koch",
     "Michael Ketting",
+    "Oliver Buchmann",
     "Patrick Säuerl",
     "Paul Rohorzka",
     "Rainer Stropek",
@@ -31,6 +33,6 @@
     "Stefan Pölz",
     "Tim Paulus"
   ],
-  "links": 43,
+  "links": 45,
   "images": 4
 }
