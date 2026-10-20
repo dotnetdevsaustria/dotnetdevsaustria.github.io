@@ -1,28 +1,32 @@
-This event is for people who join the event in person. The location will be announced.
+💻 Great talks, good company, and a room full of .NET enthusiasts — join us in person for the next DotNetDevs.at meetup!
 
-If you join the event remotely, please RSVP here: %RemoteLink%
+📍 The venue will be announced soon. Stay tuned!
 
-This meetup is organized by DotNetDevs.at (https://dotnetdevs.at/).
+Can't make it in person? Join us online instead and RSVP here: %RemoteLink%
 
-Abstract
+✨ WHAT'S ON
+
 %abstract%
+
+🎤 MEET THE SPEAKER
 
 %speakers_bio%
 
-Location, Food & Drinks sponsor will be announced.
+🍕 Food, drinks, and great conversations are part of the evening; venue and sponsor details will be announced soon.
 
-Timetable:
+🗓️ THE EVENING AT A GLANCE
 
-- 18:00: Door opens
-- 18:15: Intro
-- 18:20: Talk starts
-- 19:30: Food & Drinks
-- 21:00: End
-Recordings will be available afterward at https://go.dotnetdevs.at/recordings
+- 18:00: Doors open
+- 18:15: Welcome and intro
+- 18:20: Talk begins
+- 19:30: Food, drinks, and conversation
+- 21:00: See you next time!
 
-This meetup is organized by DotNetDevs.at (https://dotnetdevs.at/).
+🎥 Can't join us live? Catch the recording afterward: https://go.dotnetdevs.at/recordings
 
-DotNetDevs.at is sponsored by:
+Organized with ❤️ by DotNetDevs.at (https://dotnetdevs.at/).
+
+🤝 DotNetDevs.at is proudly supported by:
 
 - RUBICON IT GmbH (https://www.rubicon.eu/rubicon/)
 - JetBrains (https://jetbrains.com)

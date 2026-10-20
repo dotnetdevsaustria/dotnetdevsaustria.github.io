@@ -1,27 +1,29 @@
-This is the event for people who join the event via Stream.
+🚀 Join the DotNetDevs.at meetup from wherever you are! Tune in for an evening of .NET insights, live on stream.
 
-If you join the event in-person, please RSVP here: %InPersonLink%
+📍 Prefer to meet in person? Save your seat here: %InPersonLink%
 
-This meetup is organized by DotNetDevs.at (https://dotnetdevs.at/).
+✨ WHAT'S ON
 
-Abstract:
 %abstract%
+
+🎤 MEET THE SPEAKER
 
 %speakers_bio%
 
-Timetable:
+🗓️ THE EVENING AT A GLANCE
 
-- 18:00: Stream starts at
-https://www.twitch.tv/dotnetdevsat or
-https://www.youtube.com/c/DotNetDevsAustria
-- 18:15: Intro
-- 18:20: Talk starts
-- about 19:30: End
-Recordings will be available afterward at https://go.dotnetdevs.at/recordings
+- 18:00: Stream goes live — join us on Twitch (https://www.twitch.tv/dotnetdevsat) or YouTube (https://www.youtube.com/c/DotNetDevsAustria)
+- 18:15: Welcome and intro
+- 18:20: Talk begins
+- Around 19:30: Wrap-up
 
-This meetup is organized by DotNetDevs.at (https://dotnetdevs.at/).
+💬 Bring your questions and join the conversation live!
 
-DotNetDevs.at is sponsored by:
+🎥 Missed the stream? Watch the recording afterward: https://go.dotnetdevs.at/recordings
+
+Organized with ❤️ by DotNetDevs.at (https://dotnetdevs.at/).
+
+🤝 DotNetDevs.at is proudly supported by:
 
 - RUBICON IT GmbH (https://www.rubicon.eu/rubicon/)
 - JetBrains (https://jetbrains.com)
