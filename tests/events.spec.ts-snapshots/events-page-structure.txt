@@ -5,6 +5,10 @@
   "hasFooter": true,
   "hasMainContent": false,
   "headings": [
+    "2026-10-06 - Move over, WPF! Avalonia for X-Plat Desktop Apps (with a lot of AI help)",
+    "2026-09-15 - C# Abstractions, the lies you still believe",
+    "2026-04-28 - Kafka through the lens of .NET",
+    "2026-03-24 - Pattern-based C#: if it quacks like a duck…",
     "2026-02-19 - Evolving Modular Monoliths with architectural fitness functions",
     "2026-01-20 - DevContainers: Development environments as code",
     "2025-12-16 - Testcontainers - Integration Testing Done Right",
@@ -25,6 +29,6 @@
     "2024-02-20 - GitHub Copilot - Gimmick or Useful?",
     "2024-01-23 - Going Functional with Railway Oriented Programming in C#"
   ],
-  "links": 56,
+  "links": 65,
   "images": 1
 }

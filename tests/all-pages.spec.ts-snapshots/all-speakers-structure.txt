@@ -14,6 +14,7 @@
     "David Eiwen",
     "David Walsner",
     "Davide Bellone",
+    "Eva Ditzelmüller",
     "Jiří Činčura",
     "Manuel Juran",
     "Martin Ullrich",
@@ -23,11 +24,13 @@
     "Paul Rohorzka",
     "Rainer Stropek",
     "Raoul Holzer",
+    "Rodney Littles II",
     "Roman Jasek",
     "Shahab Ganji",
+    "Siegfried Pammer",
     "Stefan Pölz",
     "Tim Paulus"
   ],
-  "links": 40,
-  "images": 3
+  "links": 43,
+  "images": 4
 }

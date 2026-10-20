@@ -69,6 +69,7 @@ npm run generate:onsite _events/2026-01-20/index.md
 npm run generate:remote _events/2026-01-20/index.md
 ruby scripts/generate_meetup_image.rb
 npm run generate:recording-title -- _events/2026-01-20/index.md
+npm run generate:slides -- _events/2026-01-20/index.md
 ```
 
 Recording title image notes:
@@ -80,3 +81,12 @@ Recording title image notes:
 - `Title for Recording.png` renders `.NET Meetup <Month Year>`, then title, then `by <speaker(s)>`.
 - `Start Streaming.png` and `Stop Streaming.png` render title and `by <speaker(s)>`.
 - Validate correctness by comparing generated outputs for `_events/2026-01-20/Title for Recording.png` and `_events/2025-12-16/Title for Recording.png` with their existing examples; only minor anti-aliasing/font-rendering differences are acceptable.
+
+Event slide generator notes:
+
+- The slide generator reads `title`, `date`, `speakers`, `abstract`, and event link fields from the event front matter.
+- It writes `_events/<slug>/slides.html` and `_events/<slug>/Slides.pdf` and overwrites the existing files.
+- Speaker bios are loaded from `_speakers/` by matching each front matter entry in `speakers:` to the speaker file `name`.
+- Sponsor data is loaded from `_sponsors/` and upcoming events are inferred from other published event files.
+- The generated deck is browser-based, includes keyboard navigation, can be opened directly from the event folder, and is also exported as a PDF.
+- The link slide includes QR codes for any present `InPersonLink`, `RemoteLink`, and `RecordingLink` values.
