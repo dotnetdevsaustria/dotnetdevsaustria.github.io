@@ -1,6 +1,6 @@
 🚀 Join the DotNetDevs.at meetup from wherever you are! Tune in for an evening of .NET insights, live on stream.
 
-📍 Prefer to meet in person? Save your seat here: 
+📍 Prefer to meet in person? Save your seat here: https://www.meetup.com/dotnet-austria/events/317063101
 
 ✨ WHAT'S ON
 
@@ -12,6 +12,12 @@ Bojan Spasevski, Oliver Buchmann and Andreas Willich are part of a TechTalk team
 
 
 🎤 MEET THE SPEAKER
+
+About Bojan Spasevski:
+Bojan Spasevski is a Senior Developer at TechTalk and part of the team that develops software for XXXLutz. For him, AI agents are no longer an experiment but part of the everyday toolbox – planning tasks, writing code and running tests alongside the team. Bojan cares about what it takes to make that work in a real project: where agents save time, where they need clear rules, and where a developer still has to take over.
+
+About Oliver Buchmann:
+Oliver Buchmann works at TechTalk and is part of the team that develops software for XXXLutz. Beyond the project work, he is closely involved in the collaboration with the customer – from steering meetings to the question of how AI can be used across the organisation. That gives him a view on agentic engineering from both sides: what it changes in a developer's day, and what it means for a team and the customer it works for.
 
 About Andreas Willich:
 Andreas Willich is a seasoned software engineer with over 15 years of experience in the .NET ecosystem. He has a passion for improving developer productivity and has been actively involved in the .NET community, sharing his insights on modern development practices. Andreas is particularly interested in leveraging containerization and automation to enhance testing and deployment processes in legacy applications.
