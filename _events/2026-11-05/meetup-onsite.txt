@@ -1,0 +1,40 @@
+💻 Great talks, good company, and a room full of .NET enthusiasts — join us in person at XXXLutz, Andromeda Tower (https://www.xxxl.digital/)!
+
+Can't make it to the venue? Join us online instead and RSVP here: 
+
+✨ WHAT'S ON
+
+AI agents can plan tasks, write code and run tests today. In day-to-day project work, things look less shiny: results vary, reviews get tedious, and nobody really knows how far to trust the agent – and when it's better to take over yourself. Somewhere between the slick demo and the merged pull request, the promise of autonomy often turns into a lot of babysitting.
+
+We show how we do it in our team at XXXLutz, unpolished. What has worked for us, where did we fail, and what did we learn about ourselves as a team along the way? No recipe and no one right way – just an honest look into our workshop, with a live demo. You'll see the setup we work with today, the rules we gave our agents along the way, and the questions we haven't answered yet – plus what we're working on right now to improve the way we work. Something to borrow from, question and build on.
+
+Bojan Spasevski, Oliver Buchmann and Andreas Willich are part of a TechTalk team that develops software for XXXLutz, where they use agents every day. Their experience comes from real project work, not from a lab – with all the rough edges that come with it. The talk combines an experience report with a live demo and leaves room for questions and discussion.
+
+
+🎤 MEET THE SPEAKER
+
+About Andreas Willich:
+Andreas Willich is a seasoned software engineer with over 15 years of experience in the .NET ecosystem. He has a passion for improving developer productivity and has been actively involved in the .NET community, sharing his insights on modern development practices. Andreas is particularly interested in leveraging containerization and automation to enhance testing and deployment processes in legacy applications.
+
+Also he is the chairman of DotNetDevs.at.
+
+📍 THE IN-PERSON EXPERIENCE
+
+Our venue, food, and drinks are made possible by XXXLutz, Andromeda Tower — thank you for hosting the community!
+
+🗓️ THE EVENING AT A GLANCE
+
+- 18:00: Doors open at XXXLutz, Andromeda Tower
+- 18:15: Welcome and intro
+- 18:20: Talk begins
+- 19:30: Food, drinks, and conversation
+- 21:00: See you next time!
+
+🎥 Can't join us live? Catch the recording afterward: https://go.dotnetdevs.at/recordings
+
+Organized with ❤️ by DotNetDevs.at (https://dotnetdevs.at/).
+
+🤝 DotNetDevs.at is proudly supported by:
+
+- RUBICON IT GmbH (https://www.rubicon.eu/rubicon/)
+- JetBrains (https://jetbrains.com)
