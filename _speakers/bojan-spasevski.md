@@ -1,5 +1,5 @@
 ---
 name: Bojan Spasevski
 bio: |
-  Bojan Spasevski is a Senior Developer at TechTalk and part of the team that develops software for XXXLutz. For him, AI agents are no longer an experiment but part of the everyday toolbox – planning tasks, writing code and running tests alongside the team. Bojan cares about what it takes to make that work in a real project: where agents save time, where they need clear rules, and where a developer still has to take over.
+  Bojan Spasevski is a Senior Developer at TechTalk. He works in the team that builds software for XXXLutz, where AI agents have become part of his daily work. He lets them plan tasks, write code and run tests, and he decides when it is time to take over himself. In this talk he shows what that looks like on a normal project day.
 ---
