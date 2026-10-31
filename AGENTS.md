@@ -84,9 +84,13 @@ Recording title image notes:
 
 Event slide generator notes:
 
-- The slide generator reads `title`, `date`, `speakers`, `abstract`, and event link fields from the event front matter.
+- The generated deck replicates the DotNetDevs.at PowerPoint deck (`_events/2026-10-06/Slides.pptx`): 18 slides at 1920 x 1080 px with positions taken from the PPTX (1 px = 6350 EMU, 1 pt = 2 px).
+- The slide generator reads `title`, `date`, and `speakers` from the event front matter.
 - It writes `_events/<slug>/slides.html` and `_events/<slug>/Slides.pdf` and overwrites the existing files.
-- Speaker bios are loaded from `_speakers/` by matching each front matter entry in `speakers:` to the speaker file `name`.
-- Sponsor data is loaded from `_sponsors/` and upcoming events are inferred from other published event files.
-- The generated deck is browser-based, includes keyboard navigation, can be opened directly from the event folder, and is also exported as a PDF.
-- The link slide includes QR codes for any present `InPersonLink`, `RemoteLink`, and `RecordingLink` values.
+- `slides.html` is self-contained: images from `templates/slides/` are embedded as data URIs. Layout CSS and navigation JS live in `templates/event_slides.html`.
+- Sponsors are loaded from `_sponsors/` (order: Rubicon, JetBrains, then alphabetical). The logo from `templates/slides/sponsors/<sponsor-file-name>.*` is preferred, otherwise the website `logo`.
+- The "Next meetups" timeline shows up to 3 upcoming published events (date, title, speakers, `@Location`) and is padded with "TBD" months to at least 2 entries.
+- Slides that are hidden in the PowerPoint deck ("We need your help!", help-us QR, sticker slide, feedback QR) are generated with `data-hidden`: skipped during the presentation (toggle with `H`) and omitted from the PDF. The feedback slide uses `https://go.dotnetdevs.at/feedback-<YYYYMM>`.
+- Title text frames shrink automatically when the text does not fit, similar to PowerPoint autofit.
+- Fonts are Consolas and Calibri (not embedded), so the output matches the PowerPoint deck on Windows.
+- Navigation: Right / Space / click = next, Left = previous, Home / End, `F` = fullscreen, `#<n>` in the URL opens slide n, `?export` hides the slide counter.

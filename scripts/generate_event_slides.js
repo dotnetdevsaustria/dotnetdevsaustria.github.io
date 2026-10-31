@@ -1,5 +1,9 @@
 #!/usr/bin/env node
 
+// Generates the meetup slide deck for an event as a self-contained HTML file (plus PDF export).
+// The layout mirrors the DotNetDevs.at PowerPoint deck: every slide is 1920 x 1080 px,
+// positions are taken from the PPTX (1 px = 6350 EMU, 1 pt = 2 px).
+
 const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
@@ -7,32 +11,41 @@ const QRCode = require('qrcode');
 const { chromium } = require('@playwright/test');
 
 const ROOT_DIR = path.join(__dirname, '..');
-const SPEAKERS_DIR = path.join(ROOT_DIR, '_speakers');
 const SPONSORS_DIR = path.join(ROOT_DIR, '_sponsors');
 const EVENTS_DIR = path.join(ROOT_DIR, '_events');
 const TEMPLATE_PATH = path.join(ROOT_DIR, 'templates', 'event_slides.html');
+const ASSETS_DIR = path.join(ROOT_DIR, 'templates', 'slides');
+const SPONSOR_ASSETS_DIR = path.join(ASSETS_DIR, 'sponsors');
 const OUTPUT_HTML_FILENAME = 'slides.html';
 const OUTPUT_PDF_FILENAME = 'Slides.pdf';
 const COMMUNITY_NAME = 'DotNetDevs.at';
-const COMMUNITY_URL = 'https://dotnetdevs.at';
-const COMMUNITY_EMAIL = 'info@dotnetdevs.at';
-const COMMUNITY_CHANNELS = [
-  { label: 'Meetup', url: 'https://www.meetup.com/dotnet-austria' },
-  { label: 'YouTube', url: 'https://www.youtube.com/channel/UCuf0V0imn7bI_wST2fEHgXQ' },
-  { label: 'GitHub', url: 'https://github.com/dotnetdevsaustria' },
-  { label: 'LinkedIn', url: 'https://www.linkedin.com/company/dotnetdevs-austria/' }
+const COMMUNITY_EMAIL = 'team@dotnetdevs.at';
+const SOCIAL_LINKS = {
+  youtube: 'https://go.dotnetdevs.at/youtube',
+  twitch: 'https://go.dotnetdevs.at/twitch',
+  bluesky: 'https://go.dotnetdevs.at/bluesky',
+  linkedin: 'https://go.dotnetdevs.at/linkedin'
+};
+const HELP_US_URL = 'https://go.dotnetdevs.at/helpus';
+const FEEDBACK_URL_PREFIX = 'https://go.dotnetdevs.at/feedback-';
+// Sponsor order on the sponsor slide (by sponsor file name); unknown sponsors follow alphabetically.
+const SPONSOR_ORDER = ['rubicon', 'jetbrains'];
+// Logo boxes on the sponsor slide for two sponsors (from the PPTX).
+const SPONSOR_BOXES_TWO = [
+  { left: 285, top: 440.34, width: 589.03, height: 143.64 },
+  { left: 1228.2, top: 339.6, width: 318.37, height: 345.12 }
 ];
-const COMMUNITY_NEWS = [
-  'Monthly onsite and remote .NET meetups for the Austrian community.',
-  'Event pages collect speaker bios, links, recordings, and follow-up material.',
-  'Slides and recordings stay archived per event so talks remain reusable.',
-  'Community touchpoints live across Meetup, YouTube, GitHub, and LinkedIn.'
-];
-const LINK_FIELDS = [
-  { key: 'InPersonLink', label: 'In person' },
-  { key: 'RemoteLink', label: 'Remote' },
-  { key: 'RecordingLink', label: 'Recording' }
-];
+const MAX_TIMELINE_ITEMS = 3;
+const MIN_TIMELINE_ITEMS = 2;
+
+const MIME_TYPES = {
+  '.png': 'image/png',
+  '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg',
+  '.svg': 'image/svg+xml',
+  '.gif': 'image/gif',
+  '.webp': 'image/webp'
+};
 
 function printUsageAndExit() {
   console.error('Missing parameter: event markdown file path is required.');
@@ -41,15 +54,15 @@ function printUsageAndExit() {
   process.exit(1);
 }
 
-function assertFileExists(filePath, label) {
-  if (!fs.existsSync(filePath)) {
-    console.error(`Error: ${label} not found: ${filePath}`);
-    process.exit(1);
-  }
+function fail(message) {
+  console.error(`Error: ${message}`);
+  process.exit(1);
 }
 
-function toPosixPath(value) {
-  return value.split(path.sep).join('/');
+function assertFileExists(filePath, label) {
+  if (!fs.existsSync(filePath)) {
+    fail(`${label} not found: ${filePath}`);
+  }
 }
 
 function escapeHtml(value) {
@@ -61,71 +74,54 @@ function escapeHtml(value) {
     .replace(/'/g, '&#039;');
 }
 
-function formatMeetupLine(dateValue) {
-  const date = new Date(dateValue);
-  if (Number.isNaN(date.getTime())) {
-    console.error(`Error: Invalid frontmatter date: ${dateValue}`);
-    process.exit(1);
+function toDataUri(filePath) {
+  const mimeType = MIME_TYPES[path.extname(filePath).toLowerCase()];
+  if (!mimeType) {
+    fail(`Unsupported image type: ${filePath}`);
   }
 
-  const monthYear = date.toLocaleDateString('en-US', {
-    month: 'long',
-    year: 'numeric'
-  });
-
-  return `.NET Meetup ${monthYear}`;
+  return `data:${mimeType};base64,${fs.readFileSync(filePath).toString('base64')}`;
 }
 
-function formatCommunityDeckTitle(dateValue) {
-  const meetupLine = formatMeetupLine(dateValue);
-  return meetupLine.replace('.NET Meetup', '.NET Community Austria');
+function asset(fileName) {
+  const filePath = path.join(ASSETS_DIR, fileName);
+  assertFileExists(filePath, 'Slide asset');
+  return toDataUri(filePath);
 }
 
-function formatMonthYear(dateValue) {
+function parseDate(dateValue) {
   const date = new Date(dateValue);
   if (Number.isNaN(date.getTime())) {
-    console.error(`Error: Invalid frontmatter date: ${dateValue}`);
-    process.exit(1);
+    fail(`Invalid frontmatter date: ${dateValue}`);
   }
-
-  return date.toLocaleDateString('en-US', {
-    month: 'long',
-    year: 'numeric'
-  });
+  return date;
 }
 
-function formatEventDate(dateValue) {
-  const date = new Date(dateValue);
-  if (Number.isNaN(date.getTime())) {
-    console.error(`Error: Invalid frontmatter date: ${dateValue}`);
-    process.exit(1);
-  }
-
-  return date.toLocaleDateString('en-US', {
-    weekday: 'long',
-    month: 'long',
-    day: 'numeric',
-    year: 'numeric'
-  });
+function formatMonthYear(date) {
+  return date.toLocaleDateString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' });
 }
 
-function formatCompactDate(dateValue) {
-  const date = new Date(dateValue);
-  if (Number.isNaN(date.getTime())) {
-    return '';
+function ordinalSuffix(day) {
+  if (day % 100 >= 11 && day % 100 <= 13) {
+    return 'th';
   }
+  return { 1: 'st', 2: 'nd', 3: 'rd' }[day % 10] || 'th';
+}
 
-  return date.toLocaleDateString('en-US', {
-    month: 'short',
-    day: 'numeric',
-    year: 'numeric'
-  });
+// "November 5<sup>th</sup> 2026"
+function formatTimelineDateHtml(date) {
+  const month = date.toLocaleDateString('en-US', { month: 'long', timeZone: 'UTC' });
+  const day = date.getUTCDate();
+  return `${escapeHtml(month)} ${day}<sup>${ordinalSuffix(day)}</sup> ${date.getUTCFullYear()}`;
+}
+
+function formatYearMonth(date) {
+  return `${date.getUTCFullYear()}${String(date.getUTCMonth() + 1).padStart(2, '0')}`;
 }
 
 function normalizeSpeakers(speakersValue) {
   if (!Array.isArray(speakersValue) || speakersValue.length === 0) {
-    console.error('Error: Frontmatter field "speakers" must be a non-empty array.');
-    process.exit(1);
+    fail('Frontmatter field "speakers" must be a non-empty array.');
   }
 
   return speakersValue
@@ -133,479 +129,336 @@ function normalizeSpeakers(speakersValue) {
     .filter(Boolean);
 }
 
-function normalizeRichText(value) {
-  return String(value || '')
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
-    .replace(/\*\*([^*]+)\*\*/g, '$1')
-    .replace(/\s+/g, ' ')
-    .trim();
-}
+function loadSponsors() {
+  const rank = slug => {
+    const index = SPONSOR_ORDER.indexOf(slug);
+    return index === -1 ? SPONSOR_ORDER.length : index;
+  };
 
-function resolveAssetHref(eventDir, webPath) {
-  if (!webPath || typeof webPath !== 'string') {
-    return '';
-  }
-
-  const absoluteAssetPath = path.join(ROOT_DIR, webPath.replace(/^\//, ''));
-  return toPosixPath(path.relative(eventDir, absoluteAssetPath));
-}
-
-function loadAllSpeakers() {
-  const speakers = {};
-  const files = fs.readdirSync(SPEAKERS_DIR).filter(file => file.endsWith('.md'));
-
-  for (const file of files) {
-    const speakerFilePath = path.join(SPEAKERS_DIR, file);
-    const speakerFile = matter(fs.readFileSync(speakerFilePath, 'utf8'));
-    const name = speakerFile.data.name;
-    if (name) {
-      speakers[name] = speakerFile.data;
-    }
-  }
-
-  return speakers;
-}
-
-function loadSponsors(eventDir) {
-  const files = fs.readdirSync(SPONSORS_DIR).filter(file => file.endsWith('.md'));
-
-  return files
+  return fs.readdirSync(SPONSORS_DIR)
+    .filter(file => file.endsWith('.md'))
     .map(file => {
-      const sponsorFilePath = path.join(SPONSORS_DIR, file);
-      const sponsorFile = matter(fs.readFileSync(sponsorFilePath, 'utf8'));
-      return {
-        title: String(sponsorFile.data.title || '').trim(),
-        description: normalizeRichText(sponsorFile.content),
-        logoHref: resolveAssetHref(eventDir, sponsorFile.data.logo)
-      };
+      const slug = path.basename(file, '.md');
+      const sponsorFile = matter(fs.readFileSync(path.join(SPONSORS_DIR, file), 'utf8'));
+      const title = String(sponsorFile.data.title || '').trim();
+
+      // Prefer the logo used in the PowerPoint deck, fall back to the website logo.
+      const deckLogo = ['.svg', '.png', '.jpg', '.jpeg', '.webp']
+        .map(ext => path.join(SPONSOR_ASSETS_DIR, `${slug}${ext}`))
+        .find(candidate => fs.existsSync(candidate));
+      const siteLogo = typeof sponsorFile.data.logo === 'string'
+        ? path.join(ROOT_DIR, sponsorFile.data.logo.replace(/^\//, ''))
+        : '';
+      const logoPath = deckLogo || (siteLogo && fs.existsSync(siteLogo) ? siteLogo : '');
+
+      return { slug, title, logo: logoPath ? toDataUri(logoPath) : '' };
     })
-    .filter(sponsor => sponsor.title);
+    .filter(sponsor => sponsor.title)
+    .sort((left, right) => rank(left.slug) - rank(right.slug) || left.slug.localeCompare(right.slug));
 }
 
 function loadUpcomingEvents(currentDate, currentEventPath) {
   return fs.readdirSync(EVENTS_DIR, { withFileTypes: true })
     .filter(entry => entry.isDirectory())
     .map(entry => path.join(EVENTS_DIR, entry.name, 'index.md'))
-    .filter(filePath => fs.existsSync(filePath) && filePath !== currentEventPath)
-    .map(filePath => {
-      const eventFile = matter(fs.readFileSync(filePath, 'utf8'));
-      return {
-        filePath,
-        date: eventFile.data.date,
-        title: eventFile.data.title,
-        public: eventFile.data.public,
-        speakers: Array.isArray(eventFile.data.speakers) ? eventFile.data.speakers : [],
-        permalink: eventFile.data.permalink || ''
-      };
-    })
+    .filter(filePath => fs.existsSync(filePath) && path.resolve(filePath) !== path.resolve(currentEventPath))
+    .map(filePath => matter(fs.readFileSync(filePath, 'utf8')).data)
     .filter(event => event.public && event.title && event.date)
-    .filter(event => new Date(event.date) > currentDate)
-    .sort((left, right) => new Date(left.date) - new Date(right.date))
-    .slice(0, 3)
     .map(event => ({
-      date: formatCompactDate(event.date),
+      date: new Date(event.date),
       title: String(event.title).trim(),
-      speakers: event.speakers.map(name => String(name).trim()).filter(Boolean),
-      permalink: event.permalink
-    }));
+      speakers: Array.isArray(event.speakers) ? event.speakers.map(name => String(name).trim()).filter(Boolean) : [],
+      location: event.Location ? String(event.Location).trim() : ''
+    }))
+    .filter(event => !Number.isNaN(event.date.getTime()) && event.date > currentDate)
+    .sort((left, right) => left.date - right.date)
+    .slice(0, MAX_TIMELINE_ITEMS);
 }
 
-function resolveSpeakerProfiles(speakerNames, speakersIndex) {
-  return speakerNames.map(speakerName => {
-    const speaker = speakersIndex[speakerName] || {};
-    const bio = typeof speaker.bio === 'string' ? speaker.bio.trim() : '';
+// Timeline entries: published upcoming events, padded with "TBD" months.
+function buildTimelineItems(currentDate, upcomingEvents) {
+  const items = upcomingEvents.map(event => ({
+    titleHtml: formatTimelineDateHtml(event.date),
+    lines: [
+      event.title,
+      event.speakers.join(', '),
+      event.location ? `@${event.location}` : ''
+    ].filter(Boolean)
+  }));
 
-    return {
-      name: speakerName,
-      bio,
-      hasBio: bio.length > 0
-    };
+  let lastDate = upcomingEvents.length > 0 ? upcomingEvents[upcomingEvents.length - 1].date : currentDate;
+  while (items.length < MIN_TIMELINE_ITEMS) {
+    lastDate = new Date(Date.UTC(lastDate.getUTCFullYear(), lastDate.getUTCMonth() + 1, 1));
+    items.push({ titleHtml: escapeHtml(formatMonthYear(lastDate)), lines: ['TBD', 'TBD', 'TBD'] });
+  }
+
+  return items;
+}
+
+/* ---------- Slide building blocks ---------- */
+
+function slide({ title, background = 'bg-default', hidden = false, content }) {
+  const classes = ['slide', background].filter(Boolean).join(' ');
+  return `
+  <section class="${classes}" data-title="${escapeHtml(title)}"${hidden ? ' data-hidden' : ''}>
+${content}
+  </section>
+`;
+}
+
+function paragraphs(lines, className = '') {
+  const classAttr = className ? ` class="${className}"` : '';
+  return lines.map(line => `<p${classAttr}>${escapeHtml(line)}</p>`).join('\n      ');
+}
+
+function sectionSlide({ title, body = [], titleAlign = '', bodyAlign = '', titleSize = '', background, hidden, autofit = false }) {
+  const titleStyle = titleSize ? ` style="font-size:${titleSize}px;"` : '';
+  const autofitAttr = autofit ? ' data-autofit' : '';
+  const bodyHtml = body.length > 0
+    ? `\n    <div class="tb section-body">\n      ${paragraphs(body, bodyAlign)}\n    </div>`
+    : '';
+
+  return slide({
+    title,
+    background,
+    hidden,
+    content: `    <div class="tb anchor-b section-title"${titleStyle}${autofitAttr}>${paragraphs([title], titleAlign)}</div>${bodyHtml}`
   });
 }
 
-function formatSpeakerLine(speakerNames) {
-  return speakerNames.join(', ');
+function img(src, alt, box, extraStyle = '') {
+  return `    <img class="img" src="${src}" alt="${escapeHtml(alt)}" style="left:${box.left}px; top:${box.top}px; width:${box.width}px; height:${box.height}px;${extraStyle}">`;
 }
 
-function splitParagraphs(value) {
-  return String(value || '')
-    .split(/\n\s*\n/)
-    .map(paragraph => paragraph.replace(/\n/g, ' ').trim())
-    .filter(Boolean);
+function textBox(className, box, html, extraStyle = '') {
+  const size = [
+    `left:${box.left}px`,
+    `top:${box.top}px`,
+    `width:${box.width}px`,
+    box.height !== undefined ? `height:${box.height}px` : '',
+    box.fontSize !== undefined ? `font-size:${box.fontSize}px` : ''
+  ].filter(Boolean).join('; ');
+  return `    <div class="${className}" style="${extraStyle}${size};">${html}</div>`;
 }
 
-function formatLinkDisplay(url) {
-  try {
-    const parsedUrl = new URL(url);
-    const shortenedPath = parsedUrl.pathname.length > 32
-      ? `${parsedUrl.pathname.slice(0, 29)}...`
-      : parsedUrl.pathname;
-    return `${parsedUrl.hostname}${shortenedPath}`;
-  } catch {
-    return url;
-  }
+/* ---------- Slides ---------- */
+
+function titleSlide(context) {
+  const linkBox = (left, top) => ({ left, top, width: 623.62, fontSize: 32 });
+  return slide({
+    title: '.NET Community Austria',
+    background: '',
+    content: [
+      textBox('tb big anchor-b', { left: 240, top: 176.75, width: 1440, height: 376, fontSize: 108 },
+        `<p class="ctr">.NET Community Austria<br>${escapeHtml(context.monthYear)}</p>`),
+      textBox('tb', { left: 240, top: 567.25, width: 1440, height: 156.87, fontSize: 48 },
+        `<p class="ctr">&nbsp;</p><p class="ctr">Presented by ${escapeHtml(COMMUNITY_NAME)}</p>`),
+      img(asset('youtube.png'), 'YouTube', { left: 176.31, top: 798.42, width: 252.89, height: 56.69 }),
+      textBox('tb link', linkBox(431.27, 798.42), `<p>${escapeHtml(SOCIAL_LINKS.youtube)}</p>`),
+      img(asset('twitch.png'), 'Twitch', { left: 181.85, top: 883.77, width: 249.42, height: 56.69 }),
+      textBox('tb link', linkBox(431.27, 884.38), `<p>${escapeHtml(SOCIAL_LINKS.twitch)}</p>`),
+      img(asset('bluesky.png'), 'Bluesky', { left: 1051.06, top: 798.42, width: 60.52, height: 53.32 }),
+      textBox('tb link', linkBox(1111.59, 798.42), `<p>${escapeHtml(SOCIAL_LINKS.bluesky)}</p>`),
+      img(asset('linkedin.png'), 'LinkedIn', { left: 1054.89, top: 883.77, width: 66.67, height: 56.69 }),
+      textBox('tb link', linkBox(1111.59, 883.77), `<p>${escapeHtml(SOCIAL_LINKS.linkedin)}</p>`)
+    ].join('\n')
+  });
 }
 
-function buildStatItems(eventData) {
-  const labels = [
-    { key: 'Registrations', label: 'Registrations' },
-    { key: 'Participants', label: 'Onsite' },
-    { key: 'Viewers', label: 'Viewers' }
-  ];
-
-  return labels
-    .map(item => {
-      const rawValue = eventData[item.key];
-      if (rawValue === undefined || rawValue === null || String(rawValue).trim() === '') {
-        return null;
-      }
-
-      return {
-        label: item.label,
-        value: String(rawValue).trim()
-      };
-    })
-    .filter(Boolean);
+function helpUsSlide() {
+  return slide({
+    title: 'Help us',
+    hidden: true,
+    content: [
+      img(asset('qr-helpus.svg'), `QR code ${HELP_US_URL}`, { left: 523.73, top: 59.73, width: 831.2, height: 831.2 }),
+      textBox('tb calibri', { left: 0, top: 890.93, width: 1920, fontSize: 64 },
+        `<p class="ctr">${escapeHtml(HELP_US_URL)}</p>`, '--dy:0.05em; ')
+    ].join('\n')
+  });
 }
 
-function buildParagraphsHtml(paragraphs) {
-  return paragraphs.map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join('');
-}
-
-function buildListItemsHtml(items) {
-  return items.map(item => `<li>${escapeHtml(item)}</li>`).join('');
-}
-
-function buildChannelCardsHtml(channels) {
-  return channels.map(channel => `
-    <article class="mini-card mini-card--channel">
-      <div class="mini-card__label">${escapeHtml(channel.label)}</div>
-      <a href="${escapeHtml(channel.url)}">${escapeHtml(formatLinkDisplay(channel.url))}</a>
-    </article>`).join('');
-}
-
-function buildStatCardsHtml(stats) {
-  if (stats.length === 0) {
-    return '<article class="mini-card"><div class="mini-card__label">Attendance</div><p>Stats can be added in event front matter.</p></article>';
+function sponsorBoxes(count) {
+  if (count === 2) {
+    return SPONSOR_BOXES_TWO;
   }
 
-  return stats.map(stat => `
-    <article class="stat-card">
-      <div class="stat-card__value">${escapeHtml(stat.value)}</div>
-      <div class="stat-card__label">${escapeHtml(stat.label)}</div>
-    </article>`).join('');
-}
-
-function buildSponsorCardsHtml(sponsors) {
-  return sponsors.map(sponsor => {
-    const logo = sponsor.logoHref
-      ? `<img class="sponsor-card__logo" src="${escapeHtml(sponsor.logoHref)}" alt="${escapeHtml(sponsor.title)} logo" />`
-      : `<div class="sponsor-card__placeholder">${escapeHtml(sponsor.title)}</div>`;
-
-    return `
-      <article class="sponsor-card">
-        <div class="sponsor-card__media">${logo}</div>
-        <div class="sponsor-card__body">
-          <h3>${escapeHtml(sponsor.title)}</h3>
-          <p>${escapeHtml(sponsor.description || 'Community sponsor')}</p>
-        </div>
-      </article>`;
-  }).join('');
-}
-
-function buildUpcomingEventsHtml(events) {
-  if (events.length === 0) {
-    return '<article class="mini-card"><div class="mini-card__label">Planning</div><p>Upcoming events can be added once they are published.</p></article>';
-  }
-
-  return events.map(event => `
-    <article class="mini-card mini-card--event">
-      <div class="mini-card__label">${escapeHtml(event.date)}</div>
-      <h3>${escapeHtml(event.title)}</h3>
-      <p>${escapeHtml(formatSpeakerLine(event.speakers) || 'Speaker details coming soon')}</p>
-      ${event.permalink ? `<a href="${escapeHtml(`${COMMUNITY_URL.replace(/\/$/, '')}${event.permalink}`)}">${escapeHtml(event.permalink)}</a>` : ''}
-    </article>`).join('');
-}
-
-function buildSpeakerCardsHtml(speakerProfiles) {
-  return speakerProfiles.map(profile => {
-    const bioParagraphs = profile.hasBio
-      ? buildParagraphsHtml(splitParagraphs(profile.bio))
-      : '<p>Bio coming soon.</p>';
-    const densityClass = profile.bio.length > 700 ? ' speaker-card--dense' : '';
-
-    return `
-      <article class="speaker-card${densityClass}">
-        <div class="speaker-card__label">Speaker</div>
-        <h3>${escapeHtml(profile.name)}</h3>
-        <div class="speaker-card__bio">${bioParagraphs}</div>
-      </article>`;
-  }).join('');
-}
-
-async function buildLinkCardsHtml(eventData) {
-  const links = LINK_FIELDS
-    .map(field => {
-      const rawValue = eventData[field.key];
-      if (!rawValue || String(rawValue).trim() === '') {
-        return null;
-      }
-
-      return {
-        label: field.label,
-        url: String(rawValue).trim()
-      };
-    })
-    .filter(Boolean);
-
-  if (links.length === 0) {
-    return '<div class="link-card link-card--empty"><h3>Links coming soon</h3><p>Add event links in the front matter to render QR codes here.</p></div>';
-  }
-
-  const cards = await Promise.all(links.map(async link => {
-    const qrCodeDataUrl = await QRCode.toDataURL(link.url, {
-      errorCorrectionLevel: 'M',
-      margin: 1,
-      width: 280,
-      color: {
-        dark: '#6E2B7E',
-        light: '#0000'
-      }
-    });
-
-    return `
-      <article class="link-card">
-        <div class="link-card__qr-wrap">
-          <img class="link-card__qr" src="${qrCodeDataUrl}" alt="QR code for ${escapeHtml(link.label)}" />
-        </div>
-        <div class="link-card__body">
-          <div class="link-card__label">${escapeHtml(link.label)}</div>
-          <a href="${escapeHtml(link.url)}">${escapeHtml(formatLinkDisplay(link.url))}</a>
-        </div>
-      </article>`;
+  // Other counts: distribute evenly in one row within the content area.
+  const areaLeft = 132;
+  const areaWidth = 1656;
+  const cell = areaWidth / Math.max(count, 1);
+  const width = Math.min(cell - 60, 589.03);
+  const height = 345.12;
+  return Array.from({ length: count }, (_, index) => ({
+    left: Math.round((areaLeft + cell * index + (cell - width) / 2) * 100) / 100,
+    top: 339.6,
+    width: Math.round(width * 100) / 100,
+    height
   }));
-
-  return cards.join('');
 }
 
-function renderSlide({ title, eyebrow, kicker = '', lead = '', content, modifier = '', dataTitle = '' }) {
-  return `
-    <section class="slide${modifier ? ` ${modifier}` : ''}" data-slide-title="${escapeHtml(dataTitle || title)}">
-      <div class="slide__frame">
-        <div class="slide__brandbar">
-          <div class="slide__brandtext">${escapeHtml(COMMUNITY_NAME)}</div>
-          <div class="slide__brandmark" aria-hidden="true"></div>
-        </div>
-        <div class="slide__content">
-          <div class="slide__eyebrow">${escapeHtml(eyebrow)}</div>
-          ${kicker ? `<div class="slide__kicker">${escapeHtml(kicker)}</div>` : ''}
-          <h2>${escapeHtml(title)}</h2>
-          ${lead ? `<p class="slide__lead">${escapeHtml(lead)}</p>` : ''}
-          ${content}
-        </div>
-        <div class="slide__footer">
-          <span>${escapeHtml(COMMUNITY_URL)}</span>
-          <span class="slide__footer-index"></span>
-        </div>
+function sponsorsSlide(context) {
+  const boxes = sponsorBoxes(context.sponsors.length);
+  const logos = context.sponsors.map((sponsor, index) => {
+    const box = boxes[index];
+    if (!sponsor.logo) {
+      return textBox('tb anchor-ctr', { ...box, fontSize: 48 }, `<p class="ctr">${escapeHtml(sponsor.title)}</p>`);
+    }
+    return img(sponsor.logo, sponsor.title, box, ' object-fit:contain;');
+  });
+
+  return slide({
+    title: 'Our Sponsors',
+    content: [
+      '    <div class="tb anchor-ctr title-master"><p>Our Sponsors</p></div>',
+      ...logos
+    ].join('\n')
+  });
+}
+
+function raffleSlide() {
+  return slide({
+    title: 'How to take part in the raffle?',
+    content: [
+      '    <div class="tb anchor-ctr title-master"><p>How to take part in the raffle?</p></div>',
+      textBox('tb', { left: 132, top: 497.17, width: 1656, height: 114.57, fontSize: 72 },
+        '<p class="ctr">Type #jetbrains in the chat</p>', '--dy:-2px; ')
+    ].join('\n')
+  });
+}
+
+function timelineSlide(context) {
+  const items = context.timelineItems;
+  // Horizontal distance between pins; 929.73 px matches the two-entry SmartArt in the PPTX.
+  // With more entries the last text block (71.54 px offset, 602.36 px wide) must end at the arrow.
+  const step = items.length <= 2 ? 929.73 : (1656 - 71.54 - 602.36) / (items.length - 1);
+  const round = value => Math.round(value * 100) / 100;
+
+  const shapes = [];
+  const texts = [];
+
+  items.forEach((item, index) => {
+    const x = round(index * step);
+    const above = index % 2 === 0;
+    const pinX = round(x + 35.9);
+    const textLeft = round(x + 71.54);
+    const linesHtml = item.lines.map(line => `<p>${escapeHtml(line)}</p>`).join('\n        ');
+
+    if (above) {
+      shapes.push(`        <line x1="${pinX}" y1="139.79" x2="${pinX}" y2="342.62" stroke="#4472C4" stroke-width="2" stroke-dasharray="8 6"/>
+        <g transform="translate(${round(x + 10.71)} 78.96) rotate(135 25.195 25.195) scale(50.39)">
+          <use href="#teardrop" fill="#4472C4" stroke="#4472C4" stroke-width="0.0397"/>
+        </g>
+        <circle cx="${round(x + 35.91)}" cy="104.16" r="19.6" fill="#fff" fill-opacity="0.9"/>
+        <circle cx="${round(x + 35.76)}" cy="342.62" r="6.41" fill="#4472C4" stroke="#fff" stroke-width="2"/>`);
+      texts.push(`      <div class="tl-text big" style="left:${textLeft}px; top:68.53px; width:602.36px; height:71.27px;">
+        <p>${item.titleHtml}</p>
       </div>
-    </section>`;
+      <div class="tl-text small" data-autofit style="left:${textLeft}px; top:139.79px; width:602.36px; height:202.83px; padding:15px 0 22.5px 0;">
+        ${linesHtml}
+      </div>`);
+    } else {
+      shapes.push(`        <line x1="${pinX}" y1="342.62" x2="${pinX}" y2="545.45" stroke="#4472C4" stroke-width="2" stroke-dasharray="8 6"/>
+        <g transform="translate(${round(x + 10.71)} 555.9) rotate(315 25.195 25.195) scale(50.39)">
+          <use href="#teardrop" fill="#4472C4" stroke="#4472C4" stroke-width="0.0397"/>
+        </g>
+        <circle cx="${round(x + 35.91)}" cy="581.09" r="19.6" fill="#fff" fill-opacity="0.9"/>
+        <circle cx="${round(x + 35.76)}" cy="342.62" r="6.41" fill="#4472C4" stroke="#fff" stroke-width="2"/>`);
+      texts.push(`      <div class="tl-text small" data-autofit style="left:${textLeft}px; top:342.62px; width:602.36px; height:202.83px; padding:22.5px 15px 9px 0; justify-content:flex-end;">
+        ${linesHtml}
+      </div>
+      <div class="tl-text big" style="left:${textLeft}px; top:545.46px; width:602.36px; height:71.27px;">
+        <p>${item.titleHtml}</p>
+      </div>`);
+    }
+  });
+
+  return slide({
+    title: 'Next meetups',
+    content: `    <div class="tb anchor-ctr title-master"><p>Next meetups</p></div>
+    <div style="position:absolute; left:132px; top:287.5px; width:1656px; height:685.25px;">
+      <svg width="1656" height="685.25" viewBox="0 0 1656 685.25" style="position:absolute; left:0; top:0; overflow:visible;">
+        <defs>
+          <path id="teardrop" d="M0,0.5 A0.5,0.5 0 0 1 0.5,0 Q0.7875,0 1.075,-0.075 Q1,0.2125 1,0.5 A0.5,0.5 0 0 1 0.5,1 A0.5,0.5 0 0 1 0,0.5 Z"/>
+        </defs>
+        <line x1="0" y1="342.62" x2="1642" y2="342.62" stroke="#4472C4" stroke-width="3"/>
+        <polygon points="1641,335.12 1656,342.62 1641,350.12" fill="#4472C4"/>
+${shapes.join('\n')}
+      </svg>
+${texts.join('\n')}
+    </div>`
+  });
 }
 
-function buildSlidesHtml(context) {
-  const abstractParagraphs = splitParagraphs(context.abstract);
-  const hostSponsor = context.sponsors.find(sponsor => sponsor.title.toLowerCase().includes('rubicon'));
-  const raffleSponsor = context.sponsors.find(sponsor => sponsor.title.toLowerCase().includes('jetbrains'));
+function talkSlide(context) {
+  return slide({
+    title: context.title,
+    content: `    <div class="tb section-title" data-autofit>${paragraphs([context.title])}</div>
+    <div class="tb section-body">
+      ${paragraphs(context.speakers, 'ctr')}
+    </div>`
+  });
+}
 
+function stickerSlide() {
+  return slide({
+    title: 'Thank you for joining! (Sticker)',
+    hidden: true,
+    content: [
+      textBox('tb big', { left: 78, top: 239.88, width: 673.5, height: 600.25, fontSize: 144 }, '<p>Thank you for joining!</p>'),
+      `    <div style="position:absolute; left:816.27px; top:213.73px; width:725.75px; height:607.51px; overflow:hidden;">
+      <img src="${asset('stickers.png')}" alt="${escapeHtml(COMMUNITY_NAME)} stickers" style="display:block; width:725.75px; height:737.1px;">
+    </div>`
+    ].join('\n')
+  });
+}
+
+function thankYouForJoiningSlide() {
+  return slide({
+    title: 'Thank you for joining!',
+    content: textBox('tb big', { left: 306, top: 373, width: 1174, height: 466.37, fontSize: 144 },
+      '<p class="ctr">Thank you for joining!</p>')
+  });
+}
+
+async function feedbackSlide(context) {
+  const qrCode = await QRCode.toDataURL(context.feedbackUrl, {
+    errorCorrectionLevel: 'M',
+    margin: 0,
+    width: 780,
+    color: { dark: '#000000', light: '#FFFFFF' }
+  });
+
+  return slide({
+    title: 'We want to hear your feedback',
+    hidden: true,
+    content: [
+      '    <div class="tb anchor-ctr title-master"><p>We want to hear your feedback</p></div>',
+      img(qrCode, `QR code ${context.feedbackUrl}`, { left: 144.8, top: 232.6, width: 778.93, height: 778.93 }),
+      textBox('tb link', { left: 984, top: 540, width: 847, fontSize: 36 }, `<p>${escapeHtml(context.feedbackUrl)}</p>`)
+    ].join('\n')
+  });
+}
+
+async function buildSlidesHtml(context) {
   const slides = [
-    renderSlide({
-      title: context.communityDeckTitle,
-      eyebrow: 'Slide 1',
-      kicker: context.formattedDate,
-      lead: 'Monthly .NET meetup for developers, architects, and community members across Austria.',
-      dataTitle: 'Welcome',
-      modifier: 'slide--hero',
-      content: `
-        <div class="hero-layout">
-          <div class="hero-copy">
-            <h1>.NET Community Austria</h1>
-            <div class="hero-copy__month">${escapeHtml(context.monthYear)}</div>
-            <p class="hero-copy__meta">Feature session: ${escapeHtml(context.title)} by ${escapeHtml(context.speakerLine)}</p>
-          </div>
-          <div class="hero-sidebar">
-            <div class="flag-bar" aria-hidden="true"></div>
-            <div class="stats-grid">${buildStatCardsHtml(context.stats)}</div>
-          </div>
-        </div>`
-    }),
-    renderSlide({
-      title: 'Thank you for joining!',
-      eyebrow: 'Slide 2',
-      lead: 'A quick welcome before we move into community updates and the feature talk.',
-      content: `
-        <div class="two-column-grid">
-          <div class="feature-card">
-            <div class="feature-card__label">Tonight</div>
-            <ul class="bullet-list">${buildListItemsHtml([
-              'Say hello, ask questions, and keep the chat active.',
-              'Slides, links, and recordings stay archived with the event.',
-              'Stick around until the end for announcements and raffle details.'
-            ])}</ul>
-          </div>
-          <div class="mini-grid">${buildChannelCardsHtml(context.channels)}</div>
-        </div>`
-    }),
-    renderSlide({
-      title: 'Thanks for hosting!',
-      eyebrow: 'Slide 3',
-      lead: hostSponsor
-        ? `${hostSponsor.title} helps make the meetup possible with venue and event support.`
-        : 'Thanks to everyone supporting venue, streaming, moderation, and organization.',
-      content: `
-        <div class="two-column-grid">
-          <article class="feature-card">
-            <div class="feature-card__label">Host support</div>
-            <h3>${escapeHtml(hostSponsor ? hostSponsor.title : 'Community hosts')}</h3>
-            <p>${escapeHtml(hostSponsor ? hostSponsor.description : 'Local hosts, organizers, and volunteers help us run the meetup every month.')}</p>
-          </article>
-          <article class="feature-card">
-            <div class="feature-card__label">Community operations</div>
-            <ul class="bullet-list">${buildListItemsHtml([
-              'Event planning and speaker coordination',
-              'Onsite setup, streaming, and moderation',
-              'Slides, recordings, and community follow-up'
-            ])}</ul>
-          </article>
-        </div>`
-    }),
-    renderSlide({
-      title: 'Our Sponsors',
-      eyebrow: 'Slide 6',
-      lead: 'Sponsors support the meetup with venue, logistics, and prizes.',
-      content: `<div class="sponsor-grid">${buildSponsorCardsHtml(context.sponsors)}</div>`
-    }),
-    renderSlide({
-      title: 'How to take part in the raffle?',
-      eyebrow: 'Slide 7',
-      lead: raffleSponsor
-        ? `${raffleSponsor.title} sponsors the raffle for the meetup.`
-        : 'Stay until the end to take part in the raffle.',
-      content: `
-        <div class="two-column-grid">
-          <article class="feature-card">
-            <div class="feature-card__label">How it works</div>
-            <ul class="bullet-list">${buildListItemsHtml([
-              'Join the session and stay until the wrap-up.',
-              'Be present when the winner is drawn.',
-              'One prize per attendee so the raffle stays fair.'
-            ])}</ul>
-          </article>
-          <article class="feature-card">
-            <div class="feature-card__label">Prize</div>
-            <p>${escapeHtml(raffleSponsor ? raffleSponsor.description : 'A sponsor-supported giveaway closes the meetup.')}</p>
-          </article>
-        </div>`
-    }),
-    renderSlide({
-      title: 'Community News',
-      eyebrow: 'Slide 8',
-      lead: 'A few useful reminders and community touchpoints before the talk starts.',
-      content: `
-        <div class="two-column-grid">
-          <article class="feature-card">
-            <div class="feature-card__label">Highlights</div>
-            <ul class="bullet-list">${buildListItemsHtml(COMMUNITY_NEWS)}</ul>
-          </article>
-          <div class="mini-grid">${buildChannelCardsHtml(context.channels)}</div>
-        </div>`
-    }),
-    renderSlide({
-      title: 'Next meetups',
-      eyebrow: 'Slide 9',
-      lead: 'Here is what is already on the calendar after this session.',
-      content: `<div class="mini-grid mini-grid--events">${buildUpcomingEventsHtml(context.upcomingEvents)}</div>`
-    }),
-    renderSlide({
-      title: 'If you want host a meetup?',
-      eyebrow: 'Slide 10',
-      lead: 'We are always looking for speakers, topics, venues, and community partners.',
-      content: `
-        <div class="two-column-grid">
-          <article class="feature-card">
-            <div class="feature-card__label">Get involved</div>
-            <ul class="bullet-list">${buildListItemsHtml([
-              'Propose a talk or live coding session.',
-              'Offer a venue, food, or logistics support.',
-              'Help with moderation, streaming, or community outreach.'
-            ])}</ul>
-          </article>
-          <article class="feature-card">
-            <div class="feature-card__label">Contact</div>
-            <p>Email us at <a href="mailto:${escapeHtml(context.communityEmail)}">${escapeHtml(context.communityEmail)}</a> and include your topic, availability, or sponsorship idea.</p>
-            <p>Community hub: <a href="${escapeHtml(context.communityUrl)}">${escapeHtml(context.communityUrl)}</a></p>
-          </article>
-        </div>`
-    }),
-    renderSlide({
-      title: context.title,
-      eyebrow: 'Slide 11',
-      kicker: context.meetupLine,
-      lead: `by ${context.speakerLine}`,
-      modifier: 'slide--talk',
-      dataTitle: 'Talk Title',
-      content: `
-        <div class="hero-layout hero-layout--talk">
-          <div class="hero-copy">
-            <h1>${escapeHtml(context.title)}</h1>
-            <p class="hero-copy__meta">${escapeHtml(context.formattedDate)}</p>
-          </div>
-          <article class="feature-card feature-card--accent">
-            <div class="feature-card__label">Event file</div>
-            <p>${escapeHtml(context.eventFileLabel)}</p>
-          </article>
-        </div>`
-    }),
-    renderSlide({
-      title: context.speakerProfiles.length > 1 ? 'Speakers' : 'Speaker',
-      eyebrow: 'Speaker',
-      lead: 'Background and context for the featured speaker or speakers.',
-      content: `<div class="speaker-grid">${buildSpeakerCardsHtml(context.speakerProfiles)}</div>`
-    }),
-    renderSlide({
-      title: 'Abstract',
-      eyebrow: 'Talk overview',
-      lead: 'What this session is about and what attendees should expect.',
-      modifier: context.abstract.length > 750 ? 'slide--dense' : '',
-      content: `<div class="prose">${buildParagraphsHtml(abstractParagraphs)}</div>`
-    }),
-    renderSlide({
-      title: 'Event Links',
-      eyebrow: 'Join and share',
-      lead: 'Scan the QR codes or open the event links directly.',
-      content: `<div class="link-grid">${context.linkCardsHtml}</div>`
-    }),
-    renderSlide({
-      title: 'See you next Month!',
-      eyebrow: 'Closing',
-      lead: 'Thank you for being part of the community.',
-      modifier: 'slide--closing',
-      content: `
-        <div class="two-column-grid">
-          <article class="feature-card feature-card--accent">
-            <div class="feature-card__label">Keep in touch</div>
-            <p>${escapeHtml(context.communityUrl)}</p>
-            <p>${escapeHtml(context.communityEmail)}</p>
-          </article>
-          <article class="feature-card">
-            <div class="feature-card__label">Next step</div>
-            <ul class="bullet-list">${buildListItemsHtml([
-              'Share feedback after the talk.',
-              'Invite a colleague to the next meetup.',
-              'Reach out if you want to speak or support the group.'
-            ])}</ul>
-          </article>
-        </div>`
-    })
+    titleSlide(context),
+    sectionSlide({ title: 'Thank you for joining!', titleAlign: 'ctr', titleSize: 144, background: 'bg-dotnetdevs' }),
+    sectionSlide({ title: 'Thanks for hosting!', titleAlign: 'ctr', titleSize: 144, background: 'bg-dotnetdevs' }),
+    sectionSlide({ title: 'We need your help!', hidden: true }),
+    helpUsSlide(),
+    sponsorsSlide(context),
+    raffleSlide(),
+    sectionSlide({ title: 'Community News' }),
+    timelineSlide(context),
+    sectionSlide({ title: 'If you want host a meetup?', body: [COMMUNITY_EMAIL] }),
+    talkSlide(context),
+    sectionSlide({ title: 'Thank you!', titleAlign: 'ctr', titleSize: 144 }),
+    stickerSlide(),
+    thankYouForJoiningSlide(),
+    sponsorsSlide(context),
+    sectionSlide({ title: 'JetBrains Raffle', titleAlign: 'ctr', body: [`Contact us at ${COMMUNITY_EMAIL}`], bodyAlign: 'ctr' }),
+    await feedbackSlide(context),
+    sectionSlide({ title: 'See you next Month!' })
   ];
 
   return slides.join('');
@@ -616,7 +469,7 @@ async function exportSlidesPdf(htmlPath, outputPath) {
 
   try {
     const page = await browser.newPage({
-      viewport: { width: 1600, height: 900 },
+      viewport: { width: 1920, height: 1080 },
       deviceScaleFactor: 1
     });
 
@@ -641,61 +494,41 @@ async function main() {
   const eventFilePath = path.resolve(ROOT_DIR, eventFileArg);
   assertFileExists(eventFilePath, 'Event file');
   assertFileExists(TEMPLATE_PATH, 'Slides template');
-  assertFileExists(SPEAKERS_DIR, 'Speakers directory');
+  assertFileExists(ASSETS_DIR, 'Slide assets directory');
   assertFileExists(SPONSORS_DIR, 'Sponsors directory');
   assertFileExists(EVENTS_DIR, 'Events directory');
 
-  const rawEventFile = fs.readFileSync(eventFilePath, 'utf8');
-  const parsedEvent = matter(rawEventFile);
-  const { title, date, speakers, abstract } = parsedEvent.data;
+  const parsedEvent = matter(fs.readFileSync(eventFilePath, 'utf8'));
+  const { title, date, speakers } = parsedEvent.data;
 
   if (!title || String(title).trim() === '') {
-    console.error('Error: Frontmatter field "title" is required.');
-    process.exit(1);
+    fail('Frontmatter field "title" is required.');
   }
 
   if (!date) {
-    console.error('Error: Frontmatter field "date" is required.');
-    process.exit(1);
+    fail('Frontmatter field "date" is required.');
   }
 
-  if (!abstract || String(abstract).trim() === '') {
-    console.error('Error: Frontmatter field "abstract" is required.');
-    process.exit(1);
-  }
-
-  const speakerNames = normalizeSpeakers(speakers);
-  const speakersIndex = loadAllSpeakers();
+  const eventDate = parseDate(date);
   const eventDir = path.dirname(eventFilePath);
-  const eventDate = new Date(date);
-  const speakerProfiles = resolveSpeakerProfiles(speakerNames, speakersIndex);
-  const sponsors = loadSponsors(eventDir);
-  const upcomingEvents = loadUpcomingEvents(eventDate, eventFilePath);
-  const stats = buildStatItems(parsedEvent.data);
   const context = {
     title: String(title).trim(),
-    abstract: String(abstract).trim(),
-    meetupLine: formatMeetupLine(date),
-    communityDeckTitle: formatCommunityDeckTitle(date),
-    monthYear: formatMonthYear(date),
-    formattedDate: formatEventDate(date),
-    speakerLine: formatSpeakerLine(speakerNames),
-    speakerProfiles,
-    sponsors,
-    upcomingEvents,
-    stats,
-    channels: COMMUNITY_CHANNELS,
-    communityUrl: COMMUNITY_URL,
-    communityEmail: COMMUNITY_EMAIL,
-    eventFileLabel: path.relative(ROOT_DIR, eventFilePath),
-    linkCardsHtml: await buildLinkCardsHtml(parsedEvent.data)
+    speakers: normalizeSpeakers(speakers),
+    monthYear: formatMonthYear(eventDate),
+    sponsors: loadSponsors(),
+    timelineItems: buildTimelineItems(eventDate, loadUpcomingEvents(eventDate, eventFilePath)),
+    feedbackUrl: `${FEEDBACK_URL_PREFIX}${formatYearMonth(eventDate)}`
   };
 
   const template = fs.readFileSync(TEMPLATE_PATH, 'utf8');
-  const slidesHtml = buildSlidesHtml(context);
+  const slidesHtml = await buildSlidesHtml(context);
+  const pageTitle = `.NET Community Austria – ${context.monthYear} – ${COMMUNITY_NAME}`;
+  // Function replacers so "$" sequences in content are not interpreted as replacement patterns.
   const renderedHtml = template
-    .replace(/__PAGE_TITLE__/g, escapeHtml(`${context.title} - ${COMMUNITY_NAME} Slides`))
-    .replace(/__SLIDES__/g, slidesHtml);
+    .replace(/__PAGE_TITLE__/g, () => escapeHtml(pageTitle))
+    .replace(/__BG_DEFAULT__/g, () => asset('bg-default.png'))
+    .replace(/__BG_DOTNETDEVS__/g, () => asset('bg-dotnetdevs.png'))
+    .replace(/__SLIDES__/g, () => slidesHtml);
 
   const htmlOutputPath = path.join(eventDir, OUTPUT_HTML_FILENAME);
   const pdfOutputPath = path.join(eventDir, OUTPUT_PDF_FILENAME);
