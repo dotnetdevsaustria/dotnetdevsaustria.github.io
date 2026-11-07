@@ -8,10 +8,10 @@ speakers:
   - Andreas Willich
 InPersonLink: "https://www.meetup.com/dotnet-austria/events/317063101"
 RemoteLink: "https://www.meetup.com/dotnet-austria/events/317063128/"
-RecordingLink: ""
-Registrations: 0
-Participants: 0
-Viewers: 0
+RecordingLink: "https://youtube.com/live/14gOfMVAEVs"
+Registrations: 95 # Meetup: 55 Onsite + 40 Remote; abgerufen am 2026-11-07
+Participants: 35
+Viewers: 35 # 13 via YouTube + 22 via Twitch
 Location: XXXLutz, Andromeda Tower
 public: true
 LocationUrl: "https://www.xxxl.digital/"
